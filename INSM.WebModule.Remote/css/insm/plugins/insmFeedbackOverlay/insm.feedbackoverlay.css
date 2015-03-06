@@ -1,0 +1,13 @@
+﻿.insm-feedback-overlay {
+    position: fixed;
+    background: #fff url('insm-loading.gif') center center no-repeat;
+    z-index: 100;
+    top: 0px;
+    width: 70px;
+    height: 20px;
+    text-align: center;
+    left: 50%;
+    margin-left: -35px;
+    opacity: 0.5;
+    display: none;
+}

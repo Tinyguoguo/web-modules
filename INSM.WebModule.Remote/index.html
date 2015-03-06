@@ -1,0 +1,240 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+	
+	<title>Remote</title>
+	
+	<style>
+		#container, #content {
+			height: 100%;
+			width: 100%;
+		}
+	</style>
+	
+	<!-- jQuery & plugins -->
+	<link href="css/jquery/ui/jquery-ui-1.10.3.custom.min.css" rel="stylesheet" type="text/css" />
+
+	<!-- CSS files -->
+	<!-- Instoremedia -->
+	<link href="css/insm/insm.default.css" rel="stylesheet" type="text/css" />
+	<link href="css/insm/plugins/insm.dialog.css" rel="stylesheet" type="text/css" />
+	<link href="css/insm/plugins/insm.tooltip.css" rel="stylesheet" type="text/css" />
+	<link href="css/insm/plugins/insm.pagination.css" rel="stylesheet" type="text/css" />
+	<link href="css/insm/plugins/insm.notification.css" rel="stylesheet" type="text/css" />
+	<link href="css/insm/plugins/insm.playerpreview.css" rel="stylesheet" type="text/css" />
+
+	<link href="css/insm/plugins/insmPopup/insm.popup.css" rel="stylesheet" type="text/css" />
+	<link href="css/insm/plugins/insmSearchfield/insm.searchfield.css" rel="stylesheet" type="text/css" />
+	<link href="css/insm/plugins/insmTable/insm.table.css" rel="stylesheet" type="text/css" />
+	<link href="css/insm/plugins/asset/insm.asset.css" rel="stylesheet" type="text/css" />
+	<link href="css/insm/plugins/itemGrid/insm.itemgrid.css" rel="stylesheet" type="text/css" />
+	<link href="css/insm/plugins/assetGrid/insm.assetgrid.css" rel="stylesheet" type="text/css" />
+	<link href="css/insm/plugins/insmLoader/insm.loader.css" rel="stylesheet" type="text/css" />
+	<link href="css/insm/plugins/insmListTree/insm.listtree.css" rel="stylesheet" type="text/css" />
+	<link href="css/insm/plugins/insmRegionPicker/insm.regionpicker.css" rel="stylesheet" type="text/css" />
+	<link href="css/insm/plugins/insmFeedbackOverlay/insm.feedbackoverlay.css" rel="stylesheet" type="text/css" />
+	<link href="css/insm/plugins/insmInput/insm.input.css" rel="stylesheet" type="text/css" />
+	<link href="css/insm/plugins/insmInputDate/insm.input.date.css" rel="stylesheet" type="text/css" />
+	<link href="css/insm/plugins/insmInputDateInterval/insm.input.dateinterval.css" rel="stylesheet" type="text/css" />
+	<link href="css/insm/plugins/insmInputTemplateData/insm.input.templatedata.css" rel="stylesheet" type="text/css" />
+	<link href="css/insm/plugins/file/insm.file.css" rel="stylesheet" type="text/css" />
+	<link href="css/insm/modules/menu/insm.menu.css" rel="stylesheet" type="text/css" />
+	<link href="css/insm/modules/systemdetails/insm.systemdetails.css" rel="stylesheet" type="text/css" />
+	<link href="css/insm/modules/assetmanager/insm.assetmanager.css" rel="stylesheet" type="text/css" />
+	<link href="css/insm/modules/playlisteditor/insm.playlisteditor.css" rel="stylesheet" type="text/css" />
+	<link href="css/insm/modules/filemanager/insm.filemanager.css" rel="stylesheet" type="text/css" />
+	<link href="css/insm/modules/statistics/insm.statistics.css" rel="stylesheet" type="text/css" />
+	<link href="css/insm/modules/remote/insm.remote.css" rel="stylesheet" type="text/css" />
+	<link href="css/insm/plugins/insmLogin/insm.login.css" rel="stylesheet" type="text/css" />
+
+	<!-- Modules -->
+	<link href="css/modules/insm.loginform.css" rel="stylesheet" type="text/css" />
+	<link href="css/modules/errorPopup.css" rel="stylesheet" type="text/css" />
+	<link href="css/modules/button.css" rel="stylesheet" type="text/css" />
+	<link href="css/modules/input.css" rel="stylesheet" type="text/css" />
+
+	
+	<!-- Script files -->
+	<!-- jQuery & plugins -->
+	<script type="text/javascript" src="js/jquery/jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="js/jquery/ui/jquery-ui-1.10.3.custom.min.js"></script>
+	<script type="text/javascript" src="js/jquery/ui/touch-punch/jquery-ui.touch-punch-0.2.2.js"></script>
+	<script type="text/javascript" src="js/jquery/json/jquery.json.json2.js"></script>
+	<script type="text/javascript" src="js/jquery/urlencode/jquery.urlencode.js"></script>
+	<script type="text/javascript" src="js/jquery/getUrlParam/jquery.getUrlParam-2.1.js"></script>
+	<script type="text/javascript" src="js/jquery/lodash/lodash.js"></script>
+	<script type="text/javascript" src="js/jquery/center/center.js"></script>
+	
+	<!-- Instoremedia plugins -->
+	<script type="text/javascript" src="js/insm/plugins/insm.utilities.js"></script>
+	<script type="text/javascript" src="js/insm/modules/insm.menu.js"></script>
+	<script type="text/javascript" src="js/insm/modules/insm.systemdetails.js"></script>
+	<script type="text/javascript" src="js/insm/modules/insm.assetmanager.js"></script>
+	<script type="text/javascript" src="js/insm/modules/insm.filemanager.js"></script>
+	<script type="text/javascript" src="js/insm/modules/insm.playlisteditor.js"></script>
+	<script type="text/javascript" src="js/insm/modules/insm.statistics.js"></script>
+	<script type="text/javascript" src="js/insm/modules/insm.remote.js"></script>
+	<script type="text/javascript" src="js/insm/plugins/insm.notification2.js"></script> <!-- New replacing plugin -->
+	<script type="text/javascript" src="js/insm/plugins/insm.notification.js"></script>
+	<script type="text/javascript" src="js/insm/plugins/insm.dialog.js"></script>
+	<script type="text/javascript" src="js/insm/plugins/insm.tooltip.js"></script>
+	<script type="text/javascript" src="js/insm/plugins/insm.searchfield.js"></script>
+	<script type="text/javascript" src="js/insm/plugins/insm.pagination.js"></script>
+	<script type="text/javascript" src="js/insm/plugins/insm.table.js"></script>
+
+	<script type="text/javascript" src="js/insm/plugins/insmPopup/insm.popup.js"></script>
+	<script type="text/javascript" src="js/insm/plugins/insmHashChange/insm.hashchange.js"></script>
+	<script type="text/javascript" src="js/insm/plugins/insmItemGrid/insm.itemgrid.js"></script>
+	<script type="text/javascript" src="js/insm/plugins/insmAsset/insm.asset.js"></script> <!-- New replacing asset plugin -->
+	<script type="text/javascript" src="js/insm/plugins/insmPlayer/insm.player.js"></script> <!-- New replacing player plugin -->
+	<script type="text/javascript" src="js/insm/plugins/insmFile/insm.file.js"></script>
+	<script type="text/javascript" src="js/insm/plugins/insmRegionPicker/insm.regionpicker.js"></script>
+	<script type="text/javascript" src="js/insm/plugins/insmListTree/insm.listtree.js"></script>
+	<script type="text/javascript" src="js/insm/plugins/insmLoader/insm.loader.js"></script>
+	<script type="text/javascript" src="js/insm/plugins/insmProgressHandler/insm.progresshandler.js"></script>
+	<script type="text/javascript" src="js/insm/plugins/insmFeedbackOverlay/insm.feedbackoverlay.js"></script>
+	<script type="text/javascript" src="js/insm/plugins/insmInput/insm.input.js"></script>
+	<script type="text/javascript" src="js/insm/plugins/insmInput/insm.input.date.js"></script>
+	<script type="text/javascript" src="js/insm/plugins/insmInput/insm.input.dateinterval.js"></script>
+	<script type="text/javascript" src="js/insm/plugins/insmInput/insm.input.dateintervalmonth.js"></script>
+	<script type="text/javascript" src="js/insm/plugins/insmInput/insm.input.dateintervalyear.js"></script>
+	<script type="text/javascript" src="js/insm/plugins/insmInput/insm.input.string.js"></script>
+	<script type="text/javascript" src="js/insm/plugins/insmInput/insm.input.integer.js"></script>
+	<script type="text/javascript" src="js/insm/plugins/insmInput/insm.input.boolean.js"></script>
+	<script type="text/javascript" src="js/insm/plugins/insmInput/insm.input.slider.js"></script>
+	<script type="text/javascript" src="js/insm/plugins/insmInput/insm.input.file.js"></script>
+	<script type="text/javascript" src="js/insm/plugins/insmInput/insm.input.assetproperties.js"></script>
+	<script type="text/javascript" src="js/insm/plugins/insmInput/insm.input.fileproperties.js"></script>
+	<script type="text/javascript" src="js/insm/plugins/insmInput/insm.input.table.js"></script>
+	<script type="text/javascript" src="js/insm/plugins/insmInput/insm.input.resolution.js"></script>
+	<script type="text/javascript" src="js/insm/plugins/insmInput/insm.input.upload.js"></script>
+	<script type="text/javascript" src="js/insm/plugins/insmInput/insm.input.templatedata.js"></script>
+
+	<script type="text/javascript" src="js/insm/plugins/insm.asset.js"></script>
+	<script type="text/javascript" src="js/insm/plugins/insm.assetgrid.js"></script>
+	<script type="text/javascript" src="js/insm/plugins/insm.highlight.js"></script>
+	<script type="text/javascript" src="js/insm/plugins/insm.playerpreview.js"></script>
+	<script type="text/javascript" src="js/insm/plugins/insm.login.js"></script>
+	<script type="text/javascript" src="js/insm/framework/insm.service.js"></script>
+	<script type="text/javascript" src="js/insm/framework/insm.service.regiontree.js"></script>
+	<script type="text/javascript" src="js/insm/framework/insm.service.asset.js"></script>
+	<script type="text/javascript" src="js/insm/framework/insm.service.player.js"></script>
+	<script type="text/javascript" src="js/insm/framework/insm.service.unconfiguredplayers.js"></script>
+	<script type="text/javascript" src="js/insm/framework/insm.service.file.js"></script>
+	<script type="text/javascript" src="js/insm/framework/insm.service.playoutstate.js"></script>
+	<script type="text/javascript" src="js/insm/framework/insm.framework.js"></script>
+	<script type="text/javascript" src="js/insm/insm.manifest.js"></script>
+	
+	<!-- Instoremedia config files -->
+	<script src="config/config.js" type="text/javascript"></script>
+	<link href="config/config.css" rel="stylesheet" type="text/css" />
+
+	
+	<script type="text/javascript">
+		$(document).ready(function () {
+			window.onerror = function myErrorHandler(message, url, line) {
+				var fileInfo = url.split('/');
+				fileInfo = fileInfo[fileInfo.length - 1] + ': line ' + line;
+
+				var systemData = $.insmFramework('getSystemInformation');
+
+				var details = $('<div />').insmInput({
+					type: 'table',
+					objectDefinition: {
+						application: {
+							displayName: 'Application',
+							type: 'string',
+							value: systemData.application.name + ' ' + systemData.application.version
+						},
+						apiUrl: {
+							displayName: 'API URL',
+							type: 'string',
+							value: systemData.apiUrl
+						},
+						target: {
+							displayName: 'Target',
+							type: 'string',
+							value: systemData.type + ' ' + systemData.target + ' ' + systemData.version
+						},
+						file: {
+							displayName: 'File',
+							type: 'string',
+							value: fileInfo
+						},
+						message: {
+							displayName: 'Message',
+							type: 'string',
+							value: message
+						}
+					}
+				}).insmInput('view').hide();
+
+				var errorPopup = $.insmPopup({
+					content: $('<div class="errorPopup" />').append(
+						$('<h2 />').text('Sorry, something went wrong!'),
+						$('<p />').text('Sorry, something has gone wrong with the Instoremedia system.'),
+						$('<a />').append(
+						).text('Show details').click(function () {
+							if (details.is(':visible')) {
+								details.hide('slow');
+								$(this).text('Show details');
+								errorPopup.center();
+							}
+							else {
+								details.show('slow');
+								$(this).text('Hide details');
+								errorPopup.center();
+							}
+						}),
+						details
+					),
+					showCloseButton: false,
+					backdropTransparency: false
+				});
+				return false;
+			};
+
+			if (typeof config === 'undefined' || typeof config.apiUrl === 'undefined') {
+				var errorPopup = $.insmPopup({
+					content: $('<div class="errorPopup" />').append(
+						$('<h2 />').text('Unconfigured system'),
+						$('<p />').text('Sorry, the system has not been setup yet. Please try again later or contact your system administrator.'),
+						$('<p />').append(
+							$('<a />').text('Click here to refresh the page').click(function() {
+								location.reload();
+							})
+						)
+					),
+					showCloseButton: false,
+					backdropTransparency: false
+				});
+				//throw new Error('The system needs to be configured correctly. Please contact your system administrator.', 'index.html');
+			}
+			else {
+				$('#content').insmMenu({
+					apiUrl: config.apiUrl,
+					applicationName: 'Remote',
+					customMenu: [{
+						type: 'module',
+						name: 'Remote',
+						plugin: 'insmRemote',
+						div: $('<div />')
+					}]
+				});
+			}
+		});
+	</script>
+</head>
+<body>
+	<div id="container">
+		<div id="content">
+			<noscript>
+				<h1>No JavaScript enabled</h1>
+				<p>Your browser does not support JavaScript or have disabled it and the module will therefor not work. Please use a browser where JavaScript is enabled.</p>
+			</noscript> 
+		</div>
+	</div>
+</body>
+</html>

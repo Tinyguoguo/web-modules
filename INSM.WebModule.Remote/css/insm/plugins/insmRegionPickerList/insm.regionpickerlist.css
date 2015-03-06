@@ -1,0 +1,44 @@
+﻿.regionPickerList > .controls {
+    
+}
+
+.regionPickerList > .controls > a.back {
+    float: left;
+    background: url('../../../../gfx/insm/icons/arrow-left.png') center left no-repeat;
+    padding-left: 16px;
+}
+
+.regionPickerList > .controls > a.choose {
+    float: right;
+    background: url('../../../../gfx/insm/icons/arrow-right.png') center right no-repeat;
+    padding-right: 16px;
+}
+
+.regionPickerList > .controls > h3 {
+    clear: both;
+    padding: 16px;
+    font-size: 14px;
+}
+
+.regionPickerList ul {
+    list-style-type: none;
+}
+
+.regionPickerList ul > li {
+    border-bottom: 1px solid #aaa;
+    padding: 8px 0px;
+    padding-right: 16px;
+    background: url('../../../../gfx/insm/icons/arrow-right.png') center right no-repeat;
+    text-align: left;
+    word-break: break-word;
+}
+
+.regionPickerList ul > li.info {
+    text-align: center;
+    background: none;
+    padding-right: 0px;
+}
+
+.regionPickerList ul > li:last-child {
+    border-bottom: none;
+}

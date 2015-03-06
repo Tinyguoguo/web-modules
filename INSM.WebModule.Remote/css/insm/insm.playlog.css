@@ -1,0 +1,232 @@
+﻿/*
+ *  Layout
+ */
+
+
+.regionTree, .breadcrumbs, .searchField, .assetDistribution, .assetDistributionControls, .inheritInfo
+{
+    display: block;
+    padding: 8px;
+}
+
+.searchField
+{
+    display: inline-block;
+}
+
+.column {
+    display: inline-block;
+}
+
+.inheritCheckbox {
+    display: inline-block;
+}
+
+.column.mainColumn {
+    /*.column width is set inline, so I have to override it with !important. Dont judge.*/
+    width: 70% !important;
+}
+
+
+#content
+{
+    white-space: nowrap;
+}
+
+#main-column
+{
+    width: 700px;
+}
+
+    #main-column table
+    {
+        table-layout: fixed;
+    }
+
+#left-column, #main-column
+{
+    display: inline-block;
+    vertical-align: top;
+}
+
+#left-column
+{
+    margin-right: 60px;
+}
+
+    #left-column .control-panel, #main-column .control-panel
+    {
+        height: 22px;
+        padding: 8px;
+        display: block;
+    }
+
+    #left-column .content, #main-column .content
+    {
+        padding: 8px;
+        display: block;
+    }
+
+    #left-column .control-panel > *, #main-column .control-panel > *
+    {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 4px;
+    }
+
+/*
+ * Notification area
+ */
+
+#insmNotificationContainer
+{
+    position: relative;
+    height: 40px;
+    width: 100%;
+    border-bottom: 1px solid #666;
+}
+
+    #insmNotificationContainer .notification
+    {
+        border: 0px;
+        margin: 0px;
+        padding: 0px;
+        padding-left: 30px;
+        width: 100%;
+        float: left;
+        clear: left;
+        height: 40px;
+        line-height: 40px;
+    }
+
+
+/*
+ * Region tree
+ */
+
+ul.insmListTree li.player > .item-wrapper > .item-icon
+{
+    background-image: url('../../gfx/insm/icons/mediaplayer/mediaplayer.png');
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+}
+
+ul.insmListTree li.player.error > .item-wrapper > .item-icon
+{
+    background-image: url('../../gfx/insm/icons/mediaplayer/mediaplayer_error.png');
+}
+
+ul.insmListTree li.player.warning > .item-wrapper > .item-icon
+{
+    background-image: url('../../gfx/insm/icons/mediaplayer/mediaplayer_warning.png');
+}
+
+ul.insmListTree li.player.ok > .item-wrapper > .item-icon
+{
+    background-image: url('../../gfx/insm/icons/mediaplayer/mediaplayer_ok.png');
+}
+
+ul.insmListTree li.player.transferring > .item-wrapper > .item-icon
+{
+    background-image: url('../../gfx/insm/icons/mediaplayer/mediaplayer_transferring.png');
+}
+
+ul.insmListTree li.player.offline > .item-wrapper > .item-icon
+{
+    background-image: url('../../gfx/insm/icons/mediaplayer/mediaplayer_offline.png');
+}
+
+ul.insmListTree li.region > .item-wrapper > .item-icon
+{
+    background-image: url('../../gfx/insm/icons/region/map.png');
+    background-position: -16px 0px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+}
+
+ul.insmListTree li.region.expanded > .item-wrapper > .item-icon
+{
+    background-position: 0px 0px;
+}
+
+ul.insmListTree li.region.transferring > .item-wrapper > .item-icon
+{
+    background-image: url('../../gfx/insm/icons/region/map.png');
+    background-position: -16px -16px;
+}
+
+ul.insmListTree li.region.expanded.transferring > .item-wrapper > .item-icon
+{
+    background-position: 0px -16px;
+}
+
+ul.insmListTree li.region.ok > .item-wrapper > .item-icon
+{
+    background-image: url('../../gfx/insm/icons/region/map.png');
+    background-position: -16px -32px;
+}
+
+ul.insmListTree li.region.expanded.ok > .item-wrapper > .item-icon
+{
+    background-position: 0px -32px;
+}
+
+ul.insmListTree li.region.offline > .item-wrapper > .item-icon
+{
+    background-image: url('../../gfx/insm/icons/region/map.png');
+    background-position: -16px -48px;
+}
+
+ul.insmListTree li.region.expanded.offline > .item-wrapper > .item-icon
+{
+    background-position: 0px -48px;
+}
+
+ul.insmListTree li.region.warning > .item-wrapper > .item-icon
+{
+    background-image: url('../../gfx/insm/icons/region/map.png');
+    background-position: -16px -64px;
+}
+
+ul.insmListTree li.region.expanded.warning > .item-wrapper > .item-icon
+{
+    background-position: 0px -64px;
+}
+
+ul.insmListTree li.region.error > .item-wrapper > .item-icon
+{
+    background-image: url('../../gfx/insm/icons/region/map.png');
+    background-position: -16px -80px;
+}
+
+ul.insmListTree li.region.expanded.error > .item-wrapper > .item-icon
+{
+    background-position: 0px -80px;
+}
+
+
+.table-type
+{
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px;
+}
+
+    .table-type label
+    {
+        display: block;
+        padding: 3px;
+    }
+
+
+    .table-type input
+    {
+        margin-right: 4px;
+    }
+
+.date-interval, .go, .table, .button.csv, .button.csv.disabled
+{
+    margin: 8px;
+}

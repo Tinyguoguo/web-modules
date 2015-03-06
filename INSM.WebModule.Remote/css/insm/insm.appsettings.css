@@ -1,0 +1,163 @@
+﻿#header
+{
+    background: #000 url('../../gfx/insm/background_tile.jpg') repeat;
+    height: 100px;
+    width: 100%;
+    border-bottom: 1px solid #666;
+}
+
+#header .logo {
+    background: transparent url('../../css/insm/modules/playersettings/playersettings.png') 16px center no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*
+ *  Layout
+ */
+
+
+.regionTree, .searchField {
+    display: block;
+}
+
+.breadcrumbs {
+    display: none;
+}
+
+.breadcrumbs, .searchField {
+    height: 29px;
+    margin-bottom: 10px;
+}
+
+.breadcrumbs > ul > li {
+    height: 29px;
+    line-height: 29px;
+}
+
+.appSettingsControls > a {
+    margin-right: 8px;
+}
+
+.searchField {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.column {
+    display: inline-block;
+    margin-right: 20px;
+    overflow: hidden;
+}
+
+.column-regiontree{
+    width: auto;
+    min-width: 300px;
+}
+
+.column-players{
+    width: auto;
+    min-width: 300px;
+}
+
+#content
+{
+    white-space: nowrap;
+}
+
+.appSettings {
+    padding: 16px;
+}
+
+.appSettingEditor {
+    margin: 16px 0px;
+}
+
+table {
+    width: 100%;
+    background: #f5f5f5;
+    padding: 8px;
+    border-radius: 5px 5px 0px 0px;
+    overflow: hidden;
+}
+
+table tr th {
+    font-weight: bold;
+    background: #2F3437;
+    background: linear-gradient(#2F3437, #262625);
+    color: #f0f0f0;
+    border-bottom: 1px solid #aaa;
+}
+
+#insm-login-form > table {
+    background: none;
+}
+
+
+#insm-login-form > table tr th {
+    background: none;
+}
+
+input {
+    width: 97%;
+}
+
+table tr td {
+    max-width: 400px;
+    vertical-align: middle;
+}
+
+.appSettings > .column > h2 {
+    line-height: 29px;
+    height: 29px;
+    margin-bottom: 10px;
+}
+
+/*
+ * Notification area
+ */
+
+#insmNotificationContainer 
+{
+    position: relative;
+    width: 100%;
+    background: #f0f0f0;
+    border-bottom: 2px solid #666666;
+    height: 45px;
+}
+
+#insmNotificationContainer .notification
+{
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    padding-left: 30px;
+    width: 100%;
+    float: left;
+    clear: left;
+    height: 45px;
+    line-height: 45px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.add-margin-top {
+    margin-top: 10px;
+}
+
+.add-margin-bottom {
+    margin-bottom: 10px;
+}

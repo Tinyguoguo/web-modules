@@ -1,0 +1,146 @@
+.insm-file-browser
+{
+    display: inline-block;
+    width: 1100px;
+    background: #fff;
+}
+
+.insm-file-browser-header
+{
+    background: #2F3437;
+    background: linear-gradient(#2F3437, #262625);
+    cursor: move;
+    height: 35px;
+}
+
+.insm-file-browser-header h2
+{
+    font-size: 16px;
+    padding: 4px;
+    display: inline-block;
+    height: 27px;
+    line-height: 27px;
+    padding-left: 16px;
+    color: #f0f0f0;
+}
+
+.insm-file-browser-header a
+{
+    float: right;
+    margin: 3px;
+}
+
+.insm-file-browser-body
+{
+     overflow:auto;
+}
+
+.insm-file-browser-wrapper
+{
+    overflow-y: scroll;     
+    height: 426px;
+}
+
+.insm-tablesorter-content {
+    height: 20px;
+    min-height: 20px;
+}
+
+.insm-file-browser-list
+{
+    height: 426px;
+    margin-right: 300px;
+}
+
+.insm-file-browser .insm-file-browser-file-info
+{
+    float: right;
+    width: 300px
+}
+
+.insm-file-browser .insm-file-browser-file-info div
+{
+    width: 300px;
+}
+
+.insm-file-browser .insm-file-browser-footer
+{
+    border-top: 2px solid #666666;
+}
+
+.insm-file-browser .insm-file-browser-footer a
+{
+    float: right;
+    margin: 3px;
+}
+
+
+.insm-file-browser table {
+    margin-bottom: 0px;
+    table-layout: auto;
+}
+
+.insm-file-browser .view-tree
+{
+    width: 299px;
+    border-right: 1px solid #000;
+    display: inline-block;
+    overflow: auto;
+    float:left;
+}
+
+.insm-file-browser-container .view-tree ul
+{
+    display: table;
+}
+
+span.contentDirectory span.dynatree-icon
+{
+    background-position: 0 0;
+    background-image: url('../../gfx/icons/tree/content-directory.png');
+}
+
+span.dynatree-icon
+{
+    background-position: 0 0;
+    background-image: url('../../gfx/icons/tree/region.png') important;
+}
+
+.insm-file-browser-container .view-list
+{
+    display: inline-block;
+    overflow: auto;
+    width: 500px;
+}
+
+tr.show-file
+{
+    cursor: pointer;
+}
+
+.insm-file-browser-container .view-file {
+    overflow: auto;
+}
+
+.insm-file-browser-container .view-file .preview *
+{
+    max-width: 191px;
+}
+
+.insm-file-browser-container .view-file .info
+{
+    width: 195px;
+}
+
+.insm-file-browser-container .view-file .info table
+{
+    width: 191px;
+    overflow: auto;
+    display: block;
+}
+
+
+.padding 
+{
+    padding: 4px;
+}

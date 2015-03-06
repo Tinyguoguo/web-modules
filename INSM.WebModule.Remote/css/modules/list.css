@@ -1,0 +1,11 @@
+﻿li.is-clickable:hover {
+    background-color: #fea;
+}
+
+li.is-selected {
+    background-color: #9797e2;
+}
+
+li.is-selected.is-clickable:hover {
+    background-color: #adade9;
+}

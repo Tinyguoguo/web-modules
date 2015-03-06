@@ -1,0 +1,257 @@
+﻿ul.insmListTree ul
+{
+    padding-left: 25px;
+}
+
+ul.insmListTree li
+{
+    list-style-type: none;
+    background: url('li-row.png') 11px 0px repeat-y;
+    list-style-position: outside;
+}
+
+ul.insmListTree li:last-child
+{
+    background: url('li-last.png') 11px 0px no-repeat;
+}
+
+ul.insmListTree li.root
+{
+    background: none;
+}
+
+ul.insmListTree li .item-wrapper
+{
+    display: block;
+    padding: 4px 0;
+}
+
+ul.insmListTree li .item-wrapper.highlight .item-text
+{
+    background-color: #cce;
+    border-radius: 4px;
+}
+
+/* Item connectors */
+ul.insmListTree li .item-connector
+{
+    width: 24px;
+    height: 24px;
+    background-image: url('li-connector-large.png');
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Node item */
+ul.insmListTree li > .item-wrapper > .item-connector
+{
+    background-position: 0px -32px;
+}
+
+ul.insmListTree li.expanded > .item-wrapper > .item-connector
+{
+    /*background-position: -16px -32px;*/
+}
+
+ul.insmListTree li.leaf > .item-wrapper > .item-connector
+{
+    background-position: -32px -32px;
+}
+
+ul.insmListTree li > .item-wrapper > .item-connector
+{
+    background-position: -3px -3px;
+}
+
+ul.insmListTree li.expanded > .item-wrapper > .item-connector
+{
+    background-position: -3px -28px;
+}
+
+ul.insmListTree li.leaf > .item-wrapper > .item-connector
+{
+    background-position: -52px -32px;
+}
+
+ul.insmListTree li > .item-wrapper > .item-connector:hover
+{
+    background-position: 0px -48px;
+}
+
+ul.insmListTree li.expanded > .item-wrapper > .item-connector:hover
+{
+    background-position: -16px -48px;
+}
+
+ul.insmListTree li.leaf > .item-wrapper > .item-connector:hover
+{
+    background-position: -32px -48px;
+}
+
+ul.insmListTree li > .item-wrapper > .item-connector:hover
+{
+    background-position: -29px -3px;
+}
+
+ul.insmListTree li.expanded > .item-wrapper > .item-connector:hover
+{
+    background-position: -29px -28px;
+}
+
+ul.insmListTree li.leaf > .item-wrapper > .item-connector:hover
+{
+    background-position: -80px -48px;
+}
+
+/* Root item */
+/*ul.insmListTree li.root > .item-wrapper > .item-connector
+{
+    background-position: 0px 0px;
+}
+
+ul.insmListTree li.root.expanded > .item-wrapper > .item-connector
+{
+    background-position: -16px 0px;
+}
+
+ul.insmListTree li.root.leaf > .item-wrapper > .item-connector
+{
+    background-position: -32px 0px;
+}
+
+ul.insmListTree li.root:last-child > .item-wrapper > .item-connector
+{
+    background-position: -48px 0px;
+}
+
+ul.insmListTree li.root.expanded:last-child > .item-wrapper > .item-connector
+{
+    background-position: -64px 0px;
+}
+
+ul.insmListTree li.root.leaf:last-child > .item-wrapper > .item-connector
+{
+    background-position: -80px 0px;
+}
+
+ul.insmListTree li.root > .item-wrapper > .item-connector:hover
+{
+    background-position: 0px -16px;
+}
+
+ul.insmListTree li.root.expanded > .item-wrapper > .item-connector:hover
+{
+    background-position: -16px -16px;
+}
+
+ul.insmListTree li.root.leaf > .item-wrapper > .item-connector:hover
+{
+    background-position: -32px -16px;
+}
+
+ul.insmListTree li.root:last-child > .item-wrapper > .item-connector:hover
+{
+    background-position: -48px -16px;
+}
+
+ul.insmListTree li.root.expanded:last-child > .item-wrapper > .item-connector:hover
+{
+    background-position: -64px -16px;
+}
+
+ul.insmListTree li.root.leaf:last-child > .item-wrapper > .item-connector:hover
+{
+    background-position: -80px -16px;
+}*/
+
+/*
+ * Checkbox
+ */
+ 
+ul.insmListTree li .item-checkbox
+{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    background: url('checkbox-map.png') 0px 0px no-repeat;
+}
+
+ul.insmListTree li .item-checkbox:hover
+{
+    background-position: -16px 0px;
+}
+
+ul.insmListTree li .item-checkbox.selected
+{
+    background-position: -32px 0px;
+}
+
+ul.insmListTree li .item-checkbox.selected:hover
+{
+    background-position: -48px 0px;
+}
+
+ul.insmListTree li .item-checkbox.partial
+{
+    background-position: -64px 0px;
+}
+
+ul.insmListTree li .item-checkbox.partial:hover
+{
+    background-position: -80px 0px;
+}
+
+/*
+ * Icon
+ */
+
+ul.insmListTree li .item-icon
+{
+    background-image: url('map.png');
+    background-position: 0px -26px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    vertical-align: middle;
+}
+
+ul.insmListTree li.player .item-icon
+{
+    background-image: url('player-map.png');
+}
+
+/* Expanded */
+ul.insmListTree li.expanded > .item-wrapper .item-icon {
+    background-position: -26px -26px;
+}
+
+/*
+ * Text
+ */
+
+ul.insmListTree li .item-text 
+{
+    vertical-align: middle;
+    line-height: 16px;
+    padding: 10px 8px;
+    font-size: 14px;
+}
+ul.insmListTree li .item-text div
+{
+    vertical-align: middle;
+    line-height: 16px;
+    padding: 10px 8px;
+    font-size: 14px;
+}
+ul.insmListTree li .item-text.clickable
+{
+    cursor: pointer;
+}
+
+/* States */
+ul.insmListTree li.is-highlighted
+{
+    background-color: #fea;
+}

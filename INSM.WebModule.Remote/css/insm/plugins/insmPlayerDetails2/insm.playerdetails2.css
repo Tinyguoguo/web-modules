@@ -1,0 +1,90 @@
+﻿.insm-player-details2 .info-box {
+	float: left;
+	padding: 8px;
+}
+
+.insm-player-details2 .info-box a {
+	margin-right: 8px;
+}
+.insm-player-details2 .historycontainer {
+	height:350px;
+	overflow-y:auto;
+	width:326px;
+	margin-top: 10px;
+	padding-bottom: 18px;
+	display:inline-block;
+
+}
+.insm-player-details2 .historytable tr td h5 {
+	height:50px;
+	line-height:50px;
+
+}
+.insm-player-details2 .historyinfocontainer {
+	height:350px;
+	border:solid;
+	border-width:1px;
+	min-width:253px;
+	display:inline-block;
+	margin-left:30px;
+	margin-top: 10px;
+	width:253px;
+}
+
+.insm-player-details2 .info-box ul {
+	padding:10px 15px;
+}
+
+.insm-player-details2 .section {
+	display: table;
+}
+
+.insm-player-details2-popup {
+	background: #fff;
+	overflow: auto;
+	max-height: 700px;
+	width: 100%;
+}
+
+.insm-player-details2-popup > h5 {
+	margin-top: 0px;
+	padding: 16px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.insm-player-details2-popup > p {
+	padding: 16px;
+	padding-top: 0px;
+	margin:5px;
+}
+
+.insm-player-details2-popup > p  > table {
+	width: 100%;
+	background-color: #fff;
+}
+
+.insm-player-details2-popup tr th, .insm-player-details2-popup tr td {
+	border: 1px solid #c5c5c5;
+}
+
+.insm-player-details2 table.event-log tr td {
+	border: 1px solid #c5c5c5;
+}
+.insm-player-details2 table
+{
+	border-collapse: collapse;
+	margin-bottom: 6px;
+	background-color: #fff;
+}
+.insm-player-details2 table.vertical tr th, table.vertical tr td
+{
+	text-align: left;
+	vertical-align: top;
+}
+.insm-player-details2 table.no-padding tr th, table.no-padding tr td 
+{   text-align:center;
+	padding-bottom: 0;
+	padding-top:0;
+}

@@ -1,0 +1,57 @@
+﻿body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.generateBox {
+    height: 20px;
+    width: 50px;
+    background-color: #00ff90;
+    display: none;
+}
+
+.insm-playlist-manager-interactive-volumebar-startup {
+    /*background-image: url('images/volume4.png');*/
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.6;
+    background-size: 20px 20px;
+}
+
+.insm-playlist-manager-interactive-volumeUI {
+    cursor: pointer;
+    display: block;
+    padding: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+.insm-playlist-manager-interactive-volumebar-popupBox {
+    height: 120px;
+    width: 150px;
+    border: 5px solid rgb(230,230,230);
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    z-index: 10000;
+}
+
+.insm-playlist-manager-interactive-volumebar-phase1 {
+    background-image: url(volume1.png);
+}
+
+.insm-playlist-manager-interactive-volumebar-phase2 {
+    background-image: url(volume2.png);
+}
+
+.insm-playlist-manager-interactive-volumebar-phase3 {
+    background-image: url(volume3.png);
+}
+
+.insm-playlist-manager-interactive-volumebar-phase4 {
+    background-image: url(volume4.png);
+}

@@ -1,0 +1,48 @@
+﻿.boldBtn {
+    background-image: url(toolIcones/b.JPG);
+}
+.boldClickBtn {
+    background-image: url(toolIcones/cb.JPG);
+}
+.italicBtn {
+    background-image: url(toolIcones/i.JPG);
+}
+.italicClickBtn {
+    background-image: url(toolIcones/ci.JPG);
+}
+.shadowBtn {
+    background-image: url(toolIcones/a.JPG);
+}
+.shadowClickBtn {
+    background-image: url(toolIcones/ca.JPG);
+}
+.leftBtn {
+    background-image: url(toolIcones/left.JPG);
+}
+.leftClickBtn {
+    background-image: url(toolIcones/cleft.JPG);
+}
+.centerBtn {
+    background-image: url(toolIcones/center.JPG);
+}
+.centerClickBtn {
+    background-image: url(toolIcones/ccenter.JPG);
+}
+.rightBtn {
+    background-image: url(toolIcones/right.JPG);
+}
+.rightClickBtn {
+    background-image: url(toolIcones/cright.JPG);
+}
+.imgBtn {
+    background-repeat: no-repeat;
+    height: 28px;
+    width: 28px;
+}
+.marginLeft {
+    margin-left: 5px;
+}
+.alignBtns {
+    margin-left: 3px;
+}
+

@@ -1,0 +1,95 @@
+﻿.insmPagination
+{
+    display: table;
+    float: right;
+    white-space: nowrap;
+}
+
+.insmPagination > button
+{
+    float: left;
+    width: 30px;
+    margin-left: 2px;
+    margin-right: 2px;
+    height: 30px;
+    
+    background: #ffffff;
+	background: -moz-linear-gradient(top, #ffffff 0%, #f0f0f0 100%);
+	background: -webkit-gradient(linear, 0% 0%,0% 100%, from(#ffffff), to(#f0f0f0));
+	background: -webkit-linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background: -o-linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background: -ms-linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background: linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+
+    box-shadow: 0px 2px 0px 0px rgba(150, 150, 150, 0.1);
+}
+
+.insmPagination > button.first
+{
+    background: #ffffff url("first.png") center center no-repeat;
+	background: #ffffff url("first.png") center center no-repeat, -moz-linear-gradient(top, #ffffff 0%, #f0f0f0 100%);
+	background: #ffffff url("first.png") center center no-repeat, -webkit-gradient(linear, 0% 0%,0% 100%, from(#ffffff), to(#f0f0f0));
+	background: #ffffff url("first.png") center center no-repeat, -webkit-linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background: #ffffff url("first.png") center center no-repeat, -o-linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background: #ffffff url("first.png") center center no-repeat, -ms-linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background: #ffffff url("first.png") center center no-repeat, linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+}
+
+.insmPagination > button.previous
+{
+    background: #ffffff url("previous.png") center center no-repeat;
+	background: #ffffff url("previous.png") center center no-repeat, -moz-linear-gradient(top, #ffffff 0%, #f0f0f0 100%);
+	background: #ffffff url("previous.png") center center no-repeat, -webkit-gradient(linear, 0% 0%,0% 100%, from(#ffffff), to(#f0f0f0));
+	background: #ffffff url("previous.png") center center no-repeat, -webkit-linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background: #ffffff url("previous.png") center center no-repeat, -o-linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background: #ffffff url("previous.png") center center no-repeat, -ms-linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background: #ffffff url("previous.png") center center no-repeat, linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+}
+
+.insmPagination > button.next
+{
+    background: #ffffff url("next.png") center center no-repeat;
+	background: #ffffff url("next.png") center center no-repeat, -moz-linear-gradient(top, #ffffff 0%, #f0f0f0 100%);
+	background: #ffffff url("next.png") center center no-repeat, -webkit-gradient(linear, 0% 0%,0% 100%, from(#ffffff), to(#f0f0f0));
+	background: #ffffff url("next.png") center center no-repeat, -webkit-linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background: #ffffff url("next.png") center center no-repeat, -o-linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background: #ffffff url("next.png") center center no-repeat, -ms-linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background: #ffffff url("next.png") center center no-repeat, linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+}
+
+.insmPagination > button.last
+{
+    background: #ffffff url("last.png") center center no-repeat;
+	background: #ffffff url("last.png") center center no-repeat, -moz-linear-gradient(top, #ffffff 0%, #f0f0f0 100%);
+	background: #ffffff url("last.png") center center no-repeat, -webkit-gradient(linear, 0% 0%,0% 100%, from(#ffffff), to(#f0f0f0));
+	background: #ffffff url("last.png") center center no-repeat, -webkit-linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background: #ffffff url("last.png") center center no-repeat, -o-linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background: #ffffff url("last.png") center center no-repeat, -ms-linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background: #ffffff url("last.png") center center no-repeat, linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+}
+
+.insmPagination > button:hover
+{
+
+}
+
+.insmPagination > .pages
+{
+    float: left;
+    margin: 0px 4px;
+}
+
+.insmPagination > .pages > a
+{
+    line-height: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #aaa;
+    margin: 0px 4px;
+}
+
+.insmPagination > .pages > a.is-selected
+{
+    font-weight: bold;
+    color: #404040;
+}

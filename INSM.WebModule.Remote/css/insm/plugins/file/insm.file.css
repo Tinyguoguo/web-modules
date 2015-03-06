@@ -1,0 +1,47 @@
+﻿.file-viewer {
+    padding: 8px;
+}
+
+.file-viewer .property-container {
+    float: left;
+}
+
+.file-viewer > .preview {
+    width: 300px;
+    height: 280px;
+    float: left;
+    margin-left: 8px;
+    padding-left: 8px;
+    border-left: 1px solid #eaeaea;
+}
+
+.file-viewer > .preview > img {
+    max-width: 300px;
+    max-height: 280px;
+}
+
+.file-viewer .inputTable {
+    width: 260px;
+}
+
+.file-viewer .browse-file {
+    width: 252px;
+    background: #f5f5f5;
+    height: 26px;
+    line-height: 26px;
+    padding: 4px;
+}
+
+.file-viewer .divider {
+    width: 244px;
+    border-bottom: 1px solid #eaeaea;
+    margin: 8px 8px;
+}
+
+.file-viewer .inputTable table {
+    width: 100%;
+}
+
+.file-viewer .inputTable table th {
+    width: 80px;
+}
