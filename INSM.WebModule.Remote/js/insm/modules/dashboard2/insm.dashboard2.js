@@ -15,6 +15,7 @@
 * Guo Yang
 * Instoremedia AB
 */
+//test
 
 (function ($) {
 	var methods = {
