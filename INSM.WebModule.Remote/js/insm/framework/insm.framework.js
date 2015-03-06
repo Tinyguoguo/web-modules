@@ -363,23 +363,24 @@
 			var data = {
 				success: function (player) {
 					// Parse the player
-					var parsePlayer = {};
-					parsePlayer = $.insmFramework('playerDecode', player);
+
+					player = $.insmFramework('playerDecode', player);
 					$.insmFramework('getPlayerProperties', {
-						playerId: parsePlayer.id,
+						playerId: player.id,
 						success: function (playerProperties) {
-							$.extend(parsePlayer, playerProperties);
+							$.extend(player, playerProperties);
+
 							$.insmFramework('getPlayers', {
 								success: function (players) {
 									var playerFound = false;
 									$.each(players, function (index, p) {
-										if (p.upid == parsePlayer.upid) {
-											$.extend(parsePlayer, p);
+										if (p.upid == player.upid) {
+											$.extend(player, p);
 											playerFound = true;
 										}
 									});
 									if (playerFound) {
-										options.success(parsePlayer);
+										options.success(player);
 									}
 									else {
 										options.unauthorized();
@@ -417,10 +418,9 @@
 			var data = {
 				success: function (player) {
 					// Parse the player
-					var parsePlayer = {};
-					parsePlayer = $.insmFramework('playerDecode', player);
+					player = $.insmFramework('playerDecode', player);
 				   
-					options.success(parsePlayer);
+					options.success(player);
 				},
 				denied: function () {
 					// Just do it again and we should land in the success callback next time
@@ -436,6 +436,7 @@
 		playerDecode: function (player) {
 			var $this = $('html').eq(0);
 			var _plugin = $this.data('insmFramework');
+
 			var prettyPlayer = {};
 			var objectType = '';
 
@@ -453,70 +454,51 @@
 					prettyPlayer.state = player.Status.State;
 					prettyPlayer.eventId = player.Status.EventId;
 					if (player.FulfilmentStatus) {
-						prettyPlayer.fulfilmentState = player.FulfilmentStatus.State;
+					prettyPlayer.fulfilmentState = player.FulfilmentStatus.State;
 					}
-					prettyPlayer.message = player.Status.Message;		
-					prettyPlayer.samples = $.extend(true, {},player.Status.Samples);
-					prettyPlayer.messageLog = $.extend(true, {}, player.Status.MessageLog.Log);
+					prettyPlayer.message = player.Status.Message;
+					prettyPlayer.samples = player.Status.Samples;
 					prettyPlayer.ipAddress = player.IPAddress;
 					prettyPlayer.computerName = player.SystemInfo.ComputerName;
 					prettyPlayer.peer = player.SystemInfo.Peer;
 					prettyPlayer.operatingSystem = player.SystemInfo.OS;
 					prettyPlayer.version = player.SystemInfo.Version;
-					prettyPlayer.monitoredProcesses = $.extend(true, {}, player.MonitoredProcesses);
-					prettyPlayer.processes = $.extend(true, {}, player.Processes);
-					prettyPlayer.playerViews = $.extend(true, {}, player.PlayerViews);
-					prettyPlayer.eventLog = $.extend(true, {}, player.EventLog);
-					prettyPlayer.plugins = $.extend(true, {}, player.Plugins);
-					prettyPlayer.displayDevices = $.extend(true, {},player.DisplayDevices);
-					prettyPlayer.downloadedFileIds = [];
-					$.each(player.DownloadedFileIds, function (index, number) {
-						prettyPlayer.downloadedFileIds.push(number);
-					})
-					prettyPlayer.monitors = $.extend(true, {}, player.Monitors);
+					prettyPlayer.monitoredProcesses = player.MonitoredProcesses;
+					prettyPlayer.processes = player.Processes;
+					prettyPlayer.playerViews = player.PlayerViews;
+					prettyPlayer.eventLog = player.EventLog;
+					prettyPlayer.plugins = player.Plugins;
+					prettyPlayer.displayDevices = player.DisplayDevices;
+					prettyPlayer.downloadedFileIds = player.DownloadedFileIds;
+					prettyPlayer.monitors = player.Monitors;
 					prettyPlayer.playerStatus = {
 						state: player.PlayerStatus.State,
 						message: player.PlayerStatus.Message,
-						timestamp: player.PlayerStatus.Timestamp,
-						eventId: player.PlayerStatus.EventId
-					};
-					prettyPlayer.status = {
-						state: player.Status.State,
-						message: player.Status.Message,
-						timestamp: player.Status.Timestamp,
-						eventId: player.Status.EventId
+						timestamp: player.PlayerStatus.Timestamp
 					};
 					prettyPlayer.fulfilmentStatus = {
 						state: player.FulfilmentStatus.State,
 						message: player.FulfilmentStatus.Message,
-						eventId: player.FulfilmentStatus.EventId
 					};
 					prettyPlayer.uptimeStatus = {
 						state: player.UptimeStatus.State,
 						message: player.UptimeStatus.Message,
-						timestamp: player.UptimeStatus.Timestamp,
-						eventId: player.UptimeStatus.EventId
-						
+						timestamp: player.UptimeStatus.Timestamp
 					};
 					prettyPlayer.onlineStatus = {
 						state: player.OnlineStatus.State,
 						message: player.OnlineStatus.Message,
-						timestamp: player.OnlineStatus.Timestamp,
-						eventId: player.OnlineStatus.EventId
+						timestamp: player.OnlineStatus.Timestamp
 					};
 					prettyPlayer.contentStatus = {
 						state: player.ContentStatus.State,
 						message: player.ContentStatus.Message,
-						timestamp: player.ContentStatus.Timestamp,
-						eventId: player.ContentStatus.EventId
-
+						timestamp: player.ContentStatus.Timestamp
 					};
 					prettyPlayer.localStatus = {
 						state: player.LocalStatus.State,
 						message: player.LocalStatus.Message,
-						timestamp: player.LocalStatus.Timestamp,
-						eventId: player.LocalStatus.EventId
-						
+						timestamp: player.LocalStatus.Timestamp
 					};
 					prettyPlayer.diskUsage = {
 						current: player.DiskUsage.Current,
@@ -530,17 +512,17 @@
 					};
 					prettyPlayer.CPUUsage = {
 						lowerBound: player.CPUUsage.LowerBound,
-						samples: $.extend(true, {},player.CPUUsage.Samples)
+						samples: player.CPUUsage.Samples
 					};
 					prettyPlayer.networkUsage = {
-						samples: $.extend(true, {},player.NetworkUsage.Samples),
+						samples: player.NetworkUsage.Samples,
 						lowerBound: player.NetworkUsage.LowerBound,
 						upperBound: player.NetworkUsage.UpperBound,
 					};
 					prettyPlayer.temperature = {
 						lowerBound: player.Temperature.LowerBound,
 						upperBound: player.Temperature.UpperBound,
-						samples: $.extend(true, {}, player.Temperature.Samples)
+						samples: player.Temperature.Samples
 					};
 					prettyPlayer.systemInfo = {
 						type: player.SystemInfo.Type,
@@ -556,8 +538,7 @@
 						version: player.Transfer.Version,
 						onDemandStatus: {
 							state: player.Transfer.OnDemandStatus.State,
-							message: player.Transfer.OnDemandStatus.Message,
-							eventId: player.Transfer.OnDemandStatus.EventId
+							message: player.Transfer.OnDemandStatus.Message
 						}
 					};
 					prettyPlayer.fileTransfer = player.FileTransfer;
@@ -566,50 +547,41 @@
 							state: player.Service.KeepAlive.Status.State,
 							message: player.Service.KeepAlive.Status.Message,
 							timestamp: player.Service.KeepAlive.Status.Timestamp,
-							eventId: player.Service.KeepAlive.Status.EventId
-
 						},
 						player: {
 							state: player.Service.Player.Status.State,
 							message: player.Service.Player.Status.Message,
 							timestamp: player.Service.Player.Status.Timestamp,
-							eventId: player.Service.Player.Status.EventId
 						},
 						transfer: {
 							state: player.Service.Transfer.Status.State,
 							message: player.Service.Transfer.Status.Message,
 							timestamp: player.Service.Transfer.Status.Timestamp,
-							eventId: player.Service.Transfer.Status.EventId
 						},
 						maintenance: {
 							state: player.Service.Maintenance.Status.State,
 							message: player.Service.Maintenance.Status.Message,
 							timestamp: player.Service.Maintenance.Status.Timestamp,
-							eventId: player.Service.Maintenance.Status.EventId
 						},
 						diagnostics: {
 							state: player.Service.Diagnostics.Status.State,
 							message: player.Service.Diagnostics.Status.Message,
 							timestamp: player.Service.Diagnostics.Status.Timestamp,
-							eventId: player.Service.Diagnostics.Status.EventId
 						},
 						report: {
 							state: player.Service.Report.Status.State,
 							message: player.Service.Report.Status.Message,
 							timestamp: player.Service.Report.Status.Timestamp,
-							eventId: player.Service.Report.Status.EventId
 						},
 						server: {
 							state: player.Service.Server.Status.State,
 							message: player.Service.Server.Status.Message,
 							timestamp: player.Service.Server.Status.Timestamp,
-							eventId: player.Service.Server.Status.EventId
 						},
 						web: {
 							state: player.Service.Web.Status.State,
 							message: player.Service.Web.Status.Message,
 							timestamp: player.Service.Web.Status.Timestamp,
-							eventId: player.Service.Web.Status.EventId
 						}
 					};
 					break;
@@ -617,14 +589,19 @@
 					prettyPlayer.id = player.UPId;
 					prettyPlayer.upid = player.UPId;
 					prettyPlayer.name = player.Name;
+					prettyPlayer.state = player.State;
+					prettyPlayer.eventId = player.EventId;
+					prettyPlayer.fulfilmentState = player.Fulfilment;
+					prettyPlayer.message = player.Message || "";
 					prettyPlayer.version = player.Version;
-					prettyPlayer.ipAddress = player.IPAddress;
+					prettyPlayer.description = player.Description;
+					prettyPlayer.ipAddress = player.IP;
 					prettyPlayer.port = parseInt(player.Port) || 80;
 					prettyPlayer.region = {
 						id: player.RegionId
 					}
-					prettyPlayer.displayLayout = $.extend(true, {},player.DisplayLayout);
-					prettyPlayer.channelLayout = $.extend(true, {},player.ChannelLayout);
+					prettyPlayer.displayLayout = player.DisplayLayout;
+					prettyPlayer.channelLayout = player.ChannelLayout;
 					prettyPlayer.channels = player.Channels;
 					/*prettyPlayer.screenLayout = {
 						name: 'Landscape',
@@ -692,20 +669,20 @@
 
 			// Format stuff better
 			// Workaround since the server can't handle error states
-			//if (prettyPlayer.state === 'Error') {
-			//	if (prettyPlayer.message.substring(0, 7) === 'Offline') {
-			//		prettyPlayer.state = 'Offline';
-			//	}
-			//}
-			//if (prettyPlayer.state === 'Unset') {
-			//	prettyPlayer.state = 'Unknown';
-			//}
-			//if (prettyPlayer.version) {
-			//	prettyPlayer.version = prettyPlayer.version.substring(0, 3) + '.' + prettyPlayer.version.substring(11, 15);
-			//}
-			//else {
-			//	prettyPlayer.version = 'Unknown';
-			//}
+			if (prettyPlayer.state === 'Error') {
+				if (prettyPlayer.message.substring(0, 7) === 'Offline') {
+					prettyPlayer.state = 'Offline';
+				}
+			}
+			if (prettyPlayer.state === 'Unset') {
+				prettyPlayer.state = 'Unknown';
+			}
+			if (prettyPlayer.version) {
+				prettyPlayer.version = prettyPlayer.version.substring(0, 3) + '.' + prettyPlayer.version.substring(11, 15);
+			}
+			else {
+				prettyPlayer.version = 'Unknown';
+			}
 
 			// Update cache
 			if (!_plugin.cache.players[prettyPlayer.id]) {
@@ -714,8 +691,7 @@
 			
 			_plugin.cache.players[prettyPlayer.id] = $.extend(true, {}, _plugin.cache.players[prettyPlayer.id], prettyPlayer);
 
-			//return $.extend(true,{},_plugin.cache.players[prettyPlayer.id]);
-			return prettyPlayer;
+			return $.extend(true,{},_plugin.cache.players[prettyPlayer.id]);
 		},
 		playerEncode: function (prettyPlayer) {
 			var $this = $('html').eq(0);
@@ -1160,12 +1136,13 @@
 			var data = {
 				method: 'SetItems',
 				removeAllReferences: false,
-				//recursive: true,
+				recursive: true,
 				value: options.dataset.value,
 				regionId: options.dataset.regionId,
 				datasetItemKey: options.dataset.itemKey,
 				datasetItemType: "DataSet",
 				success: function (receivedMessage) {
+				    console.log(receivedMessage);
 					options.success();
 				},
 				error: function (message) {
@@ -4591,23 +4568,6 @@
 						params: callbacks
 					});
 				}
-			});
-		},
-		checkLatestVersionId:function(options){
-			var $this = $('html').eq(0);
-			var _plugin = $this.data('insmFramework');
-			var data = {
-				method: 'GetLatestVersionId',
-				success: function (data) {
-					options.success(data);
-				},
-				denied: function () {
-					$.insmFramework('checkLatestVersionId', options);
-				}
-			};
-			return $.insmFramework('ajax', {
-				url: _plugin.settings.apiUrl + '/VersionUpdates.aspx',
-				data: data
 			});
 		},
 		insertModuleInformation: function () {

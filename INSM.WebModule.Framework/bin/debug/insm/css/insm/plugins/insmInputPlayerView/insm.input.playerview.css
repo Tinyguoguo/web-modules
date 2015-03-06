@@ -1,0 +1,7 @@
+﻿.insm-input-playerview a {
+    
+}
+
+.insm-input-playerview a.is-selected {
+    font-weight: bold;
+}

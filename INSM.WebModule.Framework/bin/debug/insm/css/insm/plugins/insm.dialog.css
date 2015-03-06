@@ -1,0 +1,11 @@
+﻿.insm-dialog.container {
+    text-align: center;
+    background-color: #ffffff;
+    border: 1px solid #c5c5c5;
+    padding: 15px 30px;
+    box-shadow: 0px 0px 40px #666;
+}
+
+.insm-dialog.container .buttons-container button:first-child {
+    margin-right: 10px;
+}

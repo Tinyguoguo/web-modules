@@ -427,7 +427,7 @@
 									title: 'Player Service',
 									status: player.service.player.state,
 									tooltip: 'State of the Player Service that is responsible for starting player and plugin service.',
-									popup: $('<div />').addClass('insm-player-details2-popup').append(
+									popup: $('<div />').addClass('insm-player-details-popup').append(
 										$('<h5 />').text('Player Service')
 									).append(
 										$('<p />').append(
@@ -456,7 +456,7 @@
 									title: 'Keep-alive Service',
 									status: player.service.keepAlive.state,
 									tooltip: 'State of the keep alive service that is responsible for starting the player service in the visual session and starting monitored processes',
-									popup: $('<div />').addClass('insm-player-details2-popup').append(
+									popup: $('<div />').addClass('insm-player-details-popup').append(
 										$('<h5 />').text('Keep-alive Service')
 									).append(
 										$('<p />').append(
@@ -485,7 +485,7 @@
 									title: 'Transfer Service',
 									status: player.service.transfer.state,
 									tooltip: 'State of the transfer service that is responsible for file and information from the AMS via other Media Players.',
-									popup: $('<div />').addClass('insm-player-details2-popup').append(
+									popup: $('<div />').addClass('insm-player-details-popup').append(
 										$('<h5 />').text('Transfer Service')
 									).append(
 										$('<p />').append(
@@ -514,7 +514,7 @@
 									title: 'Maintenance Service',
 									status: player.service.maintenance.state,
 									tooltip: 'State of the maintenance service that is responsible for execution of maintenance tasks and commands issues by the AMS.',
-									popup: $('<div />').addClass('insm-player-details2-popup').append(
+									popup: $('<div />').addClass('insm-player-details-popup').append(
 										$('<h5 />').text('Maintenance Service')
 									).append(
 										$('<p />').append(
@@ -543,7 +543,7 @@
 									title: 'Diagnostics Service',
 									status: player.service.diagnostics.state,
 									tooltip: 'State of the diagnostics service that is responsible for collecting diagnostics information.',
-									popup: $('<div />').addClass('insm-player-details2-popup').append(
+									popup: $('<div />').addClass('insm-player-details-popup').append(
 										$('<h5 />').text('Diagnostics Service')
 									).append(
 										$('<p />').append(
@@ -572,7 +572,7 @@
 									title: 'Report Service',
 									status: player.service.report.state,
 									tooltip: 'State of the diagnostics service that is responsible for sending diagnostics and statistics to the AMS via other media players.',
-									popup: $('<div />').addClass('insm-player-details2-popup').append(
+									popup: $('<div />').addClass('insm-player-details-popup').append(
 										$('<h5 />').text('Report Service')
 									).append(
 										$('<p />').append(
@@ -601,7 +601,7 @@
 									title: 'Server Service',
 									status: player.service.server.state,
 									tooltip: 'State of the server service that is responsible for communication from other media players.',
-									popup: $('<div />').addClass('insm-player-details2-popup').append(
+									popup: $('<div />').addClass('insm-player-details-popup').append(
 										$('<h5 />').text('Server Service')
 									).append(
 										$('<p />').append(
@@ -630,7 +630,7 @@
 									title: 'Web Service',
 									status: player.service.web.state,
 									tooltip: 'State of the web service that serves the RESR API for local integration and web templates.',
-									popup: $('<div />').addClass('insm-player-details2-popup').append(
+									popup: $('<div />').addClass('insm-player-details-popup').append(
 										$('<h5 />').text('Web Service')
 									).append(
 										$('<p />').append(
@@ -667,7 +667,7 @@
 								title: 'Player Status',
 								status: player.playerStatus.state,
 								tooltip: 'State of the process that is playing a template or file.',
-								popup: $('<div />').addClass('insm-player-details2-popup').append(
+								popup: $('<div />').addClass('insm-player-details-popup').append(
 									$('<h5 />').text('Player Status')
 								).append(
 									$('<p />').append(
@@ -696,7 +696,7 @@
 								title: 'Shutdown Monitoring Status',
 								status: player.uptimeStatus?player.uptimeStatus.state:'Unknown',
 								tooltip: 'State of the player unexpect shutdown.',
-								popup: $('<div />').addClass('insm-player-details2-popup').append(
+								popup: $('<div />').addClass('insm-player-details-popup').append(
 									$('<h5 />').text('Shutdown Monitoring Status')
 								).append(
 									$('<p />').append(
@@ -725,7 +725,7 @@
 								title: 'Online Status',
 								status: player.onlineStatus?player.onlineStatus.state:'Unknown',
 								tooltip: 'State of the player online or offline.',
-								popup: $('<div />').addClass('insm-player-details2-popup').append(
+								popup: $('<div />').addClass('insm-player-details-popup').append(
 									$('<h5 />').text('Online Status')
 								).append(
 									$('<p />').append(
@@ -754,7 +754,7 @@
 								title: 'Content Status',
 								status: player.contentStatus.state,
 								tooltip: 'State of a running template including Asset Player and Playlist Player.',
-								popup: $('<div />').addClass('insm-player-details2-popup').append(
+								popup: $('<div />').addClass('insm-player-details-popup').append(
 									$('<h5 />').text('Content Status')
 								).append(
 									$('<p />').append(
@@ -783,7 +783,7 @@
 								title: 'Local Status',
 								status: player.localStatus.state,
 								tooltip: 'The aggregated local overall state calculated by the Media Player. The AMS uses this status along with its timestamp when calculating the Media Player State.',
-								popup: $('<div />').addClass('insm-player-details2-popup').append(
+								popup: $('<div />').addClass('insm-player-details-popup').append(
 									$('<h5 />').text('Local Status')
 								).append(
 									$('<p />').append(
@@ -909,7 +909,6 @@
 					}
 
 					var displays = [];
-
 					$.each(player.monitors, function (key, monitor) {
 						displays.push({
 							cssId: 'display' + key,
@@ -951,7 +950,7 @@
 					});
 
 					var displayDevices = [];
-
+					
 					$.each(player.displayDevices, function (key, displayDevice) {
 						displayDevices.push({
 							cssId: 'display' + key,
@@ -1074,7 +1073,7 @@
 					);
 
 					$.each(player.eventLog, function (key, logType) {
-						var $holder = $('<div />').addClass('insm-player-details2-popup').append($('<h5>' + key + ' Event Logs</h5>'));
+						var $holder = $('<div />').addClass('insm-player-details-popup').append($('<h5>' + key + ' Event Logs</h5>'));
 						if (logType.Log.length) {
 							var $table = $('<table />').addClass('event-log');
 							logType.Log.sort(function (a, b) {
@@ -1195,12 +1194,12 @@
 									if (player.transfer.version != "0") {
 										var diff = $.insmFramework("getEntityVersion") - player.transfer.version;
 										if (diff > 0) {
-											return $('<div />').insmStatusBox({ title: diff + " more to download", status: "Transfer", tooltip: 'For a player to be synchronised, the number of metadata entities in the player database must match the number in the server database. The status shows if the database has synchronised. Metadata includes schedule, asset and file expiry information for example. Note that this status only shows if the metadata in the database has synchronised and not if the player still has files to download.'});
+											return $('<div />').insmStatusBox({ title: diff + " more to download", status: "Transfer", tooltip: 'The player has more to download' });
 										} else {
-											return $('<div />').insmStatusBox({ title: 'OK', status: "OK", tooltip: 'For a player to be synchronised, the number of metadata entities in the player database must match the number in the server database. The status shows if the database has synchronised. Metadata includes schedule, asset and file expiry information for example. Note that this status only shows if the metadata in the database has synchronised and not if the player still has files to download.' });
+											return $('<div />').insmStatusBox({ title: 'OK', status: "OK", tooltip: 'The player is up to date' });
 										}
 									}
-									return $('<div />').insmStatusBox({ title: 'Unknown', status: "Error", tooltip: 'For a player to be synchronised, the number of metadata entities in the player database must match the number in the server database. The status shows if the database has synchronised. Metadata includes schedule, asset and file expiry information for example. Note that this status only shows if the metadata in the database has synchronised and not if the player still has files to download.' });
+									return $('<div />').insmStatusBox({ title: 'Unknown', status: "Error", tooltip: 'The player status is unknown' });
 								})
 							),
 							$('<tr />').append(
@@ -1235,18 +1234,27 @@
 						$('<div />').addClass('clear')
 					);
 					// PLAYER StateHistory ////
-					_plugin.htmlElements.playerStateHistory.empty();
-					_plugin.htmlElements.playerStateHistory.append(function () {
+					_plugin.htmlElements.playerStateHistory.empty(); 
+					_plugin.htmlElements.playerStateHistory.append(function () {																		
 						var historyTable = $('<table />').addClass('vertical no-border no-padding');
-						var infoContainer = $('<div />').addClass('historyinfocontainer');
-						var lastDate = new Date('1900-01-01T00:00:00');
+						var infoContainer =  $('<div />').addClass('historyinfocontainer'); 
+						var lastDate = new Date('1900-01-01T00:00:00'); 
+					   
+						var sortList = [];
 						var durationList = [];
+						
+						$.each(player.samples, function (key, value) {
+							sortList.push(key);
+						});
+						sortList.sort(function (a, b) {
+							return a < b ? 1 : -1;
+						});
 						$.each(player.samples, function (key, value) {
 							var date = new Date(key);
 							var duration;
 							var durationTxt = {
 								briefDuration: '',
-								accurateDuration: ''
+								accurateDuration:''                                
 							};
 							Date.dateDiff = function (datepart, fromdate, todate) {
 								datepart = datepart.toLowerCase();
@@ -1281,7 +1289,7 @@
 								var days = Math.floor(difference_ms % 7);
 								var weeks = Math.floor(difference_ms / 7);
 
-								return (weeks ? weeks + ' weeks,' : '') + (days ? days + ' days, ' : '') + (hours ? hours + ' hours, ' : '') + (minutes ? minutes + ' minutes, ' : '') + (seconds ? seconds + ' seconds' : '');
+								return (weeks? weeks +' weeks,':'')+ (days? days+ ' days, ':'') + (hours?hours + ' hours, ':'') + (minutes?minutes + ' minutes, ':'') + (seconds?seconds + ' seconds':'');
 							}
 							//Set the two dates
 							if (lastDate == new Date('1900-01-01T00:00:00')) {
@@ -1306,7 +1314,7 @@
 							}
 							lastDate = date;
 							durationList.push(durationTxt);
-
+							
 						});
 						durationList.push({
 							briefDuration: '~ Current',
@@ -1331,27 +1339,8 @@
 								csv += value + sep;
 								csv += durationList[csvCountNumber].accurateDuration.replace(/\,/g, ' ') + sep;
 								csv += '\r\n';
-								csvCountNumber = csvCountNumber + 1;
+								csvCountNumber =csvCountNumber+ 1;
 							});
-							//csv = csv.substr(0, csv.length - 1) + '\r\n';
-							//$.each(csvData, function (key, value) {
-							//    csv += '"' + value + '"' + sep;
-							//});
-							//csv = csv.substr(0, csv.length - 1) + '\r\n';
-							//$.each(_csvColumns, function (title, column) {
-							//    csv += title + sep;
-							//});
-
-							//csv = csv.substr(0, csv.length - 1) + '\r\n';
-							//$.each(data, function (index, row) {
-							//    $.each(_csvColumns, function (title, column) {
-							//        csv += '"' + column.output(row) + '"' + sep;
-							//    });
-							//    csv = csv.substr(0, csv.length - 1) + '\r\n';
-							//});
-							//var d = new Date();
-							//var date = d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate()
-
 							var filename = 'State_History' + $.datepicker.formatDate('yy-mm-dd', new Date());
 							$.insmFramework('convert', {
 								mimetype: 'text/csv',
@@ -1361,37 +1350,14 @@
 						});
 						var lastDate = new Date('1900-01-01T00:00:00');
 						var countNumber = 1;
-						var addedMessageSamples = [];
 						$.each(player.samples, function (key, value) {
-							addedMessageSamples.push(
-								{
-									time: key,
-									endTime: null,
-									state: value,
-									duration: durationList[countNumber]
-
-								}
-							)
-							countNumber = countNumber + 1;
-						});
-						addedMessageSamples.sort(function (a, b) {
-							return new Date(b.time) - new Date(a.time);
-						});
-						$.each(addedMessageSamples, function (index, value) {
-							if (index == 0) {
-							    value.endTime = "~Continuing";
-							    currentDate = new Date();
-							    value.duration.accurateDuration = Date.daysBetween(new Date(value.time), currentDate);
-							} else {
-								value.endTime = addedMessageSamples[index - 1].time;
-							}
-						});
-						$.each(addedMessageSamples, function (index, value) {
 							var year = '';
 							var month = '';
 							var day = '';
-							var date = new Date(value.time);
-							if (lastDate.getFullYear() != date.getFullYear()) {
+							var date = new Date(key);
+							var durationTxt = durationList[countNumber];
+							countNumber = countNumber + 1;
+							if (lastDate.getFullYear() != date.getFullYear()) {      
 								lastDate = date;
 								year = date.getFullYear();
 								month = date.getMonth() + 1;
@@ -1399,6 +1365,7 @@
 							} else {
 								year = '';
 								if (lastDate.getMonth() != date.getMonth() || lastDate.getDate() != date.getDate()) {
+									
 									lastDate = date;
 									month = date.getMonth() + 1;
 									day = date.getDate();
@@ -1408,65 +1375,45 @@
 									day = '';
 								}
 							}
+						  
 							var infoContent = $('<table />').addClass('vertical no-border');
-							infoContent.append(
+							infoContent.append( 
 								$('<tr />').append(
 									$('<th />').text('State')
 								).append(
-									$('<td>').text(value.state)
+									$('<td>').text(value)
 								),
-
+								
 								$('<tr />').append(
 									$('<th />').text('Start at: ')
 								).append(
-									$('<td>').text(printDate(value.time, 'Y-m-d H:i:s'))
+									$('<td>').text(printDate(key,'Y-m-d H:i:s'))
 								),
+								
 								$('<tr />').append(
-									$('<th />').text('End at: ')
+									$('<th />').text('Duration: ')                                    
 								).append(
-									$('<td>').text(value.endTime =="~Continuing" ? value.endTime : printDate(value.endTime, 'Y-m-d H:i:s'))
-								),
-								$('<tr />').append(
-									$('<th />').text('Duration: ')
-								).append(
-									$('<td>').text(value.duration.accurateDuration)
-								),
-								$('<tr />').append(
-									$('<th />').text('Message: ')
-								).append(function () {
-									var messageTable = $('<table />').addClass('vertical no-border');
-									$.each(player.messageLog, function (key, stateMessage) {
-										if ((value.time < key && key < value.endTime) || key == value.endTime || key == value.time) {
-											messageTable.append(
-												 $('<tr />').append(
-													 $('<th />').text(printDate(key, 'Y-m-d H:i:s'))
-												 ).append(
-													 $('<td>').text(stateMessage)
-												 )
-											)
-										}
-									});
-									return messageTable;
-								})
+									$('<td>').text(durationTxt.accurateDuration)
+								)								
 							);
-
+							
 							historyTable.addClass('historytable').append(
 								$('<tr />').append(
 									$('<td>').append($('<h5 />').text(year)),
-									$('<td>').append($('<h5 />').text(typeof month == 'number' ? day + '/' + month : '')),
-									$('<td>').append($('<h5 />').text(printDate(date, 'H:i'))),
+									$('<td>').append($('<h5 />').text(typeof month == 'number'? day+'/'+month:'')),
+									$('<td>').append($('<h5 />').text(date.getHours()+ ':'+date.getMinutes())),
 									$('<td>').append($('<div />').insmBigStatusBox({
-										status: value.state,
+										status: value,
 										infoArea: infoContainer,
 										infoContent: infoContent,
-										text: value.duration.briefDuration
+										text:durationTxt.briefDuration
 									}))
 								)
 							)
 						});
-						return $('<div />').append(
+						return $('<div />').append(                            
 							$('<div />').addClass('historycontainer').append(historyTable),
-							infoContainer
+							infoContainer                   
 						);
 					});
 					/// PLAYER ///
@@ -1554,7 +1501,7 @@
 											.append($('<td />').append(
 												 $('<div />').insmStatusBox({
 													 title: "",
-													 status: player.fulfilmentStatus ? player.fulfilmentStatus.state : 'Unknown',
+													 status: player.fulfilmentState ? player.fulfilmentState : 'Unknown',
 													 tooltip: 'Please check details in Player Information'
 												 })
 
@@ -1564,7 +1511,7 @@
 											.append($('<td />').append(
 												 $('<div />').insmStatusBox({
 													 title: "",
-													 status: player.status.state ? player.status.state : 'Unknown',
+													 status: player.state ? player.state : 'Unknown',
 													 tooltip: 'Please check details in Player Information'
 												 })
 											))
@@ -1642,58 +1589,6 @@
 						return playerContainer;
 					});   
 					/// PLAYER INFORMATION ////
-					var fulfilmentStateDescription = $('<div />').addClass('insm-player-details2-popup').append(
-						$('<h5 />').text('Fulfliment State'),
-						$('<p />').text('This is an aggregated state designed to show with reasonable confidence if the player has downloaded scheduled content and is healthy regardless of its current online state. '),
-						$('<p />').text('The Fulfilment State looks at the player’s Sync State, On Demand Download State and Online State and intelligently taking a grace period into account decides if the player is OK or Not OK. The Fulfillment State will first move into a Warning Not OK and then an Error Not OK until it recovers to OK.'),
-						$('<p />').text('The short Warning and long Error grace period are set with AMS Settings fulfilmentWarningLimitSeconds and fulfilmentErrorLimitSeconds.'),
-						$('<p />').text('Specifically:'),
-						$('<p />').text('If the Sync State is OK and On Demand Download State and Online State is or has been OK at some point looking back within the grace period then the Fulfilment state is OK. '),
-						$('<p />').text('If the On Demand Download State is transferring for files that were all scheduled within the grace period then the Fulfilment state is OK. '),
-						$('<p />').text('If the On Demand Download State is transferring for a file scheduled longer ago than the grace period then the Fulfilment state is Not OK. '),
-						$('<p />').text('If the Sync State was OK sometime within the grace period and no files are transferring or scheduled to be transferred then the Fulfilment state is OK. '),
-						$('<p />').text('If changes in the CMS have been made some time ago which was longer than the grace period Sync State is not up to date then the Fulfilment state is Not OK. '),
-						$('<p />').text('If the Sync State is OK (no change has been made in the CMS) and no file is transferring or scheduled to be transferred then the Fulfilment state is OK.'),
-						$('<p />').text('If Online State is OK and Current State is error with any of the following errors then the Fulfilment State is Not OK:').append(
-							$('<table />').addClass('vertical no-border').append(
-								$('<tr />').append(
-									$('<th />').text('1002'),
-									$('<td />').text('Error'),
-									$('<td />').text(' Screenshot black inside opening hours')
-								),
-								$('<tr />').append(
-									$('<th />').text('1011'),
-									$('<td />').text('Error'),
-									$('<td />').text('No player engine or template scheduled')
-								),
-								$('<tr />').append(
-									$('<th />').text('1013'),
-									$('<td />').text('Error'),
-									$('<td />').text('No Content')
-								),
-									$('<tr />').append(
-									$('<th />').text('1039'),
-									$('<td />').text('Error'),
-									$('<td />').text('No playlist scheduled')
-								),
-									$('<tr />').append(
-									$('<th />').text('1041'),
-									$('<td />').text('Error'),
-									$('<td />').text('No available assets')
-								),
-								$('<tr />').append(
-									$('<th />').text('1040'),
-									$('<td />').text('Error'),
-									$('<td />').text('Player is not configured')
-								),
-								$('<tr />').append(
-									$('<th />').text('1042'),
-									$('<td />').text('Error'),
-									$('<td />').text('No files in playlist')
-								)
-							)
-						)
-					)
 					_plugin.htmlElements.playerInformation.html(
 						$('<table />').addClass('vertical no-border').append(
 							
@@ -1704,9 +1599,7 @@
 									$('<div />').insmStatusBox({
 										title: player.fulfilmentStatus ? player.fulfilmentStatus.state + (player.fulfilmentStatus.message && player.fulfilmentStatus.message.trim().length > 0 ? ': ' + player.fulfilmentStatus.message : '') : 'Unknown',
 										status: player.fulfilmentStatus ? player.fulfilmentStatus.state :'Unknown',
-										tooltip: 'Please click here for more details',
-										popup: fulfilmentStateDescription,
-										statusBoxClickable:true
+										tooltip: 'This is an aggregated state designed to show with reasonable confidence if the player has downloaded scheduled content and is healthy regardless of its current online state.'
 									})
 								)
 							),                       
@@ -1715,8 +1608,8 @@
 							).append(
 								$('<td />').append(
 									$('<div />').insmStatusBox({
-										title: player.status.state + (player.status.message && player.status.message.trim().length > 0 ? ': ' + player.status.message : ''),
-										status: player.status.state,
+										title: player.state + (player.message && player.message.trim().length > 0 ? ': ' + player.message : ''),
+										status: player.state,
 										tooltip: 'The overall state of the player. Possible states in priority order are Error, Warning, Transferring, Unknown, OK. If a Media Player has a Warning and Error, the Error will show as it overrides the Warning. States can come from the Template and any of the Services running on the Media Player.'
 									})
 								)
@@ -1726,47 +1619,20 @@
 								$('<th />').text('Current Player Errors & Warnings')
 							).append(function () {
 								var statusList = {
-									"Current State": player.status,
+									
 									"Content State": player.contentStatus,
 									"Local State": player.localStatus,
 									"Online State" : player.onlineStatus,
 									"Player State": player.playerStatus,
-									"On Demand Download State": player.transfer.onDemandStatus,
+									"On Demand Download State": player.transfer.OnDemandStatus,
 									"Shutdown Monitoring State": player.uptimeStatus,
 									"Fulfilment State": player.fulfilmentStatus,
-									'Player Service': player.service.player,
-									'Keep-alive Service': player.service.keepAlive,
-									'Transfer Service': player.service.transfer,
-									'Maintenance Service': player.service.maintenance,
-									'Diagnostics Service': player.service.diagnostics,
-									'Report Service': player.service.report,
-									'Server Service': player.service.server,
-									'Web Service': player.service.web.status
 
 								};
-								$.each(player.plugins, function (key, plugin) {
-								    statusList["plugin " + plugin.Name] = {};
-								    statusList["plugin " + plugin.Name].state = plugin.State;
-								    statusList["plugin " + plugin.Name].message = plugin.Message;
-								});
-								$.each(player.displayDevices, function (key, displayDevice) {
-								    statusList["Virtual Display " + key] = {};
-								    statusList["Virtual Display " + key].state = displayDevice.State;
-								    statusList["Virtual Display " + key].message = displayDevice.Message;
-								});
-								$.each(player.playerViews, function (key, playerView) {
-								    statusList["Channel " + key] = {};
-								    statusList["Channel " + key].state = playerView.State;
-								});
-								$.each(player.monitors, function (key, monitor) {
-								    statusList["Physical Display " + key] = {};
-								    statusList["Physical Display " + key].state = monitor.State;
-								    statusList["Physical Display " + key].message = monitor.Message;
-								});
 								var messageArea= $('<table />').addClass('vertical no-border');
 								$.each(statusList, function (key, value) {
 									if (value) {
-										if (value.state == "Error" || value.state == "Warning" || value.state == "Offline") {
+										if (value.state == "Error" || value.state == "Warning") {
 											messageArea.append(
 												$('<tr />').append(
 													$('<th />').text(key)
@@ -1775,7 +1641,7 @@
 														$('<div />').insmStatusBox({
 															title: value.state + (value.eventId ? ' ' + value.eventId : '') + (value.message ? ': ' + value.message : ''),
 															status: value.state,
-															tooltip: 'This is a message area where any warnings or errors (codes and their descriptions) currently applicable to the player are written.'
+															tooltip: 'This is a message area where any warnings or errors currently applicable to the player are written.'
 														})
 													)
 												)
@@ -1790,7 +1656,7 @@
 											$('<th />').text("Sync State")
 										).append(
 											$('<td />').append(
-												$('<div />').insmStatusBox({ title: 'Error: The player status is unknown', status: "Error", tooltip: 'This is a message area where any warnings or errors (codes and their descriptions) currently applicable to the player are written.'})
+												$('<div />').insmStatusBox({ title: 'Error: The player status is unknown', status: "Error", tooltip: 'This is a message area where any warnings or errors currently applicable to the player are written.'})
 											)
 										)
 									)

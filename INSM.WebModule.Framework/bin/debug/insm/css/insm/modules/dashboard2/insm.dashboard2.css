@@ -1,0 +1,182 @@
+﻿.dashboard2 {
+	height: 100%;
+	background: #ffffff;
+	overflow: hidden;
+}
+
+.dashboard2 > .module-wrapper {
+	overflow: auto;
+}
+
+.dashboard2 > .header {
+	background: transparent url('../../../../gfx/insm/background_tile.jpg') repeat;
+	height: 40px;
+	width: 100%;
+	border-bottom: 2px solid #666666;
+}
+
+.dashboard2 > .header > .module-logo {
+	background: transparent url('dashboard3-thin.png') 10px center no-repeat;
+	width: 100%;
+	height: 100%;
+}
+
+.dashboard2 > .header > .company-logo {
+	float: right;
+	background: transparent url('../../../../gfx/insm/insm-logo-thin.png') right center no-repeat;
+	width: 100%;
+	height: 100%;
+}
+
+@media (min-width:641px) {
+	.dashboard2 > .header {
+		height: 100px;
+	}
+
+	.dashboard2 > .header > .module-logo {
+		background: transparent url('dashboard3.png') 20px center no-repeat;
+	}
+
+	.dashboard2 > .header > .company-logo {
+		background: transparent url('../../../../gfx/insm/insm_logo.png') right center no-repeat;
+	}
+}
+
+.dashboard2 .sub-header {
+	padding: 16px;
+}
+
+.dashboard2 .sub-header a.back {
+	float: left;
+	background: url('../../../../gfx/insm/icons/arrow-left.png') center left no-repeat;
+	padding-left: 16px;
+	line-height: 33px;
+}
+
+.dashboard2 .sub-header h2 {
+	text-align: center;
+}
+
+.dashboard2 .content {
+	/*padding: 16px 16px 16px 0px;*/
+	min-width:1358px;
+	overflow-x:hidden;
+	overflow-y:hidden;
+}
+
+.dashboard2 .content p {
+	text-align: center;
+	font-size: 16px;
+	max-width: 400px;
+	margin: auto;
+	padding: 16px;
+	height: 19px;
+}
+
+.dashboard2 .insmLoader {
+	display: block;
+}
+
+
+.dashboard2 .categorycontainer { 
+	width:260px;   
+	display: inline-block;
+	float:left;
+}
+.dashboard2 .categorycontainer >.categorylist { 
+	
+	list-style-type:none;
+	height:100%;
+	border-right:solid 1px white;
+	overflow-y: auto;
+	background-color:#F0F0F0;
+}
+.dashboard2 .categorycontainer > h2, .dashboard2 .playerlistcontainer > h2, .dashboard2 .playertabcontainer > h2{
+	padding-top:16px;
+	text-align:center;
+}
+
+.dashboard2 .playertabcontainer> .pie { 
+	margin-top:20px;
+}
+.dashboard2 .playertabcontainer> .description { 
+	margin-top:20px;
+	text-align:left;
+	float:right;
+	width:180px;
+}
+.dashboard2 .playertabcontainer> .description> ul{ 
+	list-style-type:none;
+}
+.dashboard2 .playertabcontainer> .description> ul >li{ 
+	margin-bottom:10px;
+}
+.dashboard2 .playerlistcontainer { 
+	
+	max-width:400px;	
+	display: inline-block;
+	float:left;
+}
+.dashboard2 .playerlistcontainer > .playerlist { 
+	
+	border-left:solid 1px #E0E0E0;
+	max-width:400px;
+	
+	
+}
+
+.dashboard2 .playertabcontainer>.playertabs >.insm-tabs >.insm-tabs-content{ 	
+	height:100%;
+	overflow:auto;
+	text-align:left;	
+	width:668px;
+}
+.dashboard2 .playertabcontainer { 
+	display: inline-block;
+	text-align:center;
+	width: 650px;
+	margin-left:10px;
+}
+.dashboard2 .playerlist ul{ 
+	height:100%;
+	overflow-y:auto;
+}
+.dashboard2 .playerlist .playerlistitem {    
+	list-style-type: none;
+	border-bottom: 1px solid #aaa;
+	width: 100%;
+	/*margin-bottom: 16px;*/
+	background: url('../../../../gfx/insm/icons/arrow-right.png') center right no-repeat;
+	
+}
+.dashboard2 .playerlist .playerlistitem .screenshot {    
+	margin-top:5px;
+	margin-bottom:5px;
+	text-align:center;
+	width:100px;	
+}
+.dashboard2 .playerlist .playerlistitem .screenshot img{    
+	max-width:100px;
+	height:56px;	
+}
+.dashboard2 .playerlist .playerlistitem > ul {    
+	list-style-type: none;
+	margin-left: 20px;
+	float:right;
+	width: 250px;
+}
+.dashboard2 .playerlist .playerlistitem ul li {    
+	word-break:break-all;
+}
+
+.dashboard2 .categorylist > .categorycontent {
+	padding: 16px 0 16px;
+	list-style-type: none;
+	overflow-y: auto;
+	border-bottom: 1px solid #aaa;
+	width: 100%;
+	text-align:center;
+	/*margin-bottom: 16px;*/
+	background: url('../../../../gfx/insm/icons/arrow-right.png') center right no-repeat;
+}
+

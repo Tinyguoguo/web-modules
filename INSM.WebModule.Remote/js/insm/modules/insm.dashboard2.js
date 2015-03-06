@@ -17,31 +17,31 @@
 */
 
 (function ($) {
-	var methods = {
-		init: function(options) {
-			var $this = $(this);
-			var _plugin = $this.data('insmDashboard2');
-						
-			if (!_plugin) {
-				_plugin = {
+    var methods = {
+        init: function(options) {
+            var $this = $(this);
+            var _plugin = $this.data('insmDashboard2');
+                        
+            if (!_plugin) {
+                _plugin = {
 
-					settings: $.extend({
-						apiUrl: '',
-						applicationName: 'Dashboard',
-						version: manifest.version,
-						header: true
-					}, options),
-					htmlElements: {
-						header: $('<div />'),
-						content: {
-							container: $('<div />').addClass('module-wrapper'),
-							header: {
-								container: $('<div />').addClass('sub-header'),
-								title: $('<h2 />'),
-								backButton: $('<a />').text('Back').addClass('back')
-							},
-							views: {
-								container: $('<div />').addClass('content'),
+                    settings: $.extend({
+                        apiUrl: '',
+                        applicationName: 'Dashboard',
+                        version: manifest.version,
+                        header: true
+                    }, options),
+                    htmlElements: {
+                        header: $('<div />'),
+                        content: {
+                            container: $('<div />').addClass('module-wrapper'),
+                            header: {
+                                container: $('<div />').addClass('sub-header'),
+                                title: $('<h2 />'),
+                                backButton: $('<a />').text('Back').addClass('back')
+                            },
+                            views: {
+                                container: $('<div />').addClass('content'),
 								categoryContainer: $('<div />'),
 								playerlistContainer: $('<div />'),
 								playerTabContainer: $('<div />'),
@@ -51,23 +51,21 @@
 								pieChatMaterial: $('<canvas />').width(400).height(400),
 								playerTabDiv: $('<div />').addClass('playertabs'),
 								pieChat: true,
-								searchBar: $('<div />')
 
+                        }
 						}
-						}
-					},
-					data: {
-					    categoryLookup :{},
-					    onSearch:function(){}
-					},              
-				};
-				$this.data('insmDashboard2', _plugin);
-			}
-			return $this;
-		},
-		getCategories: function (options) {
-			var $this = $(this);
-			var _plugin = $this.data('insmDashboard2');
+                    },
+                    data: {
+						categoryLookup :{}
+                    },              
+                };
+                $this.data('insmDashboard2', _plugin);
+            }
+            return $this;
+        },
+        getCategories: function (options) {
+            var $this = $(this);
+            var _plugin = $this.data('insmDashboard2');
 
 			$.insmFramework('regionTree', {
 				includePlayers: true,
@@ -130,35 +128,35 @@
 				}
 			});
 
-		},
-		getTarget: function () {
-			var $this = $(this);
-			var _plugin = $this.data('insmDashboard2');
-			
-			if (_plugin.settings.target) {
-				return _plugin.settings.target;
-			} else {
-				_plugin.settings.target = $('<div />');
-			}
-			return _plugin.settings.target;
-		},
-		preview: function (options) {
-			var $this = $(this);
-			var _plugin = $this.data('insmDashboard2');
+        },
+        getTarget: function () {
+            var $this = $(this);
+            var _plugin = $this.data('insmDashboard2');
+            
+            if (_plugin.settings.target) {
+                return _plugin.settings.target;
+            } else {
+                _plugin.settings.target = $('<div />');
+            }
+            return _plugin.settings.target;
+        },
+        preview: function (options) {
+            var $this = $(this);
+            var _plugin = $this.data('insmDashboard2');
 
-			if (_plugin.settings.previewTarget) {
-				return _plugin.settings.previewTarget;
-			} else {
-				_plugin.settings.previewTarget = $('<div />');
-			}
+            if (_plugin.settings.previewTarget) {
+                return _plugin.settings.previewTarget;
+            } else {
+                _plugin.settings.previewTarget = $('<div />');
+            }
 
-			_plugin.settings.previewTarget.addClass('module module-preview dashboard2');
-			_plugin.settings.previewTarget.click(function () {
-				_plugin.settings.show();
-			});
-			_plugin.settings.previewTarget.html(
-				$('<h2 />').text('Dashboard')
-			);
+            _plugin.settings.previewTarget.addClass('module module-preview dashboard2');
+            _plugin.settings.previewTarget.click(function () {
+                _plugin.settings.show();
+            });
+            _plugin.settings.previewTarget.html(
+                $('<h2 />').text('Dashboard')
+            );
 			return _plugin.settings.previewTarget;
 		},
 		generateCategories: function (options) {
@@ -309,41 +307,35 @@
 					}
 				},			    
 			});			
-		},
-		fullscreen: function(options) {
-			var $this = $(this);
-			var _plugin = $this.data('insmDashboard2');
+        },
+        fullscreen: function(options) {
+            var $this = $(this);
+            var _plugin = $this.data('insmDashboard2');
 
-			if (_plugin.data.fullscreenInitialized) {
-				setTimeout(function() {
-					$this.insmDashboard2('resize');
-				}, 1);
-				return $this;
-			}
-			_plugin.data.fullscreenInitialized = true;
-			// Init HTML
+            if (_plugin.data.fullscreenInitialized) {
+                setTimeout(function() {
+                    $this.insmDashboard2('resize');
+                }, 1);
+                return $this;
+            }
+            _plugin.data.fullscreenInitialized = true;
+            // Init HTML
 			$this.insmDashboard2('getCategories');
 			_plugin.settings.target.addClass('dashboard2').fadeIn();
-			_plugin.settings.target.empty();
+            _plugin.settings.target.empty();
 
-			if (_plugin.settings.header) {
-				_plugin.settings.target.append(
-					_plugin.htmlElements.header.addClass('header').append(
-						$('<div />').addClass('company-logo'),
-						$('<div />').addClass('module-logo')
-					)
-				);
-			}
-			_plugin.settings.target.append(
-				_plugin.htmlElements.content.container.append(
-					_plugin.htmlElements.content.views.container.append(                         
+            if (_plugin.settings.header) {
+                _plugin.settings.target.append(
+                    _plugin.htmlElements.header.addClass('header').append(
+                        $('<div />').addClass('company-logo'),
+                        $('<div />').addClass('module-logo')
+                    )
+                );
+            }
+            _plugin.settings.target.append(
+                _plugin.htmlElements.content.container.append(
+                    _plugin.htmlElements.content.views.container.append(                         
 						_plugin.htmlElements.content.views.categoryContainer.addClass('categorycontainer').append(
-							_plugin.htmlElements.content.views.searchBar.insmSearchField({
-							    placeholderText: "search with all player",
-							    onSearch: function (searchstring) {							 
-							        _plugin.data.onSearch();
-							    }
-							}),
 							$('<h2 />').text('Category'),
 							_plugin.htmlElements.content.views.categoryList.addClass('categorylist')
 						),
@@ -356,33 +348,33 @@
 							_plugin.htmlElements.content.views.playerTabDiv,
 							_plugin.htmlElements.content.views.pieChatMaterial.addClass('pie')
 						)																				   
-					)
-				)
-			);            
-		},
-		
-		resize: function() {
-			var $this = $(this);
-			var _plugin = $this.data('insmDashboard2');
-			if (_plugin) {
-				var totalHeight = _plugin.settings.target.height();
-				var headerHeight = _plugin.htmlElements.header.outerHeight(true);
+                    )
+                )
+            );            
+        },
+        
+        resize: function() {
+            var $this = $(this);
+            var _plugin = $this.data('insmDashboard2');
+            if (_plugin) {
+                var totalHeight = _plugin.settings.target.height();
+                var headerHeight = _plugin.htmlElements.header.outerHeight(true);
 
-				var contentContainerHeight = parseInt(totalHeight - headerHeight);
-				_plugin.htmlElements.content.container.css({
-					height: contentContainerHeight + 'px'
-				});
+                var contentContainerHeight = parseInt(totalHeight - headerHeight);
+                _plugin.htmlElements.content.container.css({
+                    height: contentContainerHeight + 'px'
+                });
 
-				var viewsContainerMargin = _plugin.htmlElements.content.views.container.outerHeight(true) - _plugin.htmlElements.content.views.container.height();
+                var viewsContainerMargin = _plugin.htmlElements.content.views.container.outerHeight(true) - _plugin.htmlElements.content.views.container.height();
 
-				_plugin.htmlElements.content.views.container.css({
-					height: parseInt(contentContainerHeight - viewsContainerMargin) + 'px'
-				});
+                _plugin.htmlElements.content.views.container.css({
+                    height: parseInt(contentContainerHeight - viewsContainerMargin) + 'px'
+                });
 
 				if (_plugin.htmlElements.content.views.container.width() == 1358) {
-					_plugin.htmlElements.content.views.container.css({
-						height: parseInt(_plugin.htmlElements.content.views.container.height() - 18) + 'px'
-					});
+				    _plugin.htmlElements.content.views.container.css({
+				        height: parseInt(_plugin.htmlElements.content.views.container.height() - 18) + 'px'
+				    });
 				}
 				_plugin.htmlElements.content.views.categoryList.css({
 					height: parseInt(_plugin.htmlElements.content.views.container.height() - 16 - 8 - 32) + 'px'
@@ -394,42 +386,42 @@
 					height: parseInt(_plugin.htmlElements.content.views.container.height() - 16 - 8 - 32 - 32 - 16 - 5) + 'px'
 				});
 				
-				//var height = parseInt(contentContainerHeight - viewsContainerMargin - textHeight - inputContainerMargin - _plugin.htmlElements.content.views.playerId.input.id.outerHeight(true) - _plugin.htmlElements.content.views.playerId.input.unconfiguredListTitle.outerHeight(true));
+                //var height = parseInt(contentContainerHeight - viewsContainerMargin - textHeight - inputContainerMargin - _plugin.htmlElements.content.views.playerId.input.id.outerHeight(true) - _plugin.htmlElements.content.views.playerId.input.unconfiguredListTitle.outerHeight(true));
 
-				//if (height < 50) {
-				//    height = 50
-				//}
-			}
+                //if (height < 50) {
+                //    height = 50
+                //}
+            }
 
-			return $this;
-		},
-		hasSettings: function () {
-			return false;
-		},
+            return $this;
+        },
+        hasSettings: function () {
+            return false;
+        },
 
-		onClose: function (options) {
-			options.success();
-		},
-		destroy: function () {
-			var $this = $(this);
-			var _plugin = $this.data('insmDashboard2');
-			//$this.insmDashboard2('stopSubscriptions');
-			$this.data('insmDashboard2', null).empty();
+        onClose: function (options) {
+            options.success();
+        },
+        destroy: function () {
+            var $this = $(this);
+            var _plugin = $this.data('insmDashboard2');
+            //$this.insmDashboard2('stopSubscriptions');
+            $this.data('insmDashboard2', null).empty();
 
-			return $this;
-		},
-	   
-	   
-	};
+            return $this;
+        },
+       
+       
+    };
 
-	$.fn.insmDashboard2 = function (method) {
-		if (methods[method]) {
-			return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
-		} else if (typeof method === 'object' || !method) {
-			return methods.init.apply(this, arguments);
-		} else {
-			$.error('Method ' + method + ' does not exist on $.insmDashboard2');
-		}
-	};
+    $.fn.insmDashboard2 = function (method) {
+        if (methods[method]) {
+            return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
+        } else if (typeof method === 'object' || !method) {
+            return methods.init.apply(this, arguments);
+        } else {
+            $.error('Method ' + method + ' does not exist on $.insmDashboard2');
+        }
+    };
 
 })(jQuery);

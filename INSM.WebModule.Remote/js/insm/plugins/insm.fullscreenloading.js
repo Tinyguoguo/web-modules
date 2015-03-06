@@ -47,13 +47,7 @@
             
             if (options) {
                 if (options.text) {
-                    _plugin.htmlElements.content.insmLoader('update', {
-                        text: options.text
-                    });
-                } else {
-                    _plugin.htmlElements.content.insmLoader('update', {
-                        text: ''
-                    });
+                    _plugin.htmlElements.content.insmLoader({ text: options.text });
                 }
                 if (options.timer) {
                     _plugin.data.opened = true;
@@ -79,21 +73,8 @@
                         }
                     }
                     getProgress();
-                } else {                    
-                    $this.insmPopup({
-                        backdropTransparency: true,
-                        backdropClickClose: false,
-                        showCloseButton: false,
-                        content: _plugin.htmlElements.content,
-                        backdropClickCallback: function () {
-                        },
-                        autoCenter: true
-                    });
                 }
             } else {
-                _plugin.htmlElements.content.insmLoader('update', {
-                    text: ''
-                });
                 $this.insmPopup({
                     backdropTransparency: true,
                     backdropClickClose: false,

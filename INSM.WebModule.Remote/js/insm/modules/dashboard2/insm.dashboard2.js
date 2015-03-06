@@ -15,7 +15,6 @@
 * Guo Yang
 * Instoremedia AB
 */
-//test
 
 (function ($) {
 	var methods = {
@@ -49,20 +48,16 @@
 								playerTitle: $('<h2 />'),
 								categoryList: $('<ul />').css('style', ''),
 								playerListDiv: $('<div />'),
-								pieChartMaterial: $('<canvas />').width(400).height(400),
+								pieChatMaterial: $('<canvas />').width(400).height(400),
 								playerTabDiv: $('<div />').addClass('playertabs'),
-								pieChart: true,
-								pieChartDescription:$('<div />'),
-								unavailableMessage: $('<h3 />').text('No player exist'),
-								searchField:$('<div />'),
+								pieChat: true,
 
 							}						 
 						},
-						popupLoading:$('<div />')
+					    popupLoading:$('<div />')
 					},
 					data: {
-						categoryLookup: {},
-						onSearch: function () { }
+						categoryLookup :{}
 					},              
 				};
 				$this.data('insmDashboard2', _plugin);
@@ -87,19 +82,74 @@
 					worker.postMessage(JSON.stringify(sendData));
 					worker.onmessage = function (event) {
 						var receivedData = JSON.parse(event.data);
-
 						_plugin.data.categoryLookup = receivedData.categoryLookup;
+						_plugin.data.playerNumber = receivedData.playerNumber;
 						$.each(_plugin.data.categoryLookup, function (categoryname, idArray) {
-							$this.insmDashboard2('generateCategories', {
-								categoryName: categoryname,
-								categoryValue: idArray.affectedPlayerIds.length,
-								categoryTotal: idArray.numberInRegions
-							});
+						    $this.insmDashboard2('generateCategories', {
+						        categoryName: categoryname,
+						        categoryValue: idArray.affectedPlayerIds.length,
+						        categoryTotal: _plugin.data.playerNumber
+						    });
 						});
 						_plugin.htmlElements.popupLoading.insmFullScreenLoading('close');
 						worker.terminate();
 						worker = undefined;
 					};
+					//function filterPlayer (region, players) {
+					//	if (!players) {
+					//		players = [];
+					//	}
+					//	$.each(region.players, function (key,player) {
+					//		players.push(player);
+					//	});        
+					//	$.each(region.children, function (index, subregion) {
+					//		filterPlayer(subregion, players);
+					//	});
+					//	return players;
+					//}
+					//var players = filterPlayer(regionTree);
+					//_plugin.data.playerNumber = players.length;
+					//$.each(_plugin.settings.categories, function (categoryName, category) {
+					//	_plugin.data.categoryLookup[categoryName] = {};
+					//	_plugin.data.categoryLookup[categoryName].affectedPlayerIds = [];
+						
+					//	$.each(players, function (index, player) {
+					//		var inCategory = false;
+					//		if (category.states) {
+					//			if ($.inArray(player.state, category.states) >-1) {
+					//				inCategory = true;
+					//			}
+					//		}
+					//		if (category.fulfilmentStates) {
+					//			if ($.inArray(player.fulfilmentState, category.fulfilmentStates) >-1) {
+					//				inCategory = true;
+					//			}
+					//		}
+					//		if (category.eventIds) {
+					//			if ($.inArray(player.eventId, category.eventIds) > -1) {
+					//				inCategory = true;
+					//			}
+					//		}
+					//		if (category.regionIds) {
+					//			$.each(category.regionIds, function (index,regionId) {
+					//				if ($.inArray(regionId.toString(), player.regionPath) > -1 && $.inArray(player.state,category.states) > -1) {
+					//					inCategory = true;
+					//				} 
+					//			});
+					//		}
+					//		if (inCategory) {
+					//			_plugin.data.categoryLookup[categoryName].affectedPlayerIds.push(player);
+					//		}
+					//	});
+					//});
+					//$.each(_plugin.data.categoryLookup, function (categoryname,idArray) {
+
+					//	$this.insmDashboard2('generateCategories', {
+					//		categoryName:categoryname,
+					//		categoryValue: idArray.affectedPlayerIds.length,
+					//		categoryTotal:_plugin.data.playerNumber
+					//	})
+					//});
 				}
 			});
 
@@ -140,53 +190,29 @@
 			$('<li />').addClass('categorycontent is-clickable').text(options.categoryName + ' (' + options.categoryValue + ')').appendTo(_plugin.htmlElements.content.views.categoryList).click(function () {
 				_plugin.htmlElements.content.views.playerTitle.text(options.categoryName);
 				_plugin.htmlElements.content.views.playerlistContainer.show(),
-				_plugin.htmlElements.content.views.pieChartMaterial.show();
+				_plugin.htmlElements.content.views.pieChatMaterial.show();
 				_plugin.htmlElements.content.views.playerTabDiv.hide();
-				_plugin.htmlElements.content.views.pieChartDescription.empty();
 
 				try {
-					_plugin.htmlElements.content.views.pieChart.destroy();
+					_plugin.htmlElements.content.views.pieChat.destroy();
 				}catch(err) {
 				}
-				if (options.categoryTotal == 'unavailable') {
-					_plugin.htmlElements.content.views.unavailableMessage.show();
-				} else {
-					_plugin.htmlElements.content.views.pieChart = new Chart(_plugin.htmlElements.content.views.pieChartMaterial.get(0).getContext("2d")).Pie([
-						{
-							value: options.categoryValue,
-							color: "#F7464A",
-							highlight: "#FF5A5E",
-							label: 'Affected by ' + options.categoryName
-						}, {
-							value: options.categoryTotal - options.categoryValue,
-							color: "#46BFBD",
-							highlight: "#5AD3D1",
-							label: 'Not affected'
-						}
-					], {
-						responsive: false,
-						animation: false
-					});
-					var percentageAffected = (options.categoryValue / options.categoryTotal)*100;
-					percentageAffected = percentageAffected.toFixed(2);
-					_plugin.htmlElements.content.views.unavailableMessage.hide();
-					_plugin.htmlElements.content.views.pieChartDescription.append(
-						$('<ul />').append(
-						   $('<li />').append($('<h3 />').text('Total players: '+options.categoryTotal)
-						   ),
-						   $('<li />').append($('<div />').insmStatusBox({
-							   title: (100 - percentageAffected).toFixed(2) + "% ("+(options.categoryTotal-options.categoryValue) + "/" + options.categoryTotal+") of players not affected by " + options.categoryName,
-							   status: "okpiechart",
-							   tooltips:false
-						   })),
-						   $('<li />').append($('<div />').insmStatusBox({
-							   title: percentageAffected + "% ("+ options.categoryValue + "/" + options.categoryTotal + ") of players affected by " + options.categoryName,
-							   status: "errorpiechart",
-							   tooltips:false
-						   }))
-						)						
-					);
-				}
+				_plugin.htmlElements.content.views.pieChat = new Chart(_plugin.htmlElements.content.views.pieChatMaterial.get(0).getContext("2d")).Pie([
+					{
+						value: options.categoryValue,
+						color: "#F7464A",
+						highlight: "#FF5A5E",
+						label: 'Affected by '+options.categoryName
+					}, {
+						value: options.categoryTotal-options.categoryValue,
+						color: "#46BFBD",
+						highlight: "#5AD3D1",
+						label: 'Not affected'
+					}
+				], {
+					responsive: false,
+					animation:false
+				});
 				$this.insmDashboard2('generatePlayerList', {
 					items: _plugin.data.categoryLookup[options.categoryName].affectedPlayerIds
 				});
@@ -267,20 +293,20 @@
 						fullPath+='/'+path.name
 					});
 					var stateRow = $('<div />').addClass('playerlistitem').append(
-						$('<ul />').append(
-						   $('<li />').text(item.name),
-						   $('<li />').text(fullPath)
-						),                                              
 						$('<div />').addClass('screenshot').append(
 							$.insmFramework('getScreenshot', {
 								upid: item.upid
 							})
-						)						
+						),
+						$('<ul />').append(
+						   $('<li />').text(item.name),
+						   $('<li />').text(fullPath)
+						)
 					);
 					stateRow.click(function () {
-						
+					   
 						_plugin.htmlElements.content.views.playerTabDiv.empty();
-						_plugin.htmlElements.content.views.pieChartMaterial.hide();
+						_plugin.htmlElements.content.views.pieChatMaterial.hide();
 						_plugin.htmlElements.content.views.playerTitle.text(item.name);
 						_plugin.htmlElements.content.views.playerTabDiv.insmPlayerDetails2('destroy').insmPlayerDetails2({
 							upid: item.upid,
@@ -337,12 +363,6 @@
 				_plugin.htmlElements.content.container.append(
 					_plugin.htmlElements.content.views.container.append(                         
 						_plugin.htmlElements.content.views.categoryContainer.addClass('categorycontainer').append(
-							//_plugin.htmlElements.content.views.searchBar.insmSearchField({
-							//	placeholderText: "search with all player",
-							//	onSearch: function (searchstring) {
-							//		_plugin.data.onSearch(searchstring);
-							//	}
-							//}),
 							$('<h2 />').text('Category'),
 							_plugin.htmlElements.content.views.categoryList.addClass('categorylist')
 						),
@@ -353,9 +373,7 @@
 						_plugin.htmlElements.content.views.playerTabContainer.addClass('playertabcontainer').append(
 							_plugin.htmlElements.content.views.playerTitle,
 							_plugin.htmlElements.content.views.playerTabDiv,
-							_plugin.htmlElements.content.views.unavailableMessage.hide(),
-							_plugin.htmlElements.content.views.pieChartDescription.addClass('description'),
-							_plugin.htmlElements.content.views.pieChartMaterial.addClass('pie')							
+							_plugin.htmlElements.content.views.pieChatMaterial.addClass('pie')
 						)																				   
 					)
 				)

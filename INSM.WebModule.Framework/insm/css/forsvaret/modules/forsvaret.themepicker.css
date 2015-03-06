@@ -1,0 +1,61 @@
+.forsvaret-themepicker {
+    height: 100%;
+    background: #fff;
+}
+
+.forsvaret-themepicker > .header {
+    background: transparent url('../../../gfx/insm/background_tile.jpg') repeat;
+    height: 40px;
+    width: 100%;
+    border-bottom: 2px solid #666666;
+}
+
+.forsvaret-themepicker > .header > .module-logo {
+    background: transparent url('forsvaretthemepicker-thin.png') 20px center no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.forsvaret-themepicker > .header > .company-logo {
+    float: right;
+    background: transparent url('../../../gfx/insm/insm-logo-thin.png') right center no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-width:641px) {
+    .forsvaret-themepicker > .header {
+        height: 100px;
+    }
+
+    .forsvaret-themepicker > .header > .module-logo {
+        background: transparent url('forsvaretthemepicker.png') 20px center no-repeat;
+    }
+
+    .forsvaret-themepicker > .header > .company-logo {
+        background: transparent url('../../../gfx/insm/insm_logo.png') right center no-repeat;
+    }
+}
+
+.forsvaret-themepicker > .settings-container {
+    overflow-y: auto;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.forsvaret-themepicker ul.themes-container {
+    overflow-y: auto;
+}
+
+.forsvaret-themepicker ul > li {
+    padding: 16px;
+    border-bottom: 1px solid #aaa;
+}
+
+.forsvaret-themepicker ul > li:hover {
+    background: #eaeaea;
+}
+
+.forsvaret-themepicker ul > li:last-child {
+    border-bottom: none;
+}

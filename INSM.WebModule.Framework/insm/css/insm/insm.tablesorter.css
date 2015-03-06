@@ -1,0 +1,135 @@
+﻿table.insm-tablesorter
+{
+    margin: 0px;
+    table-layout: fixed;
+    border-top: 1px solid #ffffff;
+    border-spacing: 0px;
+    border-collapse: separate;
+}
+
+table.insm-tablesorter td.no-content
+{
+    text-align: center;
+    font-style: oblique;
+}
+
+table.insm-tablesorter tbody tr:nth-child(2n)
+{
+    background: #eee;
+}
+
+table.insm-tablesorter tbody tr:hover
+{
+    background: #ccc;
+}
+
+table.insm-tablesorter tbody tr.highlight
+{
+    background: #FFD;
+}
+
+table.insm-tablesorter tbody tr:first-child td {
+    border-top: 2px solid #666666;
+}
+
+table.insm-tablesorter thead tr th 
+{
+    background: #f0f0f0;
+    padding: 16px;
+    padding-right: 20px;
+    word-wrap: break-word;
+    border-right: 2px solid #e0e0e0;
+    border-left: 1px solid #ffffff;
+    background-position: center right;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+
+table.insm-tablesorter thead tr th:first-child
+{
+    border-left: none;
+}
+
+table.insm-tablesorter thead tr th:last-child
+{
+    border-right: none;
+}
+
+table.insm-tablesorter thead tr th.order-none
+{
+    background-image: url('../../gfx/insm/icons/order-none.png');
+    cursor: pointer;
+}
+
+table.insm-tablesorter thead tr th.order-asc
+{
+    background-image: url('../../gfx/insm/icons/order-asc.png');
+    cursor: pointer;
+}
+
+table.insm-tablesorter thead tr th.order-desc
+{
+    background-image: url('../../gfx/insm/icons/order-desc.png');
+    cursor: pointer;
+}
+
+.insm-tablesorter-search 
+{
+    float: left;
+}
+
+.insm-tablesorter-search a.button 
+{
+    margin-left: 4px;
+}
+
+.insm-tablesorter-limitcontrol 
+{
+    float: right;
+    margin-top: 2px;
+    margin-right: 16px;
+}
+
+.insm-tablesorter-controls-top 
+{
+    background: #f0f0f0;
+    border-bottom: 2px solid #e0e0e0;
+    height: 30px;
+    padding: 16px;
+    text-align: center;
+}
+
+.insm-tablesorter-controls-top > *
+{
+    display: inline-block;
+    text-align: left;
+}
+
+.insm-tablesorter-controls-bottom 
+{
+    padding-top: 6px;
+    height: 26px;
+}
+
+.insm-tablesorter-paginator 
+{
+    display: table;
+    white-space: nowrap;
+    margin: auto;
+}
+
+.insm-tablesorter-paginator a.button
+{
+    width: 20px;
+    margin: 2px;
+    text-align: center;
+}
+
+.insm-tablesorter-content
+{
+    white-space:normal;
+    word-wrap: break-word;
+    min-height: 32px;
+    vertical-align: middle;
+    overflow: hidden;
+}

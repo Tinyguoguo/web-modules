@@ -99,21 +99,10 @@
 .dashboard2 .playertabcontainer> .pie { 
 	margin-top:20px;
 }
-.dashboard2 .playertabcontainer> .description { 
-	margin-top:20px;
-	text-align:left;
-	float:right;
-	width:180px;
-}
-.dashboard2 .playertabcontainer> .description> ul{ 
-	list-style-type:none;
-}
-.dashboard2 .playertabcontainer> .description> ul >li{ 
-	margin-bottom:10px;
-}
 .dashboard2 .playerlistcontainer { 
 	
-	max-width:400px;	
+	max-width:400px;
+	
 	display: inline-block;
 	float:left;
 }
@@ -150,20 +139,14 @@
 	
 }
 .dashboard2 .playerlist .playerlistitem .screenshot {    
-	margin-top:5px;
-	margin-bottom:5px;
+	margin-top:2px;
 	text-align:center;
-	width:100px;	
+	width:100px;
+	
 }
-.dashboard2 .playerlist .playerlistitem .screenshot img{    
-	max-width:100px;
-	height:56px;	
-}
-.dashboard2 .playerlist .playerlistitem > ul {    
+.dashboard2 .playerlist .playerlistitem ul {    
 	list-style-type: none;
 	margin-left: 20px;
-	float:right;
-	width: 250px;
 }
 .dashboard2 .playerlist .playerlistitem ul li {    
 	word-break:break-all;

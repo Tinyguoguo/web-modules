@@ -1,0 +1,275 @@
+﻿.playlistEditor
+{
+
+}
+
+.module-preview.playlistEditor h2 {
+    background-image: url(logo.png);
+    background-position: 8px center;
+    background-repeat: no-repeat;
+    padding: 0px 8px 0px 70px;
+    height: 60px;
+    line-height: 60px;
+    margin: 0px;
+}
+
+.playlistEditor.container
+{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box; /* Firefox */
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.playlistEditor > .header {
+    background: transparent url('../../../../gfx/insm/background_tile.jpg') repeat;
+    height: 100px;
+    width: 100%;
+}
+
+.playlistEditor > .header > .module-logo {
+    background: transparent url(playlisteditor.png) 20px center no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.playlistEditor > .header > .company-logo {
+    float: right;
+    background: transparent url('../../../../gfx/insm/insm_logo.png') right center no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.playlistEditor.container > .rightColumn
+{
+    width: auto;
+    position: relative;
+    right: 0px;
+    display: inline-block;
+}
+
+.playlistEditor.container > .leftColumn
+{
+    width: 240px;
+    float: left;
+    position: relative;
+}
+
+.playlistEditor.container > .leftColumn > .controls
+{
+    padding: 8px;
+    background: #f0f0f0;
+    border-bottom: 2px solid #666666;
+    min-height: 29px;
+    line-height: 29px;
+}
+
+.playlistEditor.container > .leftColumn > .controls > a.toggleRegionPicker
+{
+    padding-left: 16px;
+}
+
+.playlistEditor.container > .leftColumn > .controls > a.toggleRegionPicker.show {
+    background: transparent url('../../../../gfx/insm/icons/arrow-right.png') left center no-repeat;
+}
+
+.playlistEditor.container > .leftColumn > .controls > a.toggleRegionPicker.hide {
+    background: transparent url('../../../../gfx/insm/icons/arrow-left.png') left center no-repeat;
+}
+
+.playlistEditor.container > .rightColumn > .controls
+{
+    padding: 8px;
+    background: #efefef;
+}
+
+.playlistEditor.container > .rightColumn > .assetManager
+{
+    display: block;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.playlistEditor.container > .rightColumn > .playlistContainer
+{
+    position: relative;
+    height: 185px;
+    display: block;
+    margin: 18px 0px 18px 18px;
+}
+
+.playlistEditor.container > .rightColumn > .assetControls {
+    position: absolute;
+    bottom: 184px;
+    background: #f5f5f5;
+    padding: 8px 8px 8px 8px;
+    border: 1px solid #cccccc;
+    width: 100%;
+    line-height: 25px;
+    margin: 18px 0px 18px 18px;
+}
+
+.playlistEditor.container > .rightColumn > .assetControls > * {
+    margin-right: 8px;
+    display: inline;
+    height: 29px;
+    vertical-align: middle;
+}
+
+.playlistEditor.container > .rightColumn > .playlistContainer > .header
+{
+    padding-bottom: 6px;
+    padding: 8px;
+    background: #f5f5f5;
+    border: 1px solid #cccccc;
+    border-bottom: 0px;
+    border-right: 0px;
+}
+
+.playlistEditor.container > .rightColumn > .playlistContainer > .header > h5
+{
+    color: #333333;
+    margin: 0px;
+    display: inline;
+    font-weight: bold;
+}
+
+.playlistEditor.container > .rightColumn > .playlistContainer > .header > .information
+{
+    line-height: 35px;
+    height: 35px;
+    margin-right: 8px;
+    display: inline;
+    color: #333333;
+    padding-left: 8px;
+}
+
+.playlistEditor.container > .rightColumn > .playlistContainer > .header > .information > span {
+    padding-right: 16px;
+}
+
+.playlistEditor.container > .rightColumn > .playlistContainer > .header > .controls
+{
+    line-height: 35px;
+    height: 35px;
+    float: right;
+}
+
+.playlistEditor.container > .rightColumn > .playlistContainer > .header > .controls > button
+{
+    margin-left: 8px;
+    display: inline-block;
+}
+
+.playlistEditor.container > .rightColumn > .playlistContainer > .playlistItems
+{
+    color: #aaa;
+    height: 132px;
+    padding-right: 8px;
+    background: #626262;
+    border: 1px solid #525252;
+    border-top: 0px;
+    border-right: 0px;
+}
+
+.playlistEditor.container > .rightColumn > .playlistContainer > .playlistItems > .asset-thumbnail {
+    position: relative;
+}
+
+.playlistEditor.container > .rightColumn > .playlistContainer > .playlistItems > .asset-thumbnail > .remainingTimePlayStart,
+.playlistEditor.container > .rightColumn > .playlistContainer > .playlistItems > .asset-thumbnail > .remainingTimePlayEnd {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    bottom: 0px;
+    width: 35px;
+    height: 20px;
+    background-color: #222;
+    text-align: center;
+    line-height: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.playlistEditor.container > .rightColumn > .playlistContainer > .playlistItems > .asset-thumbnail > .remainingTimePlayStart {
+    left: 0px;
+}
+
+
+.playlistEditor.container > .rightColumn > .playlistContainer > .playlistItems > .asset-thumbnail > .remainingTimePlayEnd {
+    right: 0px;
+}
+
+
+.playlistEditor .addNewPlaylist {
+    position: absolute;
+    display: block;
+    border-top: 2px solid #cacaca;
+    padding: 16px;
+    right: 0;
+    bottom: 0;
+    width: 208px;
+}
+
+.playlistEditor .addNewPlaylist .insmInput {
+    display: inline-block;
+    width: 133px;
+}
+
+.playlistEditor .addNewPlaylist .insmInput input {
+    min-width: 119px;
+    width: 119px;
+}
+
+.playlistEditor .addNewPlaylist button {
+    display: inline-block;
+    float: right;
+    padding-left: 28px;
+    background: #ffffff url("../../../../gfx/insm/icons/add.png") 4px center no-repeat;
+	background: url("../../../../gfx/insm/icons/add.png") 4px center no-repeat, -moz-linear-gradient(top, #ffffff 0%, #f0f0f0 100%);
+	background: url("../../../../gfx/insm/icons/add.png") 4px center no-repeat, -webkit-gradient(linear, 0% 0%,0% 100%, from(#ffffff), to(#f0f0f0));
+	background: url("../../../../gfx/insm/icons/add.png") 4px center no-repeat, -webkit-linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background: url("../../../../gfx/insm/icons/add.png") 4px center no-repeat, -o-linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background: url("../../../../gfx/insm/icons/add.png") 4px center no-repeat, -ms-linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background: url("../../../../gfx/insm/icons/add.png") 4px center no-repeat, linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+}
+
+.playlistEditor.container .playlistItems div {
+    cursor: pointer;
+}
+
+.playlistEditor.container .playlistItems div.is-selected {
+    box-shadow: #9797e2 0px 0px 8px 2px;
+}
+
+.playlistEditor.container .playlistItems div img {
+    vertical-align: bottom;
+}
+
+.playlistEditor .playlists {
+    border-left: 1px solid #dcdcdc;
+    border-right: 2px solid #dcdcdc;
+    background: #f5f5f5;
+}
+
+.playlistEditor .playlists .insmTableControls {
+    height: 25px;
+}
+
+.playlistEditor .playlists .insmTableControls .insm-search-input {
+    width: 167px;
+}
+
+.playlistEditor .playlists table tbody tr {
+    cursor: pointer;
+}
+
+.playlistEditor.container > .single-message {
+    margin: auto;
+    margin-top: 200px;
+    display: table;
+    text-align: center;
+}

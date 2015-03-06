@@ -1,0 +1,32 @@
+﻿.itemGrid > .container {
+    padding-bottom: 12px;
+}
+
+.item-grid-category h2 {
+    padding: 8px 8px 0px 8px;
+}
+
+.item-grid-category {
+    white-space: nowrap;
+    overflow: hidden;
+    height: 177px;
+    padding-right: 8px;
+}
+
+.itemGrid > .noItemsContainer {
+    position: absolute;
+    display: block;
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+    font-size: 64px;
+    color: #aaa;
+    padding-top: 80px;
+}
+
+.itemGrid > .seeMore {
+    display: block;
+    width: 150px;
+    font-weight: bold;
+    margin: 10px auto 20px auto;
+}

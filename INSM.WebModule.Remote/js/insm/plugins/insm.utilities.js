@@ -364,8 +364,6 @@ var printDate = function (dateObject, format) {
                 return year + '-' + month + '-' + date;
             case 'Y-m-d H:i:s':
                 return year + '-' + month + '-' + date + ' ' + hours + ':' + minutes + ':' + seconds;
-            case 'H:i':
-                return hours + ':' + minutes;
             default:
                 return year + '-' + month + '-' + date + ' ' + hours + ':' + minutes + ':' + seconds;
         }

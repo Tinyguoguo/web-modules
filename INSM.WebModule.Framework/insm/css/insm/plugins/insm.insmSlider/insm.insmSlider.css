@@ -1,0 +1,22 @@
+﻿.insm-playlist-manager-slider-container
+{
+    /*margin-top: 20px;*/
+    display: block;
+    /*border: 1px solid black;*/
+    width: 100%;
+    background-image: url(line.png);
+    background-repeat: no-repeat;
+    /*background-position-x: -10px;*/
+    /*background-position-y: center;*/
+    background-position:left center;
+}
+
+.insm-playlist-manager-slider-header
+{
+    display: inline-block;
+    width: 7px;
+    height: 25px;
+    background-color: #808080;
+    cursor: pointer;
+    /*margin-top: 5px;*/
+}

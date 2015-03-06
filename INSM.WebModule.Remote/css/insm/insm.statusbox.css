@@ -25,12 +25,6 @@
 .insm-statusbox > .offline {
     background: #333;
 }
-.insm-statusbox > .errorpiechart {
-    background: #FF5A5E;
-}
-.insm-statusbox > .okpiechart {
-    background: #46BFBD;
-}
 .insm-statusbox > .x {
     background-color: none;
     background: url('../../gfx/insm/icons/dot.png') center right no-repeat;

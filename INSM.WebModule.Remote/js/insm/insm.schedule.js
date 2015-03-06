@@ -405,7 +405,6 @@
                                     type: "dataset",
                                     currentValue: {},
                                     onItemClick: function (item) {
-                            
                                         if (item.Type === "DataSet") {
                                             $this.insmDatasetEditor('displayDatasetEditor', {
                                                 datasetId: item.DataSetId

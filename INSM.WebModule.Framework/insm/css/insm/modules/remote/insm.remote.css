@@ -1,0 +1,357 @@
+﻿.remote {
+	height: 100%;
+	background: #ffffff;
+}
+
+.remote > .header {
+	background: transparent url('../../../../gfx/insm/background_tile.jpg') repeat;
+	height: 40px;
+	width: 100%;
+	border-bottom: 2px solid #666666;
+}
+
+.remote > .header > .module-logo {
+	background: transparent url('remote-thin.png') 10px center no-repeat;
+	width: 100%;
+	height: 100%;
+}
+
+.remote > .header > .company-logo {
+	float: right;
+	background: transparent url('../../../../gfx/insm/insm-logo-thin.png') right center no-repeat;
+	width: 100%;
+	height: 100%;
+}
+
+@media (min-width:641px) {
+	.remote > .header {
+		height: 100px;
+	}
+
+	.remote > .header > .module-logo {
+		background: transparent url('remote.png') 20px center no-repeat;
+	}
+
+	.remote > .header > .company-logo {
+		background: transparent url('../../../../gfx/insm/insm_logo.png') right center no-repeat;
+	}
+}
+
+.remote > .playerlist {
+	
+	text-align: center;
+}
+
+.remote > .playerlist > .header {
+	text-align: center;
+	background: #f0f0f0;
+	border-bottom: 2px solid #666666;
+	min-height: 29px;
+	padding: 8px;
+}
+
+.remote > .playerlist > .header > h3 {
+	margin: 0px;
+	min-height: 29px;
+	line-height: 29px;
+}
+
+.remote > .playerlist > .content {
+	padding: 16px;
+	list-style-type: none;
+	overflow-y: auto;
+}
+
+.remote > .playerlist > .content > .player {
+	border-bottom: 1px solid #aaa;
+	width: 100%;
+	/*margin-bottom: 16px;*/
+	background: url('../../../../gfx/insm/icons/arrow-right.png') center right no-repeat;
+	
+}
+
+.remote > .playerlist > .content > .player > .name {
+	padding: 16px;
+	min-height: 20px;
+	line-height: 20px;
+	text-align: left;
+	
+}
+
+.remote > .playlists {
+	overflow-y: auto;
+}
+
+.remote > .playlists > .header {
+	background: #f0f0f0;
+	border-bottom: 2px solid #666666;
+	min-height: 29px;
+	padding: 8px;
+}
+
+.remote > .playlists > .header > button.back {
+	float: left;
+	margin-right: 8px;
+}
+
+.remote > .playlists > .header > .title {
+	text-align: center;
+	margin: 0px;
+	min-height: 29px;
+	line-height: 29px;
+}
+
+.insm-tooltip .api-indicator table th {
+	font-weight: bold;
+	padding-right: 16px;
+}
+
+.insm-tooltip .api-indicator h2 {
+	font-weight: bold;
+	text-align: center;
+	font-size: 14px;
+}
+
+.remote > .playlists > .header > .api-indicator {
+	background: #aaa;
+	box-shadow: 0px 0px 5px 1px #555;
+	width: 10px;
+	height: 10px;
+	float: right;
+	border-radius: 10px;
+	margin: 10px 6px 0px 8px;
+}
+
+.remote > .playlists > .header > .api-indicator.red {
+	background: #f66;
+	box-shadow: 0px 0px 5px 1px #a00;
+}
+
+.remote > .playlists > .header > .api-indicator.yellow {
+	background: #ff6;
+	box-shadow: 0px 0px 5px 1px #aa0;
+}
+
+.remote > .playlists > .header > .api-indicator.green {
+	background: #6f6;
+	box-shadow: 0px 0px 5px 1px #0a0;
+}
+
+.remote > .playlists > .content {
+	text-align: center;
+	padding: 16px;
+}
+
+.remote > .playlists > .content button {
+	width: 100%;
+	margin-bottom: 16px;
+	padding: 16px;
+}
+
+.remote > .playlists > .content > .divider {
+	color: #aaa;
+	margin-bottom: 8px;
+}
+
+.remote > .playlists > .controls {
+	bottom: 0px;
+	position: absolute;
+	width: 100%;
+	height: 40px;
+	display: none;
+}
+
+
+.remote > .playlists > .controls > button {
+	height: 40px;
+	width: 20%;
+}
+
+.remote > .playlists > .controls > button.previous {
+	background-image: url('previous.png');
+	background-image: url(previous.png), -moz-linear-gradient(top, #ffffff 0%, #f0f0f0 100%);
+	background-image: url(previous.png), -webkit-gradient(linear, 0% 0%,0% 100%, from(#ffffff), to(#f0f0f0));
+	background-image: url(previous.png), -webkit-linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background-image: url(previous.png), -o-linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background-image: url(previous.png), -ms-linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background-image: url(previous.png), linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.remote > .playlists > .controls > button.pause {
+	background-image: url(pause.png);
+	background-image: url(pause.png), -moz-linear-gradient(top, #ffffff 0%, #f0f0f0 100%);
+	background-image: url(pause.png), -webkit-gradient(linear, 0% 0%,0% 100%, from(#ffffff), to(#f0f0f0));
+	background-image: url(pause.png), -webkit-linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background-image: url(pause.png), -o-linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background-image: url(pause.png), -ms-linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background-image: url(pause.png), linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.remote > .playlists > .controls > button.pause.is-selected {
+	background-image: url(pause.png);
+	background-image: url(pause.png), -moz-linear-gradient(top, #ddddff 0%, #ccccff 100%);
+	background-image: url(pause.png), -webkit-gradient(linear, 0% 0%,0% 100%, from(#ddddff), to(#ccccff));
+	background-image: url(pause.png), -webkit-linear-gradient(top, #ddddff 0%,#ccccff 100%);
+	background-image: url(pause.png), -o-linear-gradient(top, #ddddff 0%,#ccccff 100%);
+	background-image: url(pause.png), -ms-linear-gradient(top, #ddddff 0%,#ccccff 100%);
+	background-image: url(pause.png), linear-gradient(top, #ddddff 0%,#ccccff 100%);
+}
+
+.remote > .playlists > .controls > button.play {
+	background-image: url(play.png);
+	background-image: url(play.png), -moz-linear-gradient(top, #ffffff 0%, #f0f0f0 100%);
+	background-image: url(play.png), -webkit-gradient(linear, 0% 0%,0% 100%, from(#ffffff), to(#f0f0f0));
+	background-image: url(play.png), -webkit-linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background-image: url(play.png), -o-linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background-image: url(play.png), -ms-linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background-image: url(play.png), linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.remote > .playlists > .controls > button.play.is-selected {
+	background-image: url(play.png);
+	background-image: url(play.png), -moz-linear-gradient(top, #ddddff 0%, #ccccff 100%);
+	background-image: url(play.png), -webkit-gradient(linear, 0% 0%,0% 100%, from(#ddddff), to(#ccccff));
+	background-image: url(play.png), -webkit-linear-gradient(top, #ddddff 0%,#ccccff 100%);
+	background-image: url(play.png), -o-linear-gradient(top, #ddddff 0%,#ccccff 100%);
+	background-image: url(play.png), -ms-linear-gradient(top, #ddddff 0%,#ccccff 100%);
+	background-image: url(play.png), linear-gradient(top, #ddddff 0%,#ccccff 100%);
+}
+
+.remote > .playlists > .controls > button.next {
+	background-image: url(next.png);
+	background-image: url(next.png), -moz-linear-gradient(top, #ffffff 0%, #f0f0f0 100%);
+	background-image: url(next.png), -webkit-gradient(linear, 0% 0%,0% 100%, from(#ffffff), to(#f0f0f0));
+	background-image: url(next.png), -webkit-linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background-image: url(next.png), -o-linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background-image: url(next.png), -ms-linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background-image: url(next.png), linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.remote > .playlists > .controls > button.volume {
+	background-image: url(volume.png);
+	background-image: url(volume.png), -moz-linear-gradient(top, #ffffff 0%, #f0f0f0 100%);
+	background-image: url(volume.png), -webkit-gradient(linear, 0% 0%,0% 100%, from(#ffffff), to(#f0f0f0));
+	background-image: url(volume.png), -webkit-linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background-image: url(volume.png), -o-linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background-image: url(volume.png), -ms-linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background-image: url(volume.png), linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.remote > .playlists > .controls > button.volume.muted {
+	background-image: url(volume-muted.png);
+	background-image: url(volume-muted.png), -moz-linear-gradient(top, #ffffff 0%, #f0f0f0 100%);
+	background-image: url(volume-muted.png), -webkit-gradient(linear, 0% 0%,0% 100%, from(#ffffff), to(#f0f0f0));
+	background-image: url(volume-muted.png), -webkit-linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background-image: url(volume-muted.png), -o-linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background-image: url(volume-muted.png), -ms-linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background-image: url(volume-muted.png), linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.remote > .playlists > .controls > .volume-bar-container {
+	height: 40px;
+	width: 100%;
+	position: absolute;
+}
+
+.remote > .playlists > .controls > .volume-bar-container > .volume-digit {
+	width: 20%;
+	border: 1px solid #c5c5c5;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	display: inline-block;
+	vertical-align: top;
+	box-sizing: border-box;
+	font-weight: bold;
+	font-size: 14px;
+	
+	background: #f0f0f0;
+	background: -moz-linear-gradient(top, #ffffff 0%, #f0f0f0 100%);
+	background: -webkit-gradient(linear, 0% 0%,0% 100%, from(#ffffff), to(#f0f0f0));
+	background: -webkit-linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background: -o-linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background: -ms-linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background: linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+}
+
+.remote > .playlists > .controls > .volume-bar-container > .volume-digit.in-sync {
+	font-weight: normal;
+}
+
+.remote > .playlists > .controls > .volume-bar-container > .padding {
+	width: 60%;
+	border: 1px solid #c5c5c5;
+	height: 40px;
+	display: inline-block;
+	box-sizing: border-box;
+
+
+	background: #ffffff;
+	background: -moz-linear-gradient(top, #ffffff 0%, #f0f0f0 100%);
+	background: -webkit-gradient(linear, 0% 0%,0% 100%, from(#ffffff), to(#f0f0f0));
+	background: -webkit-linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background: -o-linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background: -ms-linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background: linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+}
+
+.remote > .playlists > .controls > .volume-bar-container > .padding > .volume-bar {
+	margin: 13px 13px;
+}
+
+.remote > .playlists > .controls > .volume-bar-container > button.mute {
+	width: 20%;
+	height: 40px;
+	display: inline-block;
+	vertical-align: top;
+	box-sizing: border-box;
+
+	
+	background-image: url('volume.png');
+	background-image: url(volume.png), -moz-linear-gradient(top, #ffffff 0%, #f0f0f0 100%);
+	background-image: url(volume.png), -webkit-gradient(linear, 0% 0%,0% 100%, from(#ffffff), to(#f0f0f0));
+	background-image: url(volume.png), -webkit-linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background-image: url(volume.png), -o-linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background-image: url(volume.png), -ms-linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background-image: url(volume.png), linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.remote > .playlists > .controls > .volume-bar-container > button.mute.mute-on {
+	width: 20%;
+	height: 40px;
+	display: inline-block;
+	vertical-align: top;
+	box-sizing: border-box;
+
+	
+	background-image: url('volume-muted.png');
+	background-image: url(volume-muted.png), -moz-linear-gradient(top, #ffffff 0%, #f0f0f0 100%);
+	background-image: url(volume-muted.png), -webkit-gradient(linear, 0% 0%,0% 100%, from(#ffffff), to(#f0f0f0));
+	background-image: url(volume-muted.png), -webkit-linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background-image: url(volume-muted.png), -o-linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background-image: url(volume-muted.png), -ms-linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background-image: url(volume-muted.png), linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.ui-slider .ui-slider-handle {
+	width: 1.8em;
+	height: 1.8em;
+	margin-left: -0.95em;
+	top: -0.6em;
+}

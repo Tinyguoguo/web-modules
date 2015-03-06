@@ -108,9 +108,6 @@
                         $this.insmSortableList('populateTable');
                     }
                 });
-            } else {
-                _plugin.data.limit = _plugin.settings.items.length;
-
             }
 
             _plugin.htmlElements.controls.append(
@@ -589,7 +586,7 @@
             // Append relevant rows
             _plugin.data.itemCount = _plugin.data.tableData.length;
             var lastItemIndex = _plugin.data.tableData.length;
-          
+
             if (parseInt(lastItemIndex) > parseInt(_plugin.data.offset + _plugin.data.limit)) {
                 lastItemIndex = parseInt(_plugin.data.offset + _plugin.data.limit);
             }
@@ -600,6 +597,7 @@
                     _plugin.data.offset = 0;
                 }
             }
+
             for (var i = _plugin.data.offset; i < lastItemIndex; i++) {
                 if (_plugin.settings.items[_plugin.data.tableData[i]]) {
                     if (!_plugin.settings.items[_plugin.settings.items[_plugin.data.tableData[i]].id]._tr) {

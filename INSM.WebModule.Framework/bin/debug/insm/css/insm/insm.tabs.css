@@ -1,0 +1,51 @@
+﻿.insm-tabs 
+{
+    display: inline-block;
+}
+
+.insm-tabs > ul
+{
+    list-style-type: none;
+    background: url('../../gfx/insm/tabs/menu-border.png') 0px bottom repeat-x;
+    margin-bottom: 0px;
+}
+
+.insm-tabs > ul li 
+{
+    padding: 8px;
+    border: 1px solid #c5c5c5;
+    border-right: none;
+    display: inline-block;
+    background: #fff;
+}
+
+.insm-tabs > ul li:hover
+{
+    color: #b0b0b0;
+    background: linear-gradient(#fafafa, #ffffff)
+}
+
+.insm-tabs > ul li:first-child
+{
+    margin-left: 4px;
+}
+
+.insm-tabs > ul li:last-child
+{
+    margin-right: 8px;
+    border: 1px solid #c5c5c5;
+}
+
+.insm-tabs > ul li.selected
+{
+    border-bottom: 1px solid #fff;
+}
+
+.insm-tabs .insm-tabs-content 
+{
+    clear: both;
+    padding: 8px;
+    border: 1px solid #c5c5c5;
+    border-top: none;
+    background: #fff;
+}

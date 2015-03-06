@@ -21,57 +21,38 @@
             // Global vars
             var $this = $(this);
             var _plugin = $this.data('insmStatusBox');
+
             // If the plugin hasn't been initialized yet
             if (!_plugin) {
                 _plugin = {
                     settings: $.extend({
                         status: '',
                         title: '',
-                        tooltip: 'Tooltip not available',
-                        statusBoxClickable:false
-                    }, options),
-                    htmlElements: {
-                        box:$('<div>')
-                    }
+                        tooltip: 'Tooltip not available'
+                    }, options)
                 };
                 $this.data('insmStatusBox', _plugin);
             }
-            if (_plugin.settings.tooltip == false) {
-                $this.addClass('insm-statusbox').append(
-                    _plugin.htmlElements.box.addClass(_plugin.settings.status ? _plugin.settings.status.toLowerCase() : '')
-                );
-            } else {
-                $this.addClass('insm-statusbox').append(
-                    _plugin.htmlElements.box.addClass(_plugin.settings.status ? _plugin.settings.status.toLowerCase() : '').insmTooltip({
-                        content: _plugin.settings.tooltip,
-                        backdropClickClose: true,
-                        width: 400
-                    })
-                );
-            }
-            $this.addClass('insm-statusbox').append(function () {
+            
+            $this.addClass('insm-statusbox').append(
+                $('<div />').addClass(_plugin.settings.status ? _plugin.settings.status.toLowerCase() : '').insmTooltip({
+                    content: _plugin.settings.tooltip,
+                    backdropClickClose: true
+                })
+            ).append(function () {
                 if (_plugin.settings.popup) {
-                    if (_plugin.settings.statusBoxClickable) {
-                        _plugin.htmlElements.box.addClass("is-clickable").click(function () {
-                            $.insmPopup({
-                                content: _plugin.settings.popup,
-                                backdropClickClose: true
-                            });
+                    return $('<a />').text(_plugin.settings.title).click(function() {
+                        $.insmPopup({
+                            content: _plugin.settings.popup,
+                            backdropClickClose: true
                         });
-                        return _plugin.settings.title;
-                    } else {
-                        return $('<a />').text(_plugin.settings.title).click(function () {
-                            $.insmPopup({
-                                content: _plugin.settings.popup,
-                                backdropClickClose: true
-                            });
-                        });
-                    }
+                    });
                 }
                 else {
                     return _plugin.settings.title;
                 }
             });
+
             return $this;
         }
     };

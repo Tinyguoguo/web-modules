@@ -1,0 +1,100 @@
+﻿/*
+ * Region tree
+ */
+
+ul.insmListTree li.player > .item-wrapper > .item-icon
+{
+    background-image: url('gfx/mediaplayer/mediaplayer.png');
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+}
+
+ul.insmListTree li.player.error > .item-wrapper > .item-icon
+{
+    background-image: url('gfx/mediaplayer/mediaplayer_error.png');
+}
+
+ul.insmListTree li.player.warning > .item-wrapper > .item-icon
+{
+    background-image: url('gfx/mediaplayer/mediaplayer_warning.png');
+}
+
+ul.insmListTree li.player.ok > .item-wrapper > .item-icon
+{
+    background-image: url('gfx/mediaplayer/mediaplayer_ok.png');
+}
+
+ul.insmListTree li.player.transferring > .item-wrapper > .item-icon
+{
+    background-image: url('gfx/mediaplayer/mediaplayer_transferring.png');
+}
+
+ul.insmListTree li.player.offline > .item-wrapper > .item-icon
+{
+    background-image: url('gfx/mediaplayer/mediaplayer_offline.png');
+}
+
+ul.insmListTree li.region > .item-wrapper > .item-icon
+{
+    background-image: url('gfx/region/map.png');
+    background-position: -16px 0px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+}
+
+ul.insmListTree li.region.expanded > .item-wrapper > .item-icon
+{
+    background-position: 0px 0px;
+}
+
+ul.insmListTree li.region.transferring > .item-wrapper > .item-icon
+{
+    background-position: -16px -16px;
+}
+
+ul.insmListTree li.region.expanded.transferring > .item-wrapper > .item-icon
+{
+    background-position: 0px -16px;
+}
+
+ul.insmListTree li.region.ok > .item-wrapper > .item-icon
+{
+    background-position: -16px -32px;
+}
+
+ul.insmListTree li.region.expanded.ok > .item-wrapper > .item-icon
+{
+    background-position: 0px -32px;
+}
+
+ul.insmListTree li.region.offline > .item-wrapper > .item-icon
+{
+    background-position: -16px -48px;
+}
+
+ul.insmListTree li.region.expanded.offline > .item-wrapper > .item-icon
+{
+    background-position: 0px -48px;
+}
+
+ul.insmListTree li.region.warning > .item-wrapper > .item-icon
+{
+    background-position: -16px -64px;
+}
+
+ul.insmListTree li.region.expanded.warning > .item-wrapper > .item-icon
+{
+    background-position: 0px -64px;
+}
+
+ul.insmListTree li.region.error > .item-wrapper > .item-icon
+{
+    background-position: -16px -80px;
+}
+
+ul.insmListTree li.region.expanded.error > .item-wrapper > .item-icon
+{
+    background-position: 0px -80px;
+}

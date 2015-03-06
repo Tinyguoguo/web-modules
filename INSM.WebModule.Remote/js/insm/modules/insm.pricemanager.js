@@ -44,8 +44,7 @@
                                 type: "string"
                             }, {
                                 name: "Small Price",
-                                type: "string",
-                                notCheckValidate: "true"
+                                type: "string"
                             }]
                         }]
                     }, options),
@@ -102,7 +101,7 @@
             var itemList = [];
             _plugin.data.originalList = {};
             _plugin.data.originalEditList = {};
-            _plugin.data.changedItemList = [];
+            _plugin.data.changedItemArray = [];
             _plugin.data.removedDataset = [];
             $.each(options.list, function (key, item) {
                 _plugin.data.originalList[item.name] = {};
@@ -120,6 +119,7 @@
                     formatItem['rowId'] = item.name;                                 
                     formatItem['datasetId'] = item.id;
                     formatItem['contentId'] = item.children.Content.id;
+
                     itemList.push(formatItem);
                 } catch(err){
                 }
@@ -135,6 +135,7 @@
             var priceList = {
                 children:{}
             }
+
             $.each(options.list, function (index, item) {
                 priceList.children[item.rowId] = {
                     type: "dataset",
@@ -206,79 +207,53 @@
         refreshData: function (options) {
             var $this = $(this);
             var _plugin = $this.data('insmPriceManager');
-            if (options) {
-                if (options.datasets) {
-                    _plugin.htmlElements.content.views.regionPicker.insmRegionPicker('selectNode', {
-                        node: _plugin.settings.region
-                    });
-                    _plugin.data.priceList.children = {};
-                    $.each(options.datasets, function (key, item) {
-                        _plugin.data.priceList.children[key] = item;
-                    });
+            $.insmFramework('regionDirectory', {
+                regionId: _plugin.settings.region.id,
+                name: 'pricelist',
+                success: function (directory) {
+                    
+                    _plugin.settings.region.directoryId = directory.Id;
+                    $.insmFramework('getDatasetsInDirectory', {
 
-                    _plugin.data.itemList = $this.insmPriceManager('formatEditItems', {
-                        list: _plugin.data.priceList.children
-                    });
+                        directoryId: directory.Id,
+                        
+                        success: function (datasets) {
+                            _plugin.htmlElements.content.views.regionPicker.insmRegionPicker('selectNode', {
+                                node: _plugin.settings.region
+                            });
+                            _plugin.data.priceList.children = {};
+                            $.each(datasets, function (key, item) {
+                                _plugin.data.priceList.children[key] = item;
+                            });
 
-                    $this.insmPriceManager('generateTable', {
-                        items: _plugin.data.itemList
+                            _plugin.data.itemList = $this.insmPriceManager('formatEditItems', {
+                                list: _plugin.data.priceList.children
+                            });                           
+                            $this.insmPriceManager('generateTable', {
+                                items: _plugin.data.itemList
+                            });
+                            _plugin.htmlElements.popupLoading.insmFullScreenLoading('close');
+                        }
                     });
-                    _plugin.htmlElements.popupLoading.insmFullScreenLoading('close');
-
+                },
+                denied: function (data) {
+                },
+                error: function (data) {
                 }
-            } else {
-                $.insmFramework('regionDirectory', {
-                    regionId: _plugin.settings.region.id,
-                    name: 'pricelist',
-                    success: function (directory) {
+            });
 
-                        _plugin.settings.region.directoryId = directory.Id;
-                        $.insmFramework('getDatasetsInDirectory', {
-
-                            directoryId: directory.Id,
-
-                            success: function (datasets) {
-
-                                _plugin.htmlElements.content.views.regionPicker.insmRegionPicker('selectNode', {
-                                    node: _plugin.settings.region
-                                });
-                                _plugin.data.priceList.children = {};
-                                $.each(datasets, function (key, item) {
-                                    _plugin.data.priceList.children[key] = item;
-                                });
-
-                                _plugin.data.itemList = $this.insmPriceManager('formatEditItems', {
-                                    list: _plugin.data.priceList.children
-                                });
-
-                                $this.insmPriceManager('generateTable', {
-                                    items: _plugin.data.itemList
-                                });
-                                _plugin.htmlElements.popupLoading.insmFullScreenLoading('close');
-
-                            }
-                        });
-                    },
-                    denied: function (data) {
-                    },
-                    error: function (data) {
-                    }
-                });
-            }
         },
         generateCell: function (options) {
             var $this = $(this);
             var _plugin = $this.data('insmPriceManager');
 
-            var stateRow = $('<div />').addClass('pricemanager-cells').insmInput({
+            var stateRow = $('<div />').insmInput({
                 type: 'string',
                 value: options.item[options.title],
                 autoFocus: true,
                 required: true,
                 validateFunction: function (value) {
-                    if (options.notCheckValidate) {
-                        return true;
-                    }
+
                     if (value.length == 0) {
                         return false;
                     }
@@ -312,16 +287,10 @@
                     }
                 },
                 onBlur: function () {
-                    //if (stateRow.insmInput('getValue').trim().length == 0) {
-                    //    stateRow.insmInput('setValue', {
-                    //        value: ""
-                    //    })
-                    //}
-                    stateRow.insmInput('view');                    
+                    stateRow.insmInput('view');                   
                     if (_plugin.data.originalEditList[options.item.rowId][options.title] !== stateRow.insmInput('getValue')) {
                         _plugin.data.originalEditList[options.item.rowId][options.title] = stateRow.insmInput('getValue');
-                        
-                        _plugin.data.changedItemList.push(options.item.rowId);
+                        _plugin.data.changedItemArray.push(options.item.id);
                         var updateItem = {};
                         updateItem[options.item.id] = options.item;
                         _plugin.htmlElements.content.views.tableDiv.insmTable('update', {
@@ -345,13 +314,6 @@
                 namespace: "insmPriceManager",
                 key: "headers",
                 success: function (headers) {
-                    var headerString = JSON.stringify(headers);
-                    var configHeaderString = JSON.stringify(_plugin.settings.headers);
-                    if (headerString != configHeaderString) {
-                        _plugin.data.ChangeColumn = true;
-                    } else {
-                        _plugin.data.ChangeColumn = false;
-                    }
                     headers = _plugin.settings.headers;
                     $.insmFramework('setModuleSettings', {
                         regionId: _plugin.settings.region.id,
@@ -389,9 +351,10 @@
                         $.each(headers[0].headers, function (index, header) {
                             $.each(headerCheckList, function (index, nameArray) {
                                 if ($.inArray(header.name, nameArray) < 0) {
-                                    _plugin.data.itemList[index][header.name] = '';
+                                    _plugin.data.itemList[index][header.name] = '';                                   
                                 }
-                            });
+
+                            })
                         });
                         $.each(headers[0].headers, function (index, header) {
                             $.each(_plugin.data.itemList, function (index, item) {
@@ -400,8 +363,7 @@
                                         var stateRow = $this.insmPriceManager('generateCell', {
                                             item: item,
                                             title: header.name,
-                                            unique: header.unique,
-                                            notCheckValidate:header.notCheckValidate
+                                            unique: header.unique
                                         });
                                         item[key] = stateRow;
                                     }
@@ -410,7 +372,6 @@
                         });
                         $.each(headers[0].headers, function (index, header) {
                             _plugin.data.header[header.name] = {
-                                notCheckValidate:header.notCheckValidate,
                                 searchIndex:header.searchIndex,
                                 unique: header.unique,
                                 weight: 0.5,
@@ -466,39 +427,37 @@
                             },
                         }
                     } 
-                    $this.insmPriceManager('updateTable');
-                    if (_plugin.data.ChangeColumn) {
-                        _plugin.htmlElements.popupLoading.insmFullScreenLoading('popUp', { text: 'Updating data Since Header is Changed' });                     
-                        var priceList = $this.insmPriceManager('formatSaveItems', {
-                            list: _plugin.data.itemList
-                        });
-                        if (_plugin.data.onSave) {
-                            var saveDeferredList = [];
-                            $.each(priceList.children, function (key, item) {
+                    $this.insmPriceManager('updateTable');      
+                    //_plugin.htmlElements.popupLoading.insmFullScreenLoading('popUp', {text:'Updating data Since Header is Changed'});                      
+                    var priceList = $this.insmPriceManager('formatSaveItems', {
+                        list: _plugin.data.itemList
+                    });
+                    if (_plugin.data.onSave) {
+                        var saveDeferredList = [];
+                        $.each(priceList.children, function (key, item) {
 
-                                var saveDeferred = $.insmFramework('saveDatasetInDirectory', {
-                                    dataset: {
-                                        name: item.name,
-                                        children: item.children,
-                                        id: item.id,
-                                        contentDirectoryId: _plugin.settings.region.directoryId,
-                                    },
-                                    regionId: _plugin.settings.region.id,
-                                    datasetItemKey: 'priceList',
-                                    success: function () {
-                                       
-                                    },
-                                });
-                                saveDeferredList.push(saveDeferred);
+                            var saveDeferred = $.insmFramework('saveDatasetInDirectory', {
+                                dataset: {
+                                    name: item.name,
+                                    children: item.children,
+                                    id: item.id,
+                                    contentDirectoryId: _plugin.settings.region.directoryId,
+                                },
+                                
+                                regionId: _plugin.settings.region.id,
+                                datasetItemKey: 'priceList',
+                                success: function () {
+                                },
                             });
-                            $.when.apply(null, saveDeferredList).done(function () {
-                                _plugin.htmlElements.popupLoading.insmFullScreenLoading('close');
-                            });
-                        } else {
-                            _plugin.htmlElements.popupLoading.insmFullScreenLoading('close');
-                            _plugin.data.onSave = true;
-                        }
+                            saveDeferredList.push(saveDeferred);
+                        });
+                        $.when.apply(null, saveDeferredList).done(function () {
+
+                        });
+                    } else {
+                        _plugin.data.onSave = true;
                     }
+                    
                 },
             });
         },        
@@ -558,54 +517,59 @@
                                     });
                                     _plugin.htmlElements.popupLoading.insmFullScreenLoading('popUp');
                                     var removeDeferredList = [];
-                                    if (_plugin.data.removedDataset)
                                     $.each(_plugin.data.removedDataset, function (index, value) {
-                                        try {
-                                            var removeDeferred = $.insmFramework('deleteDataset', {
-                                                id: value,
-                                                success: function() {                                           
-                                                }
-                                            });
-                                        } catch (error) {
-                                        }
+                                        var removeDeferred = $.insmFramework('deleteDataset', {
+                                            id: value,
+                                            success: function() {                                           
+                                            }
+                                        });
                                         removeDeferredList.push(removeDeferred);
                                     });
                                     $.when.apply(null, removeDeferredList).done(function () {
                                         _plugin.data.removedDataset = [];
                                         var saveDeferredList = [];
-                                        $.each(priceList.children, function (key, item) {                                          
-                                            if ($.inArray(item.name, _plugin.data.changedItemList) > -1) {
-                                                var saveDeferred = $.insmFramework('saveDatasetInDirectory', {
-                                                    dataset: {
-                                                        name: item.name,
-                                                        children: item.children,
-                                                        id: item.id,
-                                                        contentDirectoryId: _plugin.settings.region.directoryId,
-                                                    },
-                                                    regionId: _plugin.settings.region.id,
+                                        $.each(priceList.children, function (key, item) {
+                                            var saveDeferred = $.insmFramework('saveDatasetInDirectory', {
+                                                dataset: {
+                                                    name: item.name,
+                                                    children: item.children,
+                                                    id: item.id,
+                                                    contentDirectoryId: _plugin.settings.region.directoryId,
+                                                },
+                                                regionId: _plugin.settings.region.id,
 
-                                                    datasetItemKey: 'priceList',
-                                                    success: function () {
-
-                                                    },
-                                                });
-                                                saveDeferredList.push(saveDeferred);
-                                            }
-                                                                                        
+                                                datasetItemKey: 'priceList',
+                                                success: function (){ 
+                                                    
+                                                },
+                                            });
+                                            saveDeferredList.push(saveDeferred);
                                         });
+                                        function saveDatasetLinkInRegionDeferred(name,id) {
+                                            var deferred = $.Deferred();
+                                            $.insmFramework('saveDatasetLinkInRegion', {
+                                                dataset: {
+                                                    name: originalDataset.name,
+                                                    id: originalDataset.id,
+                                                    regionId: _plugin.settings.region.id
+                                                },
+                                                success: function () {
+                                                    return deferred.resolve();
+                                                },
+                                            });
+                                        };
                                         $.when.apply(null, saveDeferredList).done(function () {
                                             $.insmFramework('getDatasetsInDirectory', {
                                                 directoryId: _plugin.settings.region.directoryId,
                                                 success: function (datasets) {
-
-                                                    var datasetItemKey = "";
-                                                    var datasetValue = "";
-                                                    $.each(datasets, function (datasetId, originalDataset) {                                                        
-                                                        datasetItemKey += "," + originalDataset.name;
-                                                        datasetValue += "," + originalDataset.id;                                                        
+                                                   
+                                                    var datasetItemKey = [];
+                                                    var datasetValue = [];
+                                                    $.each(datasets, function (datasetId, originalDataset) {
+                                                        datasetItemKey.push(originalDataset.name);
+                                                        datasetValue.push(originalDataset.id);                      
                                                     });
-                                                    datasetItemKey = datasetItemKey.substring(1, datasetItemKey.length);
-                                                    datasetValue = datasetValue.substring(1, datasetValue.length);
+
                                                     $.insmFramework('saveDatasetLinkInRegion', {
                                                         dataset: {
                                                             itemKey: datasetItemKey,
@@ -613,9 +577,9 @@
                                                             regionId: _plugin.settings.region.id
                                                         },
                                                         success: function () {
-                                                            $this.insmPriceManager('refreshData', { datasets: datasets });
+                                                            $this.insmPriceManager('refreshData');
                                                         },
-                                                    });                                                                       
+                                                    });                                                     
                                                 }
                                             });                        
                                         });
@@ -625,31 +589,32 @@
                                 }
                             }).hide(),
                              //addButton
-                            _plugin.htmlElements.content.views.addButton.click(function () {
-                                var newItem = {};
-                                newItem.rowId = $.insmUtilities('generateGuid');
-                                _plugin.data.originalEditList[newItem.rowId] = {};
-                                _plugin.data.changedItemList.push(newItem.rowId);
-                                $.each(_plugin.data.header, function (key, header) {
-                                    if (key != 'Remove') {
-                                        newItem[key] = $this.insmPriceManager('generateCell', {
-                                            item:newItem,
-                                            title: key,
-                                            unique: header.unique,
-                                            notCheckValidate:header.notCheckValidate
-                                        });
-                                        _plugin.data.originalEditList[newItem.rowId][key] = "";
-                                        $.each(_plugin.data.itemList, function (index, item) {
-                                            item[key].detach();
-                                        });
-                                    }
-                                });
-                                _plugin.data.itemList.unshift(newItem);
-                                $.each(_plugin.data.itemList, function (index, item) {
-                                    item.id = index;
-                                })
-                                $this.insmPriceManager('updateTable');
-                            }).hide()
+                             _plugin.htmlElements.content.views.addButton.click(function () {
+                                 var newItem = {};
+                                 newItem.rowId = $.insmUtilities('generateGuid');
+                                 _plugin.data.originalEditList[newItem.rowId] = {};
+
+                                 $.each(_plugin.data.header, function (key, header) {
+                                     if (key != 'Remove') {
+                                         newItem[key] = $this.insmPriceManager('generateCell', {
+                                             item:newItem,
+                                             title: key,
+                                             unique:header.unique                                          
+                                         });
+                                         _plugin.data.originalEditList[newItem.rowId][key] = "";
+                                         $.each(_plugin.data.itemList, function (index, item) {
+                                             item[key].detach();
+                                         });
+                                     }
+                                 });
+
+                                 _plugin.data.itemList.unshift(newItem);
+
+                                 $.each(_plugin.data.itemList, function (index, item) {
+                                     item.id = index;
+                                 })
+                                 $this.insmPriceManager('updateTable');
+                             }).hide()
                         ),
                         _plugin.htmlElements.content.views.tableDiv
                     )                  

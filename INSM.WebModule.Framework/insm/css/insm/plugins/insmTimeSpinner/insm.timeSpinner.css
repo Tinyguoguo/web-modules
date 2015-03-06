@@ -1,0 +1,8 @@
+﻿/* TimeEntry styles v2.0.0 */
+.timeEntry-control {
+    vertical-align: middle;
+    margin-right: 2px;
+    width: 17px !important;
+    height: 22px !important;
+    margin-top: 2px;
+}

@@ -1,0 +1,36 @@
+﻿ul.insm-breadcrumbs 
+{
+    list-style-image: none;
+    height: 22px;
+    line-height: 22px;
+}
+
+ul.insm-breadcrumbs li
+{
+    float: left;
+    padding-right: 18px;
+    background: url('../../gfx/insm/icons/breadcrumbs-arrow.png') center right no-repeat;
+    list-style: none;
+    font-size: 11px;
+}
+
+ul.insm-breadcrumbs li:last-child
+{
+    padding: 0px;
+    background: none;
+}
+
+ul.insm-breadcrumbs li a
+{
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+ul.insm-breadcrumbs li:last-child a
+{
+    cursor: default;
+    font-weight: normal;
+    text-decoration: none;
+    color: #444;
+}

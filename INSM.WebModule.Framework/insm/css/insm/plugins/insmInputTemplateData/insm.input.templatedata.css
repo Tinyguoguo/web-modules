@@ -1,0 +1,29 @@
+﻿.templateViewer {
+    width: 300px;
+}
+
+.templateViewer > .templatePicker {
+    background: #f5f5f5;
+}
+
+.templateViewer > .templatePicker > div {
+    display: inline-block;
+    padding: 8px;
+}
+
+.templateViewer > .templatePreview {
+    height: 120px;
+    line-height: 120px;
+    text-align: center;
+    background: #848484;
+}
+
+.templateViewer > .templatePreview > img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.templateViewer > .templateData{
+
+}
+

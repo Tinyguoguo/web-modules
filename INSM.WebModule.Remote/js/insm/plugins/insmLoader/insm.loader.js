@@ -76,15 +76,13 @@
             return $this;
         },
         update: function (options) {
-
             var $this = $(this);
             var _plugin = $this.data('insmLoader');
 
-            if (options.text) {
-                _plugin.htmlElements.loader.text(options.text).addClass('has-text');
-            } else {
-                _plugin.htmlElements.loader.text('').removeClass('has-text');
+            if(options.text) {
+                _plugin.htmlElements.loader.text(options.text)
             }
+
             return $this;
         },
         destroy: function (options) {

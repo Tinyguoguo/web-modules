@@ -144,14 +144,19 @@
             if (_plugin.data.loginInProgress) {
                 return $;
             }
-            _plugin.data.loginInProgress = true;              
+            _plugin.data.loginInProgress = true;
+
+                
             $this.append(_plugin.htmlElements.container);
+
             return $;
         },
         close: function () {
             var $this = $('html').eq(0);
             var _plugin = $this.data('insmLogin');
+
             _plugin.htmlElements.container.detach();
+
             return $;
         },
         destroy: function (options) {

@@ -1,0 +1,51 @@
+﻿<form class="insm-statistics-form float_left" action="">    
+    <div class="insm-statistics-section">
+        <input class="insm-style insm-statistics-region-autocomplete insm-tooltip" type="text" title="Search for player or region..." value="" />
+        <div id="insm-statistics-tree">
+                    
+        </div>
+    </div>
+
+    <div class="insm-statistics-section">
+        Filter<br />
+        <select id="insm-statistics-select-filter" onchange="$('form.insm-statistics-form').trigger('submit');" class="insm-style filter" name="filter">
+            <optgroup label="Actions" />
+            <option value="actions_total">Total actions</option>
+            <option value="actions_inc">Incremented actions</option>
+            <option value="actions_total_ps">Total actions/s</option>
+            <option value="actions_inc_ps">Incremented actions/s</option>
+            <optgroup label="Duration" />
+            <option value="duration_total">Total duration</option>
+            <option value="duration_inc">Incremented duration</option>
+            <option value="duration_total_pa">Total duration per action</option>
+            <option value="duration_inc_pa">Incremented duration per action</option>
+        </select><br />
+        Timespan<br />
+        <select id="insm-statistics-select-timespan" onchange="$('form.insm-statistics-form').trigger('submit');" class="insm-style" name="limit_days">
+            <option value="1">Last day</option>
+            <option value="7">Last week</option>
+            <option value="30">Last month</option>
+            <option value="91">Last Quarter</option>
+            <option value="183">Last half year</option>
+            <option value="365">Last year</option>
+            <option value="0">Since start</option>
+        </select><br />
+    </div>
+
+    <div class="insm-statistics-section">
+        <input class="insm-style insm-statistics-item-autocomplete insm-tooltip" title="Search for item to add..." type="text" /><br />
+        <a id="insm-statistics-items-clear" class="insm-button" >Clear all</a><a id="insm-statistics-items-add-all" class="insm-button" >Add all</a>
+        <div id="insm-statistics-item-list">
+        
+        </div>
+        <div id="insm-statistics-legend"></div>
+    </div>
+    <div class="insm-statistics-players"></div>
+<div class="selected"></div>
+</form>
+<div id="insm-statistics-content">
+    <a class="insm-button insm-statistics-show-graph" href="">Graph</a><a class="insm-button insm-statistics-show-table" href="">Table</a><a class="insm-button insm-statistics-download-excel" href="">Download</a><a class="insm-button insm-statistics-generate-url" href="">Generate URL</a><br />
+    <div id="insm-statistics-graph"></div>
+    <div id="insm-statistics-table"></div>
+</div>
+<div class="clear"></div>

@@ -42,7 +42,7 @@
 .insm-player-details2-popup {
 	background: #fff;
 	overflow: auto;
-	max-height: 700px;
+	height: 700px;
 	width: 100%;
 }
 
@@ -57,12 +57,10 @@
 .insm-player-details2-popup > p {
 	padding: 16px;
 	padding-top: 0px;
-	margin:5px;
 }
 
 .insm-player-details2-popup > p  > table {
 	width: 100%;
-	background-color: #fff;
 }
 
 .insm-player-details2-popup tr th, .insm-player-details2-popup tr td {

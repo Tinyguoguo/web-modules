@@ -1,0 +1,124 @@
+﻿.insm-playlist-manager-timeoptions-container {
+    position: absolute;
+    width: 55%;
+    height: 75%;
+    /*border: 1px solid black;*/
+    overflow-y: auto;
+}
+
+.insm-playlist-manager-timeoptions-button-add {
+    cursor: pointer;
+    margin: 5px;
+    width: 80px;
+}
+
+.insm-playlist-manager-timeoptions-mainContainer {
+    width: 105%;
+    height: 100%;
+}
+
+.insm-playlist-manager-timeoptions-timeOptionContainer {
+    width: 80%;
+    height: 100%;
+    float: left;
+}
+
+.insm-playlist-manager-timeoptions-messageContainer {
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+
+.insm-playlist-manager-timeoptions-messageContent {
+    background-color: #d3d3d3;
+    height: 28%;
+    margin-left: 5px;
+    border-radius: 8px;
+    margin-top: 280px;
+}
+
+.insm-playlist-manager-timeoptions-innerContainer {
+    width: 99%;
+    height: 200%;
+    /*border: 1px solid red;*/
+    display: flex;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    margin-top: 5px;
+    margin-left: 6px;
+}
+
+
+.insm-playlist-manager-timeoptions-upperContainer {
+    width: 100%;
+    height: 22%;
+    background-color: #ebebeb;
+}
+
+.insm-playlist-manager-timeoptions-lowerContainer {
+    width: 100%;
+    height: 65%;
+    background-color: #ffffff;
+    border: 1px solid #617583;
+    margin-top: 40px;
+    overflow-y: auto;
+}
+
+.insm-playlist-manager-timeoptions-upperContainer-element {
+    height: 100%;
+    width: 33%;
+    border-right: 1px solid #c9c9c9;
+    float: left;
+}
+
+.insm-playlist-manager-timeoptions-noTimeOption-container {
+    margin-top: 5px;
+    margin-left: 140px;
+    color: #8c8c9a;
+}
+
+.insm-playlist-manager-timeoptions-noTimeOption-content {
+    font-style: italic;
+}
+
+.insm-playlist-manager-timeoptions-addBorder {
+    border: 1px solid #617583;
+}
+
+.insm-playlist-manager-timeoptions-input-radio {
+    margin-left: 8px;
+}
+
+.insm-playlist-manager-timeoptions-input-label {
+    margin-left: 5px;
+}
+
+.insm-playlist-manager-timeoptions-weekDays-container {
+    margin-left: 26px;
+}
+
+.insm-playlist-manager-timeoptions-timeSpinner {
+    height: 11px;
+    min-width: 16px !important;
+}
+
+.startSpinner {
+    margin-left: 15px;
+}
+
+.endSpinner {
+    margin-left: 18px;
+}
+
+.insm-playlist-manager-timeoptions-opacity-div {
+    opacity: 0.2;
+    filter: Alpha(opacity=50);
+}
+
+.insm-playlist-manager-timeoptions-select-div {
+    background-color: #cbe6ef !important;
+}
+
+.insm-playlist-manager-timeoptions-datepicker-image {
+    margin-top: 3px;
+}

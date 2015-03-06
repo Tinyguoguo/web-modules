@@ -34,8 +34,7 @@
                     },
                     subscribers: {
                         regionTree: {},
-                        regions: {},
-                        version:0
+                        regions: {}
                     },
                     timeout: {
                         update: null,
@@ -137,29 +136,24 @@
                     });
                 });
                 // If subscribers for player list exist we should use getPlayers (find below)
-                $.insmFramework('checkLatestVersionId', {
-                    success: function (versionId) {
-                        if (versionId != _plugin.subscribers.version) {
-                            $.each(regionsToDownload, function (index, settings) {
-                                deferredList.push($.insmFramework('regionTree', {
-                                    includePlayers: settings.includePlayers,
-                                    success: function (regionTree) {
-                                        settings.subscriber.update(regionTree);
-                                        successDeferred.resolve();
-                                        return;
-                                    }
-                                }));
-                            });
-                        } else {
+                $.each(regionsToDownload, function(index, settings) {
+                    deferredList.push($.insmFramework('regionTree', {
+                        includePlayers: settings.includePlayers,
+                        success: function (regionTree) {
+                            settings.subscriber.update(regionTree);
                             successDeferred.resolve();
+                            return;
                         }
-                        _plugin.subscribers.version = versionId;
-                    }
+                    }));
                 });
             }
+
+
             if (!$.isEmptyObject(_plugin.subscribers.regions)) {
                 // TODO: Fetch a single region
             }
+
+
             $.when.apply(null, deferredList).done(function () {
                 // Need to clear the timeout, otherwise this will be fired twice (not sure why)
                 clearTimeout(_plugin.timeout.update);
@@ -169,6 +163,8 @@
                     }
                 }, _plugin.settings.updateInterval);
             });
+            
+
             return $this;
         },
         hasUpdate: function(options) {

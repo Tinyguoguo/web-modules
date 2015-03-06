@@ -75,7 +75,7 @@
 
             if (_plugin.data.width) {
                 _plugin.htmlElements.content.css({
-                    "max-width": _plugin.data.width
+                    width: _plugin.data.width
                 });
             }
 

@@ -1,0 +1,33 @@
+﻿        .insm-folderbrowserlist-filesection {
+            float: left;
+            width: 100%;
+            height: 100%;
+        }
+
+
+        .insm-folderbrowserlist-buttoncontrol {
+            padding: 5px;
+        }
+
+        .insm-folderbrowserlist-foldericon {
+            background-image: url(icons/levelUpIcon.png);
+            background-repeat: no-repeat;
+            background-position-y: center;
+            border: 1px solid black;
+            display: inline-block;
+            height: 20px;
+            width: 80%;
+            border: 1px solid black;
+            display: inline-block;
+        }
+
+        .insm-folderbrowserlist-foldername {
+            padding-left: 15px;
+            margin-top: 4px;
+            display: block;
+        }
+
+        .insm-folderbrowserlist-upfolder {
+            border: 1px solid black;
+            display: inline-block;
+        }

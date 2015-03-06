@@ -1,0 +1,107 @@
+﻿.mainMediaSettingsDiv {
+    height: 100%;
+    width: 97%;
+    margin-top: 30px;
+    margin-left: 15px;
+    float: right;
+}
+
+div.previewScreenDiv {
+    height: 200px;
+    width: 100%;
+    border: 8px solid #e6e6e6;
+    border-radius: 4px;
+    -webkit-box-shadow: 4px 4px 5px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: 4px 4px 5px 0px rgba(50, 50, 50, 0.75);
+    box-shadow: 4px 4px 5px 0px rgba(50, 50, 50, 0.75);
+    background-color: black;
+    text-align: center;
+    cursor:pointer;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.insm-playlist-manager-mediaSettings-audioPreview{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+}
+
+.insm-mediaSettings table tr {
+    height: 10px;
+}
+
+.insm-mediaSettings table {
+    float: right;
+    margin-right: 30px;
+    height: 100%;
+}
+
+.insm-mediaSettings-previewIcon{
+    width: 32px;
+    height:32px;
+    float: right;
+    cursor:pointer;
+    background-image:url(FullScreenIcon.png);
+    background-repeat:no-repeat;
+    background-position:center;
+    
+}
+
+
+td.contentTd {
+    height: 150px;
+}
+
+.paddingTop {
+    padding-top: 5px;
+}
+
+.marginRight {
+    margin-Right: 5px;
+}
+
+.numericInput {
+    min-width: 126px !important;
+    border-radius: 0px !important;
+    height: 10px;
+    width: 100px;
+}
+
+.select {
+    height: 24px;
+    width: 140px;
+}
+
+#volumeBarContainer {
+    float: left;
+    position: relative;
+}
+
+#image {
+    position: absolute;
+    left: -5px;
+    top: 5px;
+}
+
+#slider {
+    z-index: 100;
+    position: absolute;
+    color: black;
+    font-size: 10px;
+    font-weight: bold;
+    left: -50px;
+    top: 30px;
+}
+
+.slider-range-min {
+    height: 3px;
+    margin-top: 10px;
+    width: 130px;
+}
+
+.muteDiv {
+    margin-top: 15px;
+}
