@@ -1,0 +1,17 @@
+﻿html, body {
+    overflow: hidden;
+}
+
+#content > .l-columnContainer > .l-column > h2 {
+    position: relative;
+    padding: 8px;
+    background: #f0f0f0;
+    border-bottom: 2px solid #666666;
+    min-height: 29px;
+    line-height: 29px;
+}
+
+.pluginSettings {
+    padding: 16px;
+    overflow-y: auto;
+}

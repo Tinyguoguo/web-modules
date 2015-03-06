@@ -1,0 +1,68 @@
+﻿.insm-bigstatusbox > div {
+    display: inline-block;
+    height: 50px;
+    width: 150px;
+    background:rgba(153, 153, 153, 1);
+    border: 1px solid #c5c5c5;
+    text-align: center;
+    vertical-align: middle;
+}
+.insm-bigstatusbox > div:hover {
+    border: 1px solid #333;
+    background:rgba(153, 153, 153,1);
+}
+
+.insm-bigstatusbox >div.is-selected{
+    border: 1px solid #333;
+    background:rgba(153, 153, 153,1);
+    transform:scale(1.1);
+}
+
+.insm-bigstatusbox > .ok {
+    background: #9e9;
+    background: rgba(144, 224, 144, 1);
+}
+
+.insm-bigstatusbox > .error {
+    background: #e67;
+    background: rgba(238, 102, 119, 1);
+}
+
+.insm-bigstatusbox > .warning {
+    background: rgba(255, 204, 119, 1);
+}
+
+.insm-bigstatusbox > .transfer {
+    background: rgba(153, 153, 238, 1);
+}
+.insm-bigstatusbox > .offline {
+    background: rgba(51, 51, 51, 1);
+}
+.insm-bigstatusbox > .offline h4,.insm-bigstatusbox > .offline h6{
+    color: #ccc;
+}
+.insm-bigstatusbox > .ok:hover,.insm-bigstatusbox .ok.is-selected {
+    border: 1px solid #333;
+    background: rgba(144, 224, 144,1);
+} 
+.insm-bigstatusbox > .error:hover, .insm-bigstatusbox .error.is-selected {
+    border: 1px solid #333;
+    background: rgba(238, 102, 119,1);
+} 
+.insm-bigstatusbox > .warning:hover, .insm-bigstatusbox .warning.is-selected {
+    border: 1px solid #333;
+    background: rgba(255, 204, 119,1);
+} 
+.insm-bigstatusbox > .transfer:hover, .insm-bigstatusbox .transfer.is-selected {
+    border: 1px solid #333;
+    background: rgba(153, 153, 238,1);
+} 
+.insm-bigstatusbox > .offline:hover, .insm-bigstatusbox .offline.is-selected {
+    border: 1px solid #333;
+    background: rgba(51, 51, 51,1);
+} 
+.insm-bigstatusbox > .x {
+    background-color: none;
+    background: url('../../gfx/insm/icons/dot.png') center right no-repeat;
+    border: 0px;
+}

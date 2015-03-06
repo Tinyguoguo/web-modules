@@ -1,0 +1,70 @@
+﻿.insm-player-details .info-box {
+    float: left;
+    padding: 8px;
+}
+
+.insm-player-details .info-box a {
+    margin-right: 8px;
+}
+.insm-player-details .historycontainer {
+    height:350px;
+    overflow-y:auto;
+    width:326px;
+    padding-top: 10px;
+    padding-bottom: 18px;
+    display:inline-block;
+
+}
+.insm-player-details .historytable tr td h5 {
+    height:50px;
+    line-height:50px;
+
+}
+.insm-player-details .historyinfocontainer {
+    height:350px;
+    border:solid;
+    border-width:1px;
+    min-width:253px;
+    display:inline-block;
+    margin-left:30px;
+}
+
+.insm-player-details .info-box ul {
+    padding:10px 15px;
+}
+
+.insm-player-details .section {
+    display: table;
+}
+
+.insm-player-details-popup {
+    background: #fff;
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+}
+
+.insm-player-details-popup > h5 {
+    margin-top: 0px;
+    padding: 16px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.insm-player-details-popup > p {
+    padding: 16px;
+    padding-top: 0px;
+}
+
+.insm-player-details-popup > p  > table {
+    width: 100%;
+}
+
+.insm-player-details-popup tr th, .insm-player-details-popup tr td {
+    border: 1px solid #c5c5c5;
+}
+
+table.event-log tr td {
+    border: 1px solid #c5c5c5;
+}

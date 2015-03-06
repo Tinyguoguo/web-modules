@@ -1,0 +1,23 @@
+﻿.input-placeholder
+{
+    padding: 8px 0px 0px 8px;
+    text-align: left;
+    color: #aaa;
+    font-style: oblique;
+    cursor: text;
+    height: 100%;
+    line-height: 100%;
+    position: absolute;
+}
+
+/* Add has-icon to the placeholder? */
+.input-placeholder.has-icon
+{
+    padding-left: 28px;
+}
+
+.input-placeholder-wrapper
+{
+    display: inline-block;
+    position: relative;
+}

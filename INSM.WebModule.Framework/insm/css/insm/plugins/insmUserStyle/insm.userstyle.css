@@ -1,0 +1,23 @@
+﻿ .insm-user-style {
+	padding-bottom: 8px;
+	border: 1px solid #aaa;
+	background: transparent url('groupIcon.png') center 15px no-repeat;  
+	margin: 8px 8px 8px 16px;
+	width: 120px;
+	height: 80px;
+	line-height: 80px;
+	display: inline-block;
+	text-align:center;
+	vertical-align: bottom;
+}
+.insm-user-style span{
+	line-height: normal;
+	vertical-align: bottom;
+	display: inline-block;
+}
+
+.insm-user-style-is-selected {
+
+	box-shadow: 0px 0px 14px 3px #B2F2CC;
+	
+}

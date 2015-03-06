@@ -1,0 +1,13 @@
+﻿.inputDate {
+    padding-right: 24px;
+    position: relative;
+    display: inline-block;
+}
+
+.inputDate >  .clearDate {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: 0px;
+    background: transparent url(clear.png) no-repeat center center;
+}

@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "INSM.WebModule.Remote", "INSM.WebModule.Remote\INSM.WebModule.Remote.csproj", "{61677224-0737-417E-A22F-3B6FDCFEF66B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "INSM.WebModule.Framework", "INSM.WebModule.Framework\INSM.WebModule.Framework.csproj", "{32A86832-2935-4087-8FA2-1D26DD18D754}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://server19:8080/tfs/insm
+		SccProjectUniqueName0 = INSM.WebModule.Framework\\INSM.WebModule.Framework.csproj
+		SccProjectName0 = INSM.WebModule.Framework
+		SccLocalPath0 = INSM.WebModule.Framework
+		SccLocalPath1 = .
+		SccProjectUniqueName2 = INSM.WebModule.Remote\\INSM.WebModule.Remote.csproj
+		SccProjectName2 = INSM.WebModule.Remote
+		SccLocalPath2 = INSM.WebModule.Remote
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{61677224-0737-417E-A22F-3B6FDCFEF66B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61677224-0737-417E-A22F-3B6FDCFEF66B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61677224-0737-417E-A22F-3B6FDCFEF66B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61677224-0737-417E-A22F-3B6FDCFEF66B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32A86832-2935-4087-8FA2-1D26DD18D754}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32A86832-2935-4087-8FA2-1D26DD18D754}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32A86832-2935-4087-8FA2-1D26DD18D754}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32A86832-2935-4087-8FA2-1D26DD18D754}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

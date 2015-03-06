@@ -1,0 +1,9 @@
+﻿.assetGrid > .assetContainer {
+    margin-bottom: 8px;
+}
+
+.assetGrid > .assetContainer > h2 {
+    clear: both;
+    color: #777;
+    padding: 16px 8px 0px 8px;
+}

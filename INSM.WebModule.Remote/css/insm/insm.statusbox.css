@@ -1,0 +1,32 @@
+﻿.insm-statusbox > div {
+    display: inline-block;
+    height: 14px;
+    width: 14px;
+    background: #999;
+    border: 1px solid #c5c5c5;
+    margin-right: 4px;
+}
+
+.insm-statusbox > .ok {
+    background: #9e9;
+}
+
+.insm-statusbox > .error {
+    background: #e67;
+}
+
+.insm-statusbox > .warning {
+    background: #fc7;
+}
+
+.insm-statusbox > .transfer {
+    background: #99e;
+}
+.insm-statusbox > .offline {
+    background: #333;
+}
+.insm-statusbox > .x {
+    background-color: none;
+    background: url('../../gfx/insm/icons/dot.png') center right no-repeat;
+    border: 0px;
+}

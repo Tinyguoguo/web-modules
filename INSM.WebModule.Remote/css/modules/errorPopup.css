@@ -1,0 +1,26 @@
+﻿.errorPopup {
+    width: 400px;
+    padding: 8px;
+    background: #2F3437;
+    background: linear-gradient(#2F3437, #262625);
+    border-radius: 5px;
+    color: #bdbebd;
+}
+
+.errorPopup > a {
+    color: #bdbebd;
+}
+
+.errorPopup > a:hover {
+    color: #ffffff;
+}
+
+.errorPopup .inputTable > table {
+    width: 100%;
+    margin-top: 8px;
+    background: transparent;
+}
+
+.errorPopup .inputTable > table > tbody > tr > th {
+    color: #929292;
+}

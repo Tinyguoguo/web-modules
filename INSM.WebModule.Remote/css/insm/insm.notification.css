@@ -1,0 +1,98 @@
+﻿#insmNotificationContainer, #insmNotificationContainerAutoCreated {
+    bottom: 0px;
+    overflow: hidden;
+    position: fixed;
+    right: 0px;
+}
+
+#insmNotificationContainer .notification, #insmNotificationContainerAutoCreated .notification {
+    background: #fff 10px center no-repeat;
+    border: 1px solid #000;
+    margin: 0px 10px 10px 0px;
+    padding: 10px;
+    padding-left: 30px;
+    width: 200px;
+    float: right;
+    clear: right;
+}
+
+/* Default values for notification */
+.insmNotificationContainer .notification {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #bdf;
+}
+
+/* Message palette */
+.insmNotificationContainer .notification.successful {
+    background-color: #9e9;
+}
+
+.insmNotificationContainer .notification.information {
+    background-color: #bdf;
+}
+
+.insmNotificationContainer .notification.warning {
+    background-color: #fc7;
+}
+
+.insmNotificationContainer .notification.error {
+    background-color: #e67;
+}
+
+.insmNotificationContainer .notification.load {
+    background-color: #bdf;
+}
+
+.insmNotificationContainer .notification.unauthorized {
+    background-color: #fc7;
+}
+
+/* Positioned notification */
+.insmNotificationContainer .notification.topLeft {
+    top: 15px;
+    left: 15px;
+}
+
+.insmNotificationContainer .notification.topRight {
+    top: 15px;
+    right: 15px;
+}
+
+.insmNotificationContainer .notification.bottomLeft {
+    bottom: 15px;
+    left: 15px;
+}
+
+.insmNotificationContainer .notification.bottomRight {
+    bottom: 15px;
+    right: 15px;
+}
+
+#insmNotificationContainer .notification.successful, #insmNotificationContainerAutoCreated .notification.successful {
+    background-image: url('../../gfx/insm/icons/general_ok.png');
+}
+
+#insmNotificationContainer .notification.information, #insmNotificationContainerAutoCreated .notification.information {
+    background-image: url('../../gfx/insm/icons/general_information.png');
+}
+
+#insmNotificationContainer .notification.warning, #insmNotificationContainerAutoCreated .notification.warning {
+    background-image: url('../../gfx/insm/icons/general_warning.png');
+}
+
+#insmNotificationContainer .notification.error, #insmNotificationContainerAutoCreated .notification.error {
+    background-image: url('../../gfx/insm/icons/general_error.png');
+}
+
+#insmNotificationContainer .notification.load, #insmNotificationContainerAutoCreated .notification.load {
+    background-image: url('../../gfx/insm/icons/loading.gif');
+}
+
+#insmNotificationContainer .notification.unauthorized, #insmNotificationContainerAutoCreated .notification.unauthorized {
+    background-image: url('../../gfx/insm/icons/general_dissaprove.png');
+}

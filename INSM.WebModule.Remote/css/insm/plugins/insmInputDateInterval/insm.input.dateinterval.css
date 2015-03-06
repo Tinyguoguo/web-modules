@@ -1,0 +1,15 @@
+﻿.inputDateInterval > div
+{
+    display: inline-block;
+    margin: 0px 4px;
+}
+
+.inputDateInterval > div:first-child
+{
+    margin-left: 0px;
+}
+
+.inputDateInterval > div:last-child
+{
+    margin-right: 0px;
+}

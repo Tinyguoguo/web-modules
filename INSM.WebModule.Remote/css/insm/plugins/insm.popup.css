@@ -1,0 +1,34 @@
+﻿.popup {
+    z-index: 50;
+}
+
+.popup > .backdrop {
+    background: transparent url('../../../gfx/insm/background_tile.jpg') repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+}
+
+.popup > .backdrop.transparent {
+    background: rgba(47, 52, 55, 0.5);
+}
+
+.popup > .content {
+    z-index: 50;
+    background: transparent;
+    position: relative;
+}
+
+.popup > .close {
+    z-index: 51;
+    background: #ccc url('../../../gfx/modules/loginForm/close.png');
+    position: absolute;
+    right: -8px;
+    top: -8px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}

@@ -1,0 +1,62 @@
+﻿#notificationContainer {
+    bottom: 60px;
+    overflow: hidden;
+    position: fixed;
+    right: 20px;
+    min-width: 200px;
+    display: table;
+    z-index: 100;
+}
+
+/* Default values for notification */
+#notificationContainer .notification {
+    top: 0;
+    left: 0;
+    margin-top: 8px;
+}
+
+#notificationContainer .notification .content {
+    background: #eaeaea;
+    min-width: 160px;
+    padding: 20px;
+}
+
+#notificationContainer .notification .progress
+{
+    background-color: #246;
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    opacity: 0.2;
+}
+
+/* Message palette */
+#notificationContainer .notification .content.successful {
+    background-color: #9e9;
+    background-image: url('../../gfx/insm/icons/general_ok.png');
+}
+
+#notificationContainer .notification .content.information {
+    background-color: #bdf;
+    background-image: url('../../gfx/insm/icons/general_information.png');
+}
+
+#notificationContainer .notification .content.warning {
+    background-color: #fc7;
+    background-image: url('../../gfx/insm/icons/general_warning.png');
+}
+
+#notificationContainer .notification .content.error {
+    background-color: #e67;
+    background-image: url('../../gfx/insm/icons/general_error.png');
+}
+
+#notificationContainer .notification .content.load {
+    background-color: #bdf;
+    background-image: url('../../gfx/insm/icons/loading.gif');
+}
+
+#notificationContainer .notification .content.unauthorized {
+    background-color: #fc7;
+    background-image: url('../../gfx/insm/icons/general_dissaprove.png');
+}

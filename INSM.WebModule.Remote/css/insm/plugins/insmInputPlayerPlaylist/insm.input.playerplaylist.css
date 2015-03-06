@@ -1,0 +1,13 @@
+﻿.insm-input-player-playlist .container {
+    margin-bottom: 8px;
+}
+
+.insm-input-player-playlist .container > * {
+    display: inline-block;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.insm-input-player-playlist .container .insmLoader {
+    height: 19px;
+}

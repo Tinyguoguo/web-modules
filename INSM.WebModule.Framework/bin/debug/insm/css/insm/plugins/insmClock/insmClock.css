@@ -1,0 +1,9 @@
+﻿.insm-playlist-timeOption-clock-option-div {
+    position: absolute;
+    background-color: white;
+    overflow-y: scroll;
+    height: 100px;
+    width: 103px;
+    border: 1px solid #8d8b8b;
+    cursor: pointer;
+ }

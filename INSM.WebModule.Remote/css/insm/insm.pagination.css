@@ -1,0 +1,25 @@
+﻿.insm-tablesorter-pagination
+{
+    display: table;
+    margin: auto;
+    white-space: nowrap;
+    float: right;
+}
+
+.insm-tablesorter-pagination a
+{
+    float: left;
+}
+
+.insm-tablesorter-pagination .pages
+{
+    float: left;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.insm-tablesorter-pagination .pages a 
+{    
+    margin-left: 2px;
+    margin-right: 2px;
+}

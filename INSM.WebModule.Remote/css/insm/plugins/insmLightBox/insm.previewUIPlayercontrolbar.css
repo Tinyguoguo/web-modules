@@ -1,0 +1,45 @@
+﻿.playlist-manager-preview-controlbutton {
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    border: 1px solid black;
+    display: inline-block;
+}
+
+.playlist-manager-preview-playbutton {
+    background: url(icons/general_play.png);
+    margin-right:5px;
+}
+
+.playlist-manager-preview-pausebutton {
+    background: url(icons/general_pause.png);
+    margin-right:5px;
+}
+
+.playlist-manager-preview-stopbutton {
+    background: url(icons/general_stop.png);
+}
+
+.playlist-manager-preview-span {
+    display: inline-block;
+}
+
+.playlist-manager-preview-spanfiller {
+    width: 20%;
+}
+
+.playlist-manager-preview-controlbutton-container {
+    width: 100%;
+    height: 40%;
+    background-color: #e2d4d4;
+}
+
+.playlist-manager-preview-controlbutton-master-container {
+    margin-bottom: 3px;
+}
+
+
+.playlist-manager-preview-controlbutton-slider {
+    padding: 10px;
+}

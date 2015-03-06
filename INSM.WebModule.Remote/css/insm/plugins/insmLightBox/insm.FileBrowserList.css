@@ -1,0 +1,53 @@
+﻿.insm-filebrowserlist-main {
+    height:300px;
+    width:98%;
+    background-color:#fff;
+    overflow-y:auto;
+}
+
+#filelistview{
+    width:100%
+}
+.insm-filebrowserlist-tr{
+    height:20px;
+    vertical-align:central;
+    cursor:pointer;
+}
+
+.insm-filebrowserlist-tr:hover{
+     background-color: rgb(230, 243, 247 );
+}
+
+.insm-filebrowserlist-filename{
+    padding-left: 7px;
+    font-size: 11px;
+    vertical-align: middle;
+}
+
+.insm-filebrowserlist-selected-row {
+    background-color:rgb(203,230,239);
+}
+
+.insm-filebrowserlist-foldericonForList{
+    background:url('icons/folderIcon.png');
+    width:20px;
+    background-repeat:no-repeat;
+}
+
+.insm-filebrowserlist-movieIcon{
+    background:url('icons/movieIcon.png');
+    width:20px;
+    background-repeat:no-repeat;
+}
+
+.insm-filebrowserlist-flashIcon{
+    background:url('icons/flashIcon.png');
+    width:20px;
+    background-repeat:no-repeat;
+}
+
+.insm-filebrowserlist-imageicon{
+    background:url('icons/imageicon.png');
+    width:20px;
+    background-repeat:no-repeat;
+}

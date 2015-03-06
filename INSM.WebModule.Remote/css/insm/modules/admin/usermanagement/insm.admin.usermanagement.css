@@ -1,0 +1,56 @@
+﻿.insmAdminUserManagement {
+	height: 100%;
+	background: #ffffff;
+}
+
+.insmAdminUserManagement > .header {
+	background: transparent url('../../../../../gfx/insm/background_tile.jpg') repeat;
+	height: 40px;
+	width: 100%;
+	border-bottom: 2px solid #666666;
+}
+
+.insmAdminUserManagement > .header > .module-logo {
+	background: transparent url('adminusermanagement-thin.png') 10px center no-repeat;
+	width: 100%;
+	height: 100%;
+}
+
+.insmAdminUserManagement > .header > .company-logo {
+	float: right;
+	background: transparent url('../../../../../gfx/insm/insm-logo-thin.png') right center no-repeat;
+	width: 100%;
+	height: 100%;
+}
+
+@media (min-width:641px) {
+	.insmAdminUserManagement > .header {
+		height: 100px;
+	}
+
+	.insmAdminUserManagement > .header > .module-logo {
+		background: transparent url('adminusermanagement.png') 20px center no-repeat;
+	}
+
+	.insmAdminUserManagement > .header > .company-logo {
+		background: transparent url('../../../../../gfx/insm/insm_logo.png') right center no-repeat;
+	}
+}
+
+
+.insmAdminUserManagement > .top-container > button {
+	float: right;
+	margin-left:16px
+}
+.insmAdminUserManagement > .top-container {
+	padding: 16px;
+	line-height: 29px;
+}
+.insmAdminUserManagement > .title {
+	padding: 16px;
+	line-height: 29px;
+}
+.insmAdminUserManagement > .groups-container {
+
+	
+}

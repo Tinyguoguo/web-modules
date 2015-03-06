@@ -1,0 +1,153 @@
+﻿.assetManager
+{
+    height: 100%;
+    display: inline;
+    background: #ffffff;
+}
+
+.module-preview.assetManager h2 {
+    background-image: url(logo.png);
+    background-position: 8px center;
+    background-repeat: no-repeat;
+    padding: 0px 8px 0px 70px;
+    height: 60px;
+    line-height: 60px;
+    margin: 0px;
+}
+
+.assetManager > .header {
+    background: transparent url('../../../../gfx/insm/background_tile.jpg') repeat;
+    height: 100px;
+    width: 100%;
+}
+
+.assetManager > .header > .module-logo {
+    background: transparent url(assetmanager.png) 20px center no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.assetManager > .header > .company-logo {
+    float: right;
+    background: transparent url('../../../../gfx/insm/insm_logo.png') right center no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.assetManager-container > .controlsContainer {
+    padding: 8px;
+    background: #f0f0f0;
+    border-bottom: 2px solid #666666;
+    min-height: 29px;
+}
+
+.assetManager-container > .controlsContainer > a.toggleRegionPicker
+{
+    padding-left: 16px;
+    margin-right: 16px;
+}
+
+.assetManager-container > .controlsContainer > a.toggleRegionPicker.show {
+    background: transparent url('../../../../gfx/insm/icons/arrow-right.png') left center no-repeat;
+}
+
+.assetManager-container > .controlsContainer > a.toggleRegionPicker.hide {
+    background: transparent url('../../../../gfx/insm/icons/arrow-left.png') left center no-repeat;
+}
+
+.assetManager-container > .controlsContainer button {
+    margin-right: 4px;
+}
+
+.assetManager-container > .controlsContainer button.add {
+    padding-left: 28px;
+    background: #ffffff url("../../../../gfx/insm/icons/add.png") 4px center no-repeat;
+	background: url("../../../../gfx/insm/icons/add.png") 4px center no-repeat, -moz-linear-gradient(top, #ffffff 0%, #f0f0f0 100%);
+	background: url("../../../../gfx/insm/icons/add.png") 4px center no-repeat, -webkit-gradient(linear, 0% 0%,0% 100%, from(#ffffff), to(#f0f0f0));
+	background: url("../../../../gfx/insm/icons/add.png") 4px center no-repeat, -webkit-linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background: url("../../../../gfx/insm/icons/add.png") 4px center no-repeat, -o-linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background: url("../../../../gfx/insm/icons/add.png") 4px center no-repeat, -ms-linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+	background: url("../../../../gfx/insm/icons/add.png") 4px center no-repeat, linear-gradient(top, #ffffff 0%,#f0f0f0 100%);
+}
+
+.assetManager-container > .assetsContainer > .itemGrid {
+    overflow-y: auto;
+}
+
+.assetManager > .single-message {
+    margin: auto;
+    margin-top: 200px;
+    display: table;
+    text-align: center;
+}
+
+/* Item Grid */
+.assetManager .itemGrid {
+    overflow: auto;
+    height: 100%;
+}
+
+.assetManager-itemGrid-file {
+    width: 160px;
+    height: 120px;
+    float: left;
+    position: relative;
+}
+
+.assetManager-itemGrid-file > .image-container
+{
+    width: 160px;
+    height: 100px;
+    line-height: 98px;
+    text-align: center;
+    background: #f0f0f0;
+}
+
+.assetManager-itemGrid-file > .image-container.is-highlighted
+{
+    background: #fea;
+}
+
+
+.assetManager-itemGrid-file > .image-container > img {
+    max-width: 160px;
+    max-height: 100px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.assetManager-itemGrid-file > h2 {
+    width: 152px;
+    height: 20px;
+    padding: 0px 4px;
+    line-height: 20px;
+    font-size: 10px;
+    overflow: hidden;
+}
+
+.assetManager-itemGrid-file > h2.is-highlighted
+{
+    background: #fea;
+}
+
+.assetManager-itemGrid-file .remainingTimePlayStart,
+.assetManager-itemGrid-file .remainingTimePlayEnd {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    bottom: 20px;
+    width: 35px;
+    height: 20px;
+    background-color: #222;
+    text-align: center;
+    line-height: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.assetManager-itemGrid-file .remainingTimePlayStart {
+    left: 0;
+}
+.assetManager-itemGrid-file .remainingTimePlayEnd {
+    right: 0;
+}

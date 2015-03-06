@@ -1,0 +1,14 @@
+﻿.insm-playlist-manager-weekDays-mainDiv {
+    height: 100px;
+    width: 200px;
+}
+
+.insm-playlist-manager-weekDays-subDiv {
+    float: left;
+    height: 100%;
+    width: 30%;
+}
+
+.insm-playlist-manager-weekDays-input-label {
+    margin-left: 5px;
+}

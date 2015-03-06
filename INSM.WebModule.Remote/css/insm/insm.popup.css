@@ -1,0 +1,44 @@
+﻿.insm-popup.backdrop
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 50;
+    opacity: 0;
+}
+
+.insm-popup.backdrop.transparent {
+    opacity: 0.5;
+}
+
+.insm-popup.container
+{
+    top: 0;
+    z-index: 51;
+    text-align: center;
+    opacity: 0;
+    visibility: visible;
+    position: absolute;
+    margin: 20px;
+}
+
+.insm-popup.close
+{
+    background-color: gainsboro;
+    border: 1px solid black;
+    cursor: pointer;
+    float: right;
+    padding: 2px 5px;
+    margin: -10px;
+    position: relative;
+    z-index: 53;
+}
+
+.insm-popup.backdrop.solid
+{
+    background: #eee;
+    opacity: 1;
+}

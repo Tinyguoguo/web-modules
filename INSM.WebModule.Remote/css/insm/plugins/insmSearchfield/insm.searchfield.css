@@ -1,0 +1,31 @@
+﻿input[type=text].insm-search-input {
+    width: 100px;
+    float: left;
+    padding-left: 28px;
+    background: #fff url('icon.png') 8px center no-repeat;
+}
+
+a.insm-search-button, a.insm-clear-button 
+{
+    width: 23px;
+    height: 23px;
+    border-left: 0px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-left: none;
+    text-decoration: none;
+    float: left;
+}
+
+a.insm-search-button
+{
+    background: url("../../../gfx/insm/plugins/insmSearchField/search.png") no-repeat scroll center #FFFFFF;
+    border-right: none;
+    border-left: none;
+}
+
+a.insm-clear-button
+{
+    background: url("../../../gfx/insm/plugins/insmSearchField/clear_search.png") no-repeat scroll center #FFFFFF;
+    border-left: none;
+}

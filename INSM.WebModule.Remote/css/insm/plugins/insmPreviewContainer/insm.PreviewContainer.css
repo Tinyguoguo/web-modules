@@ -1,0 +1,28 @@
+﻿.insm-playlisteditor-process-container-header {
+    margin-top: 5px;
+    width: 100%;
+    background-color: #fcfcfc;
+    height: 5%;
+}
+.insm-playlisteditor-process-container-header span {
+    margin-top: 3px;
+    margin-left: 5px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.insm-playlisteditor-process-content {
+    width: 57%;
+    height: 86%;
+    background-color: #f0f0f0;
+    float: left;
+    border: 1px solid #c5c5c5;
+    display: inline;
+     
+}
+.insm-playlisteditor-preview-content {
+     width: 20%;
+    height: 100%;
+    /*background-color: black;*/
+    float: left;
+    display: inline;
+}

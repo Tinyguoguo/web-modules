@@ -1,0 +1,109 @@
+﻿.insm-thumbanail-div {
+    width: 100%;
+    height: 100%;
+    background-color: #fefefe;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    padding: 0 25px 0 5px;
+}
+
+.insm-playlist-manager-thumbnail-media-div{
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.insm-thumbanail-child-div {
+    width: 80%;
+    height: 100%;
+    background-color: #fefefe;
+    /*overflow-y: auto;
+    overflow-x: hidden;*/
+    /*box-sizing: border-box;
+    padding: 0 25px 0 5px;*/
+}
+.insm-thumbnail-outer-div-select {
+    border: 10px solid #4e8fa5;
+    background-color: #f6f6f6;
+    width: 97%;
+    height: 200px;
+    padding: 0px;
+    margin: 10px 0;
+    border-sizing: border-box;
+}
+
+.insm-thumbnail-outer-div {
+    background-color: #f6f6f6;
+    width: 97%;
+    height: 200px;
+    min-height: 15%;
+    border: 1px solid #dadada;
+    padding: 9px;
+    margin: 10px 0;
+    border-sizing: border-box;
+}
+
+.insm-thumbnail-middle-div {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.insm-thumbnail-inner-div {
+    background-color: black;
+    width: calc(100% - 20px);
+    height: 175px; /*calc(100% - 27px);*/
+    border: 1px solid #000;
+    margin: 3px 10px 0;
+}
+
+.insm-thumbnail-inner-div > div {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-position:center;
+}
+
+.insm-thumbnail-duration {
+    float: right;
+}
+
+.insm-thumbnail-middle-div span {
+    font-weight: bold;
+    font-size: 14px;
+    margin: 0 7px;
+}
+
+.insm-thumbnail-scaletofit {
+    background-size: contain !important;
+}
+
+.insm-thumbnail-strech {
+    background-size: 100% 100% !important;
+}
+
+.insm-thumbnail-fillancrop {
+    background-size: cover !important;
+}
+
+.insm-playlist-manager-thumbnail-indicator-basicBlock{
+    height: 16px;
+    width: 16px;
+    display: inline-block;
+}
+
+.insm-playlist-manager-thumbnail-greenIndicator{
+    background-image:url(icons/clockSmall_green.png);
+}
+
+.insm-playlist-manager-thumbnail-orangeIndicator{
+    background-image:url(icons/clockSmall.png);
+}
+
+.insm-playlist-manager-thumbnail-blankIndicator{
+    background-image:url('');
+}
+

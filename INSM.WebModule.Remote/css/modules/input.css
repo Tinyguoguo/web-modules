@@ -1,0 +1,57 @@
+﻿input[type=text] {
+    border: 1px solid #ccc;
+    color: #000;
+    display: inline-block;
+    background-color: #fff;
+    min-width: 140px;
+    padding: 6px;
+    border-radius: 2px;
+}
+
+input[type=text].is-highlighted {
+    background-color: #fea;
+}
+
+input[type=text].is-highlighted-error {
+    background-color: #f99;
+    border: 1px solid #f00;
+}
+
+select.is-highlighted {
+    background-color: #fea;
+}
+
+select.is-highlighted-error {
+    background-color: #f99;
+    border: 1px solid #f00;
+}
+
+input[type=password] {
+    border: 1px solid #ccc;
+    color: #000;
+    display: inline-block;
+    background-color: #fff;
+    min-width: 140px;
+    padding: 6px;
+}
+
+input[type=password].is-highlighted {
+    background-color: #fea;
+}
+
+input[type=password].is-highlighted-error {
+    background-color: #f99;
+    border: 1px solid #f00;
+}
+
+input[type=file] {
+    background: none;
+    padding: 4px;
+}
+
+input.hasDatepicker {
+    cursor: pointer;
+    background-image: url('calendar.png');
+    background-position: right center;
+    background-repeat: no-repeat;
+}

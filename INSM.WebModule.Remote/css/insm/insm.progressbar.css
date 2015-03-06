@@ -1,0 +1,28 @@
+﻿.insm-progressbar {
+    border: 1px solid #c5c5c5;
+    height: 25px;
+    background: #fff;
+    width: 100%;
+}
+
+.insm-progressbar .progressbackground {
+    background: #050 url('../../gfx/insm/icons/progressbar.gif') center center;
+    line-height: 25px;
+    height: 25px;
+    position: absolute;
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    opacity: .2;
+    border-right: 1px solid #c5c5c5;
+    width: 100%;
+}
+
+.insm-progressbar .progresstext {
+    line-height: 25px;
+    height: 25px;
+    display: block;
+    text-align: center;
+    padding: 0px 8px;
+    position: relative;
+}

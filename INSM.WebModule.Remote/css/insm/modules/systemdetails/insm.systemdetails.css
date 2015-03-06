@@ -1,0 +1,91 @@
+﻿.systemDetails {
+    height: 100%;
+    padding-bottom: 8px;
+    background: #ffffff;
+}
+
+.module-preview.systemDetails h2 {
+    background-image: url(logo.png);
+    background-position: 8px center;
+    background-repeat: no-repeat;
+    padding: 0px 8px 0px 70px;
+    height: 60px;ö
+    line-height: 60px;
+    margin: 0px;
+}
+
+.systemDetails > .header
+{
+    background: transparent url('../../../../gfx/insm/background_tile.jpg') repeat;
+    height: 100px;
+    width: 100%;
+}
+
+.systemDetails > .header > .module-logo {
+    background: transparent url('systemdetails.png') 20px center no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.systemDetails > .header > .company-logo {
+    float: right;
+    background: transparent url('../../../../gfx/insm/insm_logo.png') right center no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+
+.systemDetails-container > .controlsContainer {
+    padding: 8px;
+    background: #f0f0f0;
+    border-bottom: 2px solid #666666;
+    min-height: 29px;
+}
+
+.systemDetails .controlsContainer button {
+    margin-right: 4px;
+}
+
+.systemDetails-container > .playerDetails {
+    padding: 8px;
+}
+
+.systemDetails > .content {
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-bottom: 8px;
+}
+
+
+.systemDetails-container .state {
+    padding-left: 8px;
+    height: 48px;
+    line-height: 48px;
+    color: white;
+}
+
+.systemDetails-container .offline
+{
+    background-color: rgb(116, 116, 116);   
+}
+
+.systemDetails-container .transferring {
+    background-color: #CF00A6;
+}
+
+.systemDetails-container .ok
+{
+    background-color: rgb(1, 125, 1);
+}
+
+.systemDetails-container .error
+{
+    background-color: rgb(255, 35, 35); 
+    color: #000;
+}
+
+.systemDetails-container .warning
+{
+    background-color: #ffae4b;
+    color: #000;
+}

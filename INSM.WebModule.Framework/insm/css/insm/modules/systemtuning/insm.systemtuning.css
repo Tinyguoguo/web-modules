@@ -1,0 +1,65 @@
+﻿.system-tuning
+{
+    height: 100%;
+    display: inline;
+    background: #ffffff;
+}
+
+.module-preview.system-tuning h2 {
+    background-image: url(logo.png);
+    background-position: 8px center;
+    background-repeat: no-repeat;
+    padding: 0px 8px 0px 70px;
+    height: 60px;
+    line-height: 60px;
+    margin: 0px;
+}
+
+.system-tuning > .header {
+    background: transparent url('../../../../gfx/insm/background_tile.jpg') repeat;
+    height: 100px;
+    width: 100%;
+    border-bottom: 2px solid #666666;
+}
+
+.system-tuning > .header > .module-logo {
+    background: transparent url(systemtuning.png) 20px center no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.system-tuning > .header > .company-logo {
+    float: right;
+    background: transparent url('../../../../gfx/insm/insm_logo.png') right center no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.system-tuning > .content > .system-information {
+    padding: 16px;
+}
+
+.system-tuning > .content > .system-information > .player-settings,
+.system-tuning > .content > .system-information > .timings {
+    display: inline-block;
+    margin-right: 16px;
+}
+
+.system-tuning > .content {
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #ffffff;
+}
+
+.system-tuning > .content > .graphs > .graph {
+    padding: 32px;
+}
+
+.system-tuning > .content > .graphs > .graph > .graph-container {
+    padding: 0px 16px;
+    height: 100px;
+}
+
+.system-tuning > .content > .graphs > .graph > h3 {
+    display: inline;
+}

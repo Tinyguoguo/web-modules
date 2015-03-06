@@ -1,0 +1,24 @@
+﻿.insmLoader {
+    height: inherit;
+    width: inherit;
+    text-align: center;
+    line-height: inherit;
+    font-size: inherit;
+    display: inline-block;
+    min-width: 65px;
+    min-height: 19px;
+    height: inherit;
+    padding: 16px;
+}
+
+.insmLoader.spinner {
+    background: url('insm-loading.gif') center 16px no-repeat;
+}
+
+.insmLoader.has-text {
+    padding-top: 36px;
+}
+
+.insmLoader.text-only {
+    padding-top: 0px;
+}

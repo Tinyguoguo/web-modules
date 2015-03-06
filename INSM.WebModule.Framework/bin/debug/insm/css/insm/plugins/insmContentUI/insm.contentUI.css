@@ -1,0 +1,53 @@
+﻿.pathTxt {
+    margin-top: 15px;
+    background-color: #f0f0f0 !important;
+    width: 350px;
+}
+
+.emptyPathInput {
+    border: 1px solid red !important;
+}
+
+.browseBtns {
+    margin-top: 15px;
+    margin-left: 5px;
+    height: 30px;
+    background-color: #fbfbfb;
+}
+
+.urlTxt {
+    margin-top: 15px;
+    background-color: #f0f0f0 !important;
+    width: 450px;
+}
+
+.Select {
+    width: 350px;
+}
+
+.marginTop {
+    margin-top: 15px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.marginLeft {
+    margin-left: 10px;
+}
+
+.titleContentInput {
+    width: 420px;
+    margin-top: 6px;
+}
+
+.textContentInput {
+    resize: none;
+    width: 420px;
+    margin-top: 6px;
+    height: 50px;
+}
+.marginBottom {
+    margin-bottom: 15px;
+}

@@ -1,0 +1,73 @@
+﻿#insm-entity 
+{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin: 10px;
+    border: 1px solid #aaa;
+    border-radius: 2px;
+    padding: 4px;
+    background: #eee;
+    min-width: 300px;
+    min-height: 100px;
+}
+
+#insm-entity.fixed {
+    position: fixed !important;
+    top: 0;
+}
+
+#insm-entity h2 {
+    font-size: 14px;
+}
+
+#insm-entity .navigation
+{
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+#insm-entity .navigation .pages
+{
+    display: inline-block;
+    margin: 0px 10px;
+    margin-top: 8px;
+}
+
+#insm-entity .navigation .pages a
+{
+    cursor: pointer;
+    color: #888;
+}
+
+#insm-entity .navigation .pages a.selected 
+{
+    font-weight: bold;
+    cursor: default;
+    color: #000;
+    text-shadow: 0px 0px 2px #000;
+}
+
+#insm-entity .entity table tr th, #insm-entity .entity table tr td
+{
+    vertical-align: top;
+    max-width: 227px;
+    overflow: hidden;
+}
+
+#insm-entity .entity table tr th.subheader
+{
+    padding-top: 20px;
+}
+
+#insm-entity .entity ul li
+{
+    margin-left: 12px;
+}
+
+#insm-entity a.entityLink 
+{
+    color: #007;
+    cursor: pointer;
+    text-decoration: underline;
+}

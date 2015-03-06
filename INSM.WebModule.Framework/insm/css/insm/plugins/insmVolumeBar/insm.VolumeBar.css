@@ -1,0 +1,14 @@
+﻿.insm-playlist-manager-volumebar {
+    width: 100px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-image: url(bar.png);
+}
+
+.insm-playlist-manager-header {
+    height: 20px;
+    width: 8px;
+    background-color: rgb(121, 107, 107);
+    margin-top: 3px;
+    cursor: pointer;
+}

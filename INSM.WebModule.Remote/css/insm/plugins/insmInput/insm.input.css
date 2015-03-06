@@ -1,0 +1,26 @@
+﻿.insmInput.disabled > input[type=text] {
+    background: #ddd;
+    font-style: italic;
+    color: #999;
+    border-color: #bbb;
+}
+
+.insmInput > .inputTable {
+    width: 100%;
+}
+
+.insmInput > .inputTable > table.vertical {
+    width: 100%;
+}
+
+.insmInput > .inputTable > button {
+    margin-bottom: 16px;
+}
+
+.insmInput > .inputTable > table {
+    background: #f5f5f5;
+}
+
+.insmInput > .inputTable > table .inputTable > table {
+    background: #eaeaea;
+}

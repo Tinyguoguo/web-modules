@@ -1,0 +1,9 @@
+﻿.insm-weblink {
+    width: inherit;
+    height: inherit;
+}
+
+.insm-weblink > iframe {
+    width: inherit;
+    height: inherit;
+}

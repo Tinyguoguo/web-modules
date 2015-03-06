@@ -1,0 +1,22 @@
+﻿ .insm-module-style {
+	padding: 8px;
+	border: 1px solid #aaa;
+	background: transparent url('moduleIconbackground.png') center no-repeat;
+	
+	margin: 0px 8px 8px 0px;
+	width: 120px;
+	height: 80px;
+	line-height: 80px;
+	display: inline-block;
+	text-align: center;
+}
+.insm-module-style span {
+	line-height: normal;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.insm-module-style-is-selected {
+	background: transparent url('moduleIconselected.png') center no-repeat;
+}
+

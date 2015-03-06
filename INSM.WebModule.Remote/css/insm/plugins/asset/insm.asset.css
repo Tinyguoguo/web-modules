@@ -1,0 +1,99 @@
+﻿/* Asset properties */
+.asset-viewer {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.asset-viewer > .fileManager {
+    width: 100%;
+    display: inline-block;
+}
+
+.asset-viewer .property-container {
+    float: left;
+    padding: 8px;
+}
+
+.asset-viewer > .template-container {
+    width: 300px;
+    min-height: 280px;
+    padding: 8px;
+    float: left;
+    border-left: 1px solid #eaeaea;
+}
+
+.asset-viewer > .template-container button {
+    float: right;
+}
+
+.asset-viewer > .template-container .templateData {
+    line-height: 26px;
+}
+
+ .asset-viewer .ui-slider {
+     margin-bottom: 10px;
+ }
+
+ .asset-viewer .ui-slider.ui-slider-disabled a {
+     pointer-events: none;
+ }
+
+ .asset-viewer .duration {
+     vertical-align: top;
+ }
+
+.template-picker {
+    display: table;
+}
+
+.template-picker > div {
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.template-picker span {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.template-container > .preview {
+    margin: 15px 0;
+    width: 300px;
+}
+
+.asset-viewer .preview > img {
+    max-width: 100%;
+    max-height: 280px;
+    border: 1px solid #eaeaea;
+}
+
+.asset-viewer .inputTable {
+    width: 295px;
+}
+
+.template-container .inputTable {
+    width: 300px;
+}
+
+.asset-viewer .browse-file {
+    width: 252px;
+    background: #eaeaea;
+    height: 26px;
+    line-height: 26px;
+    padding: 4px;
+}
+
+.asset-viewer .divider {
+    width: 244px;
+    border-bottom: 1px solid #eaeaea;
+    margin: 8px 8px;
+}
+
+.asset-viewer .inputTable table {
+    width: 100%;
+}
+
+.asset-viewer .inputTable table th {
+    width: 80px;
+}

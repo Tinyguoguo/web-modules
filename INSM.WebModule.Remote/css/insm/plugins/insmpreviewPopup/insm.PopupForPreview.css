@@ -1,0 +1,136 @@
+﻿/*body
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+.sample
+{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: #fff;
+    display: flex;
+    flex-flow: row;
+}
+
+.unitui
+{
+    height: 95%;
+    width: 100%;
+    border: 1px solid red;
+    display: flex;
+    margin: 5px;
+}
+
+.previewcontainer
+{
+    justify-content: center;
+    align-items: center;
+}
+
+.previewdiv
+{
+    width: 90%;
+    height: 30%;
+    border: 10px solid #b8b9ab;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background-color: black;
+    cursor: pointer;
+}*/
+
+.insm-playlistmanager-previewpopup-backdrop
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .0;
+    filter: alpha(opacity=0);
+    z-index: 50;
+    display: none;
+}
+
+.insm-playlistmanager-previewpopup-videoUI{
+    height:80%;
+    width:auto;
+}
+
+.insm-playlistmanager-previewpopup-controller-common{
+    height: 30px;
+    width: 100%;
+    margin-top:3px;
+    /*border:1px solid black;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.insm-playlistmanager-previewpopup-controller-button{
+    height: 18px;
+    width: 18px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    /*border: 1px solid red;*/
+    background-position: center;
+    background-image:url(general_pause.png);
+}
+
+.insm-playlistmanager-previewpopup-controller-pause-button{
+    background-image:url(general_pause.png);
+}
+
+.insm-playlistmanager-previewpopup-controller-playbutton{
+    background-image:url(general_play.png);
+}
+
+.insm-playlistmanager-previewpopup-controller-stop-button{
+    background-image:url(general_stop.png);
+}
+
+
+.insm-playlist-manager-slider-container-preivewPopup{
+    display: block;
+    width: 100%;
+    background-image: url(line.png);
+    background-repeat: no-repeat;
+    background-position-x: -10px;
+    background-position-y: center;
+    background-position: center;
+}
+
+.insm-playlistmanager-previewpopup-box
+{
+    width: 60%;
+    height: 60%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    /*background-image:url(../jqgridexp/images/kk3.jpg);*/
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 51;
+    padding: 10px;
+    -moz-box-shadow: 0px 0px 5px #444444;
+    -webkit-box-shadow: 0px 0px 5px #444444;
+    box-shadow: 0px 0px 5px #444444;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    border: 10px solid #E6E6E6;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}

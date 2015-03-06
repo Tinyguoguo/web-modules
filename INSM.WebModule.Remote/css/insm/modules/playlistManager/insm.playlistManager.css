@@ -1,0 +1,374 @@
+﻿html, body {
+    overflow: hidden;
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+#content > .l-columnContainer > .l-column > h2 {
+    position: relative;
+    padding: 8px;
+    background: #f0f0f0;
+    border-bottom: 2px solid #666666;
+    min-height: 29px;
+    line-height: 29px;
+}
+
+.pluginSettings {
+    padding: 16px;
+    overflow-y: auto;
+}
+
+#content .table-view {
+    margin-top: 8px;
+    display: block;
+    width: 100%;
+    margin-left: 4px;
+}
+
+#header {
+    background: #000 url('../../../../gfx/insm/background_tile.jpg') repeat;
+    height: 100px;
+    width: 100%;
+    border-bottom: 1px solid #666;
+}
+
+#header .logo {
+    background: transparent url('../../../../css/insm/modules/playlistManager/playlistmanager.png') 16px center no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+#container {
+    height: 100%;
+    background: #fff;
+}
+
+/*
+ * Layout
+ */
+
+#insm-module-content {
+    padding: 0;
+}
+
+#insm-control-panel {
+    padding: 16px;
+}
+
+#insm-module-content table.insm-tablesorter img {
+    cursor: pointer;
+}
+
+#insm-module-content .file-view {
+    padding: 16px;
+}
+
+#insm-module-content .edit-view {
+    padding: 16px;
+}
+
+#insm-module-content .file-view a.preview img {
+    max-height: 100px;
+}
+
+#insm-module-content table.insm-tablesorter tr td a {
+    cursor: pointer;
+}
+
+#insm-module-content table.insm-tablesorter tr td:first-child {
+    text-align: center;
+}
+
+.quick-select {
+    padding: 8px;
+}
+
+#insm-breadcrumbs {
+    display: none;
+}
+
+#insmNotificationContainer {
+    position: relative;
+    width: 100%;
+    background: #f0f0f0;
+    border-bottom: 2px solid #666666;
+    height: 45px;
+}
+
+#insmNotificationContainer .notification {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    padding-left: 30px;
+    width: 100%;
+    float: left;
+    clear: left;
+    height: 45px;
+    line-height: 45px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.insm-playlisteditor-startup {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0;
+}
+
+.insm-playlisteditor-editor {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0;
+    display: none;
+}
+
+.insm-playlisteditor-toolbar-space {
+    width: 40%;
+    display: inline-block;
+}
+
+.insm-playlisteditor-main-container {
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0;
+}
+
+.insm-playlisteditor-thumbnail-container {
+    width: 20%;
+    height: calc(100% - 48px);
+    background-color: #fff;
+    border: 5px solid #f0f0f0;
+    float: left;
+}
+
+.insm-playlisteditor-process-container {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border: 5px solid #f0f0f0;
+}
+
+
+@media screen and (max-width: 1920px) {
+    .insm-playlisteditor-regiontree-container {
+        width: 14%;
+        height: 93%;
+        float: left;
+        background-color: #fff;
+        border: 5px solid #f0f0f0;
+    }
+}
+
+@media screen and (max-width: 1680px) {
+    .insm-playlisteditor-regiontree-container {
+        width: 16%;
+        height: 93%;
+        float: left;
+        background-color: #fff;
+        border: 5px solid #f0f0f0;
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    .insm-playlisteditor-regiontree-container {
+        width: 17%;
+        height: 93%;
+        float: left;
+        background-color: #fff;
+        border: 3px solid #f0f0f0;
+    }
+}
+
+.insm-playlisteditor-playlist-container {
+    width: calc(100% - 20%);
+    height: 93%;
+    background-color: #fff;
+    border: 5px solid #f0f0f0;
+    margin-left:273px;
+
+    /*overflow-y:auto;*/
+}
+
+@media screen and (max-width: 1366px) {
+    .insm-playlisteditor-playlist-container {
+        width: 81%;
+        height: 93%;
+        background-color: #fff;
+        border: 5px solid #f0f0f0;
+        margin-left:240px;
+        /*overflow-y:auto;*/
+    }
+}
+
+
+/*css for all button icons */
+.insm-add-new-button {
+    background-image: url('icons/general_add.png');
+    background-repeat: no-repeat !important;
+    display: inline-block;
+    padding-right: 20px;
+    background-position: top right;
+}
+
+.insm-remove-button {
+    background-image: url('icons/general_remove.png');
+    background-repeat: no-repeat !important;
+    display: inline-block;
+    padding-right: 20px;
+    background-position: top right;
+}
+
+.insm-general-settings-button {
+    background-image: url('icons/general_settings.png');
+    background-repeat: no-repeat !important;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+}
+
+.insm-general-settings-more-button {
+    background-image: url('icons/general_settings.png');
+    background-repeat: no-repeat !important;
+    display: inline-block;
+    padding-right: 20px;
+    background-position: top right;
+}
+
+.insm-up-button {
+    background-image: url('icons/general_up.png');
+    background-repeat: no-repeat !important;
+    display: inline-block;
+    padding-right: 20px;
+    background-position: top right;
+}
+
+.insm-down-button {
+    background-image: url('icons/general_down.png');
+    background-repeat: no-repeat !important;
+    display: inline-block;
+    padding-right: 20px;
+    background-position: top right;
+}
+
+.insm-publish-button {
+    background-image: url('icons/general_publish.png');
+    background-repeat: no-repeat !important;
+    display: inline-block;
+    padding-right: 20px;
+    background-position: top right;
+}
+
+.insm-more-button {
+    background-image: url('icons/general_settings.png');
+    background-repeat: no-repeat !important;
+    display: inline-block;
+    padding-right: 20px;
+    background-position: top right;
+}
+
+.insm-playlistmanager-publishbutton {
+    float: right;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.insm-playlistmanager-Filetitle {
+    float: right;
+    margin-top: 10px;
+    margin-right: 50px;
+}
+
+.insm-playlistmanager-ImageThumbnailview {
+    border: 2px solid #000;
+    padding: 5px;
+}
+
+.insm-refresh-button {
+    background-image: url('icons/general_refresh.png');
+    background-repeat: no-repeat !important;
+    display: inline-block;
+    padding-right: 20px;
+    background-position: top right;
+}
+
+.insm-div-label {
+    line-height: 30px;
+    font-weight: bold;
+    padding-right: 5px;
+    padding-left: 3px;
+    display: inline-block;
+}
+
+.insm-display-layout {
+    display: inline-block;
+}
+
+#searchInputBox input.inputWithImge {
+    float: left;
+    padding-right: 50px;
+    vertical-align: middle;
+    width: 74%;
+}
+
+#searchInputBox span {
+    cursor: pointer;
+    float: right;
+    height: 27px;
+    position: relative;
+    top: -29px;
+    vertical-align: middle;
+    width: 20px;
+}
+
+.insm-search-playlist {
+    display: inline-block;
+    width: 210px;
+    padding-right: 6px;
+    height: 34px;
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+    color: #787878;
+    text-align: left;
+    font-style: italic;
+}
+
+::-webkit-input-placeholder { /* Firefox 19+ */
+    color: #787878;
+    text-align: left;
+    font-style: italic;
+}
+
+.insm-playlisteditor-playlist-grid-publish {
+    cursor: pointer;
+}
+
+.insm-playlisteditor-playlist-grid-edit {
+    cursor: pointer;
+}
+
+.insm-playlisteditor-playlist-grid-remove {
+    cursor: pointer;
+}
+
+.insm-playlist-treecontainer {
+    margin-top: 10px;
+}
+
+.insm-header-infomsg {
+    height: 35px;
+    line-height: 40px;
+    width: 100%;
+    bottom: 0px;
+    background: #eaeaea;
+}
+
+.insm-playlist-manager-import-playlist {
+    display: block;
+    height: 0;
+    width: 0;
+}

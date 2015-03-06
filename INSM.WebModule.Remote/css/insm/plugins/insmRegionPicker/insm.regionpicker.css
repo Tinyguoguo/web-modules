@@ -1,0 +1,62 @@
+﻿.regionPicker {
+    float: left;
+    width: 300px;
+    margin-left: -300px;
+    opacity: 0;
+    white-space: nowrap;
+}
+
+.regionPicker.expanded {
+    margin-left: 0px;
+    opacity: 1;
+}
+
+.regionPicker .controls {
+    position: relative;
+    padding: 8px;
+    background: #f0f0f0;
+    border-bottom: 2px solid #666666;
+    min-height: 29px;
+}
+
+.regionPicker .controls .search {
+    height: 29px;
+}
+
+.regionPicker .content {
+    padding: 16px;
+    overflow: auto;
+    background: #f5f5f5;
+}
+
+.regionPicker h2
+{
+    margin-top: 8px;
+}
+
+.regionPicker .searchResults > a.back
+{
+    padding-left: 10px;
+    background: transparent url('back.png') center left no-repeat;
+}
+
+.regionPicker .searchResults > ul
+{
+    list-style-type: none;
+}
+
+.regionPicker .searchResults > ul > li
+{
+    padding: 4px 8px;
+    white-space: normal;
+}
+
+.regionPicker .searchResults > ul > li:hover
+{
+    background: #fea;
+}
+
+.regionPicker .searchResults > ul > li.is-selected
+{
+    background: #ccf;
+}

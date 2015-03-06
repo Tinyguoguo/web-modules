@@ -1,0 +1,55 @@
+﻿.insm-previewwindow-link {
+    cursor: pointer;
+}
+
+td > img.insm-previewwindow-link.adjust-width {
+    width: 100%;
+}
+
+.insm-previewwindow.preview-object {
+    vertical-align: bottom;
+    opacity: 0;
+}
+
+.insm-previewwindow.backdrop
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .5;
+    z-index: 50;
+    opacity: 0
+}
+
+.insm-previewwindow.container
+{
+    top: 0;
+    z-index: 51;
+    text-align: center;
+    opacity: 0;
+    visibility: visible;
+    position: absolute;
+}
+
+.insm-previewwindow.inner-container
+{
+    opacity: 0;
+    vertical-align: bottom;
+    z-index: 52;
+}
+
+
+.insm-previewwindow.close
+{
+    background-color: gainsboro;
+    border: 1px solid black;
+    cursor: pointer;
+    float: right;
+    padding: 2px 5px;
+    margin: -10px;
+    position: relative;
+    z-index: 53;
+}

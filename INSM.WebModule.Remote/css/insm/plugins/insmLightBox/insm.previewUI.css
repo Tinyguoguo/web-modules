@@ -1,0 +1,39 @@
+﻿
+
+@media screen  (min-width: 1366px) and  (max-width:1920px) {
+    .insm-playlist-manager-preview-loading-media-position {
+        position: relative;
+        top: 50%;
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        color: white;
+    }
+}
+
+@media screen (max-width: 1366px)  {
+    .insm-playlist-manager-preview-loading-media-position {
+        position: relative;
+        color: white;
+    }
+}
+
+.insm-playlist-manager-preview-loading-media-position-new{
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+    .insm-playlist-manager-preview-loading-text {
+        position: relative;
+        color: white;
+    }
+
+.insm-playlist-manager-preview-loading-audio-text-position {
+    color: white;
+    font-family: Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+    position: relative;
+    top: 200px;
+    text-align: center;
+}

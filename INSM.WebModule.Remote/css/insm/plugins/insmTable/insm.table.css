@@ -1,0 +1,141 @@
+﻿.insmTableControls {
+    padding: 16px;
+    background: #f0f0f0;
+    border-bottom: 2px solid #e0e0e0;
+    height: 28px;
+}
+
+.insmTable {
+    width: 100%;
+    table-layout: fixed;
+    border-top: 1px solid #ffffff;
+}
+
+.insmTable tr {
+    height: 54px;
+}
+
+.insmTable tbody tr {
+    background: #fff;
+}
+
+.insmTable tbody tr td.no-results {
+    text-align: center;
+    font-style: oblique;
+    color: #aaa;
+}
+
+.insmTable tbody tr:first-child td {
+    border-top: 2px solid #666666;
+}
+
+.insmTable tbody tr:nth-child(2n) {
+    background: #f5f5f5;
+}
+
+.insmTable tbody tr:hover {
+    background: #eaeaea;
+}
+
+.insmTable tbody tr.is-highlighted {
+    background: #fea;
+}
+
+.insmTable tbody tr.is-selected {
+    background: #ccf;
+}
+
+.insmTable tbody tr.is-selected:hover {
+    background: #d2d2ff;
+}
+
+.insmTable thead tr th {
+    background: #f0f0f0;
+    padding: 10px;
+    padding-right: 20px;
+    word-wrap: break-word;
+    border-right: 2px solid #e0e0e0;
+    border-left: 1px solid #ffffff;
+}
+
+.insmTable thead tr th:first-child
+{
+    border-left: none;
+}
+
+.insmTable thead tr th:last-child
+{
+    border-right: none;
+}
+
+.insmTable thead tr th.is-sortable {
+    background-image: url('order-none.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+.insmTable thead tr th.is-sortable.asc {
+    background-image: url('order-asc.png');
+}
+
+.insmTable thead tr th.is-sortable.desc {
+    background-image: url('order-desc.png');
+}
+
+.insmTable tbody tr td {
+    padding: 10px;
+    word-wrap: break-word;
+}
+
+.insmTable tbody tr td .publish {
+    width:16px;
+    height:16px;
+    background :  transparent url('general_publish.png') center no-repeat;
+}
+.insmTable tbody tr td .edit {
+    width:16px;
+    height:16px;
+    background :  transparent url('edit.png') center no-repeat;
+}
+
+.insmTable tbody tr td .remove {
+    width:16px;
+    height:16px;
+    background :  transparent url('delete.png') center no-repeat;
+}
+.insmTable tbody tr td .version-expand {
+    float:left;
+    width:16px;
+    height:16px;
+    background :  transparent url('general_add.png') center no-repeat;
+}
+
+.insmTable tbody tr td .version-collapse {
+    float:left;
+    width:16px;
+    height:16px;
+    background :  transparent url('general_remove.png') center no-repeat;
+}
+
+.insmTable tbody tr td .inuse {
+    width:30px;
+    height:30px;
+    background :  transparent url('InUse.png') center no-repeat;
+}
+
+.insmTable tbody tr td .subinuse {
+    width:30px;
+    height:30px;
+    background :  transparent url('Sub_InUse.png') center no-repeat;
+}
+
+.insmTable tbody tr td .inuse-subinuse {
+    width:30px;
+    height:30px;
+    background :  transparent url('InUse_subInUse.png') center no-repeat;
+}
+.insmTable tbody tr td .not-inuse {
+    width:30px;
+    height:30px;
+    
+}

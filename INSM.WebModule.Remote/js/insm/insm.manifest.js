@@ -1,0 +1,3 @@
+﻿var manifest = {
+    version: 'Development'
+}

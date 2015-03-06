@@ -1,0 +1,135 @@
+﻿/*
+ *  Layout
+ */
+
+
+.regionTree, .breadcrumbs, .searchField, .assetDistribution, .assetDistributionControls, .inheritInfo {
+    display: block;
+}
+
+.searchField {
+    display: inline-block;
+}
+
+.column {
+    display: inline-block;
+    float: left;
+}
+
+.inheritCheckbox {
+    display: inline-block;
+}
+
+
+#content
+{
+
+}
+
+#main-column
+{
+    width: 700px;
+}
+
+    #main-column table
+    {
+        table-layout: fixed;
+    }
+
+#left-column, #main-column
+{
+    display: inline-block;
+    vertical-align: top;
+}
+
+#left-column
+{
+    margin-right: 60px;
+}
+
+    #left-column .control-panel, #main-column .control-panel
+    {
+        height: 22px;
+        padding: 8px;
+        display: block;
+    }
+
+    #left-column .content, #main-column .content
+    {
+        padding: 8px;
+        display: block;
+    }
+
+    #left-column .control-panel > *, #main-column .control-panel > *
+    {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 4px;
+    }
+
+
+.paddingDiv {
+    padding: 8px;
+}
+
+/*
+ * Notification area
+ */
+
+#insmNotificationContainer
+{
+    position: relative;
+    height: 40px;
+    width: 100%;
+    border-bottom: 1px solid #666;
+}
+
+    #insmNotificationContainer .notification
+    {
+        border: 0px;
+        margin: 0px;
+        padding: 0px;
+        padding-left: 30px;
+        width: 100%;
+        float: left;
+        clear: left;
+        height: 40px;
+        line-height: 40px;
+    }
+
+
+.rulestable
+{
+    border:0px; 
+    padding-top: 0px; 
+    padding-bottom: 2px; 
+    margin-top: 0px;
+}
+
+.rulestable .container
+{
+    padding: 10px; 
+    background-color: white; 
+    border: 1px solid black; 
+    border-top: 0px;
+}
+
+table tr td, table tr th {
+    padding: 16px;
+}
+
+#insm-login-form table tr td, #insm-login-form table tr th {
+    padding: 4px;
+}
+
+table {
+
+}
+
+.table-wrapper {
+    margin-top: 16px;
+}
+
+a.button.delete-table-input {
+    margin-bottom: 16px;
+}

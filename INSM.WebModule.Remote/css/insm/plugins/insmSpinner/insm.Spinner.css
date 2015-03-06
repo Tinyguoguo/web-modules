@@ -1,0 +1,28 @@
+﻿.insm-spinner-input {
+    width: 40px;
+    height: 23px;
+    text-align: left;
+}
+
+.insm-spinner-div {
+    padding-right: 3px;
+    display: table-cell;
+}
+.insm-spinner-outer {
+    display: block;
+    padding-left: 5px;
+}
+.insm-set-cross {
+    padding-top: 8px;
+}
+.insm-resolution-label {
+    font-weight: bold;
+}
+.insm-set-button {
+    margin-right: 5px;
+}
+.insm-set-button-position {
+    float: right;
+    margin-top: 25px;
+    margin-right: 10px;
+}

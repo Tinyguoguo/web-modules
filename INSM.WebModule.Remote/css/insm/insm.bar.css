@@ -1,0 +1,41 @@
+﻿.insm-bar.barHolder {
+    visibility:visible;
+    width: 100px;
+}
+
+.insm-bar.barContent {
+       background-color: grey;
+       width: 45%;
+       height: 15px;
+}
+
+.insm-bar.barHolder .insm-progressbar {
+    border: 1px solid #c5c5c5;
+    height: 15px;
+    background: #fff;
+    width: 100%;
+    position: relative;
+}
+
+.insm-bar.barHolder .insm-progressbar .progressbackground {
+    
+    background: #aaa;
+    line-height: 15px;
+    height: 15px;
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    opacity: 1;
+    border: none;
+    width: 100%;
+    position: absolute;
+}
+
+.insm-bar.barHolder .insm-progressbar .progresstext {
+    line-height: 15px;
+    height: 15px;
+    display: block;
+    text-align: center;
+    padding: 0px 8px;
+    position: relative;
+}

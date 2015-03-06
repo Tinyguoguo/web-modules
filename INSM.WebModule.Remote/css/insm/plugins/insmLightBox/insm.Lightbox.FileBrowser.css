@@ -1,0 +1,213 @@
+﻿.insm-lightbox-fb-backdrop {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .0;
+    filter: alpha(opacity=0);
+    z-index: 50;
+    display: none;
+}
+
+.insm-lightbox-fb-box {
+    position: absolute;
+    /*top: 35%;
+    left: 35%;
+    width: 800px;
+    height: 425px;*/
+    background: #efefef;
+    z-index: 51;
+    padding: 4px;
+    margin: -100px 0 0 -200px;
+    -moz-box-shadow: 3px 3px 2px #444444;
+    -webkit-box-shadow: 3px 3px 2px #444444;
+    box-shadow: 3px 3px 2px #444444;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+.insm-lightbox-fb-normal{
+    top: 35%;
+    left: 35%;
+    width: 800px;
+    height: 425px;
+}
+
+.insm-lightbox-fb-max{
+    top: 100px;
+    left: 200px;
+    width: 98%;
+    height: 98%;
+}
+
+
+.insm-lightbox-fb-close {
+    float: right;
+    cursor: pointer;
+    background: #eaeaea url('icons/close.png');
+    width: 16px;
+    height: 16px;
+    z-index: 53;
+    text-align: center;
+    line-height: 20px;
+    font-weight: bold;
+}
+
+.insm-lightbox-fb-buttonStatus {
+    float: right;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    z-index: 53;
+    text-align: center;
+    line-height: 20px;
+    font-weight: bold;
+    margin-right: 2px;
+}
+
+.insm-lightbox-fb-buttonStatusforMax {
+    background: #eaeaea url('icons/Max.png');
+}
+
+.insm-lightbox-fb-buttonStatusforRestore {
+    background: #eaeaea url('icons/Restore.png');
+}
+    
+.insm-lightbox-fb-moveToBottom {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+}
+
+
+.insm-filebrowserlist-filesection {
+    float: left;
+    width: 60%;
+    height: 362px;
+}
+
+.insm-filebrowserlist-previewsection {
+    float: right;
+    width: 40%;
+    height: 362px;
+}
+
+.insm-filebrowserlist-movetosection {
+    float: right;
+    width: 40%;
+    height: 362px;
+    display:none;
+    background-color:white;
+}
+
+
+.insm-filebrowserlist-buttoncontrol {
+    padding: 5px;
+}
+
+.insm-filebrowserlist-foldericon {
+    background-image: url(icons/folderIcon.png);
+    background-repeat: no-repeat;
+    background-position-y: center;
+    border: 1px solid rgb(129, 123, 123);
+    display: inline-block;
+    height: 27px;
+    width: 44%;
+    border: 1px solid black;
+    display: inline-block;
+}
+
+.insm-filebrowserlist-foldername {
+    padding-left: 18px;
+    margin-top: 7px;
+    display: block;
+}
+
+.insm-filebrowserlist-previewsectioncontainer {
+    width: 100%;
+    height: 65%;
+    margin-top: 5px;
+    background-color: black;
+}
+
+.insm-filebrowserlist-fileinfosection {
+    width: 100%;
+    height: 30%;
+    margin-top: 5px;
+}
+
+.insm-filebrowserlist-searchBox {
+    display: inline-block;
+}
+
+.insm-filebrowserlist-searchBox-button {
+    display:inline-block;
+    background-image:url(icons/general_search.png);
+    background-repeat:no-repeat;
+    height:20px;
+    width:20px;
+    cursor:pointer;
+}
+
+
+.insm-filebrowserlist-newfolder {
+    display: inline-block;
+    background-image:url(icons/newFolderIcon.png);
+    background-repeat:no-repeat;
+    height:20px;
+    width:20px;
+    cursor:pointer;
+}
+
+.insm-filebrowserlist-upfolder {
+    display: inline-block;
+    background-image:url(icons/levelUpIcon.png);
+    background-repeat:no-repeat;
+    height:20px;
+    width:20px;
+    cursor:pointer;
+}
+
+.insm-filebrowserlist-folderinfo{
+    margin-top:5px;
+    margin-bottom: 5px;
+}
+
+.insm-filebrowserlist-preiviewUI{
+	width: 100%;
+	height: 100%;
+    background-color:black;
+    text-align:center;
+    color:white;
+}
+.button--upload{
+    width: 100px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    padding: 0 !important;
+    height: 28px;
+}
+.button--upload:before {
+    content: 'Upload File...';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    padding-top: 7px;
+}
+.button--upload input[type=file]{
+    opacity: 0;
+    position: relative;
+    margin: -1px;
+}
+
+.insm-playlist-manager-filebrowser-download-button{
+    display:inline-block !important;
+    height: 16px;
+}
